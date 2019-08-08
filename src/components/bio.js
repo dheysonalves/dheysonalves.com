@@ -8,8 +8,15 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import styled from 'styled-components'
 
 import { rhythm } from "../utils/typography"
+
+const Wrapper = styled.div`
+
+        display: flex;
+        margin-bottom: ${rhythm(2.5)}; 
+`
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -34,12 +41,7 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
-      }}
-    >
+    <Wrapper>
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
@@ -54,14 +56,15 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
+        Escrito por <strong>{author}</strong> estudante de Ciência da Computação na UNIFAVIP, 
+        entusiasta do Open Source e Desenvolvedor Front-end.
         {` `}
+        <br/>
         <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+          Saber mais, segue no Twitter.
         </a>
       </p>
-    </div>
+      </Wrapper>
   )
 }
 

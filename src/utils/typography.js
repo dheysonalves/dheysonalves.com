@@ -9,9 +9,18 @@ Wordpress2016.overrideThemeStyles = () => {
   }
 }
 
+// const typography = new Typography({
+//   baseFontSize: "18px",
+//   baseLineHeight: 1.666,
+//   headerFontFamily: [
+//     "Helvetica",
+//   ]
+// })
+
+
 delete Wordpress2016.googleFonts
 
-const typography = new Typography(Wordpress2016)
+ const typography = new Typography(Wordpress2016)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

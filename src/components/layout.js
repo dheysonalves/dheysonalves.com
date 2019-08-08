@@ -1,7 +1,26 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from 'styled-components'
+import Navbar from "./Navigation"
 
 import { rhythm, scale } from "../utils/typography"
+
+const Wrapper = styled.div`
+    margin: 0 auto;
+    max-width: ${rhythm(25)};
+    padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
+    background-color: white;
+`
+const Head1 = styled.h1`
+    ${scale(1.5)};
+    margin-bottom: ${rhythm(1.5)};
+    margin-top: 0;
+`
+const Head3 = styled.h3`
+     font-family: Montserrat, sans-serif;
+     margin-top: 0;
+     max-width: ${rhythm(50)};
+`
 
 class Layout extends React.Component {
   render() {
@@ -11,13 +30,7 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
+       <Head1>
           <Link
             style={{
               boxShadow: `none`,
@@ -28,16 +41,11 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-        </h1>
+        </Head1>
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
+        <Head3>
           <Link
             style={{
               boxShadow: `none`,
@@ -48,26 +56,22 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-        </h3>
+        </Head3>
       )
     }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
+      <Wrapper>
+        <header>
+        <Navbar/>
+          {header}
+        </header>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Construido com
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.gatsbyjs.org">Gatsby</a>+<a href="">React</a>
         </footer>
-      </div>
+      </Wrapper>
     )
   }
 }

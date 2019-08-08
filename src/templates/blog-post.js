@@ -5,53 +5,43 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import { Heading, Paragraph, Hr, List } from './styles'
+// import Disqus from 'disqus-react';
+// import {disqusConfig} from '../utils/misc'
+
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    // const siteBase = 'localhost:8000'
 
+    // const disqusShortname = 'dheyson-blog-tech';
+    //     // const disqusConfig = {
+    //     //      identifier: this.props.markdownRemark.id,
+    //     //      title: post.frontmatter.title,
+    //     // };
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1
-          style={{
-            marginTop: rhythm(1),
-            marginBottom: 0,
-          }}
-        >
+        <Heading>
           {post.frontmatter.title}
-        </h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-          }}
-        >
+        </Heading>
+        {/* <Disqus.CommentCount shortname={disqusShortname}>
+                    Comments
+        </Disqus.CommentCount> */}
+        <Paragraph>
           {post.frontmatter.date}
-        </p>
+        </Paragraph>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <Hr/>
         <Bio />
 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <List>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -66,7 +56,14 @@ class BlogPostTemplate extends React.Component {
               </Link>
             )}
           </li>
-        </ul>
+          </List>
+        {/* <Disqus.CommentEmbed 
+                    commentId={this.props.post}
+                    showMedia={true}
+                    height={160}
+                />
+                
+                <Disqus.DiscussionEmbed shortname={disqusShortname} /> */}
       </Layout>
     )
   }

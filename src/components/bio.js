@@ -60,7 +60,7 @@ const Bio = () => {
         entusiasta do Open Source e Desenvolvedor Front-end.
         {` `}
         <br/>
-        <a href={`https://twitter.com/${social.twitter}`}>
+        <a href={`https://twitter.com/${social.twitter}`} Target={`_blank`} rel={`noopener noreferrer`}>
           Saber mais, segue no Twitter.
         </a>
       </p>

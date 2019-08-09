@@ -1,6 +1,7 @@
 import React from "react"
 import { rhythm } from "../utils/typography"
 import styled from "styled-components"
+import { Link } from "gatsby";
 
 const Header = styled.header`
   body, ul, li {
@@ -12,13 +13,18 @@ const Header = styled.header`
       color: black;
       text-decoration: none;
   }
-  
+
+  a:hover {
+      color:gray;
+  }
+
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   padding: 20px;
-
+  overflow: hidden;
+  
   .menu {
     display: flex;
     list-style: none;
@@ -33,17 +39,16 @@ const Header = styled.header`
     padding: 10px;
   }
 
-  
 `
 
 const Navigation = () => {
   return (
     <Header>
-      <a href="https://github.com/Dheyson" title="Portfolio">Dheyson Alves</a>
+      <Link to="/">Dheyson Alves</Link>
       <nav>
         <ul className="menu">
-          <li><a href="https://github.com/Dheyson" title="Portfolio">Portfolio</a></li>
-          <li><a href="/" title="Sobre autor">Sobre</a></li>
+          <li><a href="https://github.com/Dheyson" title="Portfolio" Target={`_blank`} rel={`noopener noreferrer`}>Portfolio</a></li>
+          <li><Link to="/">Sobre</Link></li>
         </ul>
       </nav>
     </Header>

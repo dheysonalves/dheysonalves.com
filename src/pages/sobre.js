@@ -1,29 +1,16 @@
 import React from "react"
-import { rhythm } from "../utils/typography"
-import styled from "styled-components"
-import { Link } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import styled from "styled-components"
 
-
-class SobrePage extends React.Component {
-    render () {
-        return (
-            <Layout>
+export default props => (
+            <Layout location={props.location} >
                 <SEO title="Sobre"></SEO>
+                <div>
+                  <h2>Sobre mim</h2>
+                  <p>Estudante de Ciência da Computação na UNIFAVIP, amante do Open Source e do mundo GNU/Linux. Tudo que envolve o mundo do Desenvolvimento Web e gosta de pesquisar sobre Otimização.</p>
+                </div>
             </Layout>
-        )
-    }
-}
+      
+      )
 
-export default SobrePage
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-}
-`

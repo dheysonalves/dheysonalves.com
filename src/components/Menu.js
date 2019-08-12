@@ -43,11 +43,9 @@ const Menu = () => {
     return (
     <Wrapper>
         <ul className="menu">
-            <li><Link to="/">Categoria</Link></li>
-            <li><Link to="/">Categoria 2</Link></li>
-            <li><Link to="/">Categoria 3</Link></li>
-            <li><Link to="/">Categoria 4</Link></li>
-            <li><Link to="/">Categoria 5</Link></li>
+            <li><Link to="/">Web</Link></li>
+            <li><Link to="/">Computação</Link></li>
+            <li><Link to="/">Open Source</Link></li>
         </ul>
     </Wrapper>
     )

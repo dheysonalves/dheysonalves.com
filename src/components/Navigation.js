@@ -48,7 +48,7 @@ const Navigation = () => {
       <nav>
         <ul className="menu">
           <li><a href="https://github.com/Dheyson" title="Portfolio" Target={`_blank`} rel={`noopener noreferrer`}>Portfolio</a></li>
-          <li><Link to="/">Sobre</Link></li>
+          <li><Link to="/sobre/">Sobre</Link></li>
         </ul>
       </nav>
     </Header>

@@ -58,13 +58,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Dheyson Alves - Developer Blog`,
+        short_name: `Dheyson Alves`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#D9D9D9`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/avatar6.png`,
       },
     },
     `gatsby-plugin-offline`,

@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from 'styled-components'
 import Navbar from "./Navigation"
 import Menu from "./Menu"
+import Footer from "./footer"
 import { rhythm, scale } from "../utils/typography"
 
 const Wrapper = styled.div`
@@ -67,11 +68,7 @@ class Layout extends React.Component {
           {header}
         </header>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Construido com
-          {` `}
-          <a href="https://www.gatsbyjs.org" Target="_blank" rel="noopener noreferrer">Gatsby</a>+<a href="https://pt-br.reactjs.org/" Target="_blank" rel="noopener noreferrer">React</a>
-        </footer>
+        <Footer/>
       </Wrapper>
     )
   }

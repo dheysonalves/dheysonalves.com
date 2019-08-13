@@ -4,7 +4,7 @@ module.exports = {
     title: `Breakpoint`,
     author: `Dheyson Alves`,
     description: `Um blog sobre desenvolvimento e computação.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://dheysonalves-tech.surge.sh`,
     social: {
       twitter: `DheysonAlves2`,
     },

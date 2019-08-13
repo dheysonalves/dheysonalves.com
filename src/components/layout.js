@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
-import Navbar from "./Navigation"
-import Menu from "./Menu"
+import Navbar from "./navigation"
+// import Menu from "./menu"
 import Footer from "./footer"
 import { rhythm, scale } from "../utils/typography"
 
@@ -64,7 +64,6 @@ class Layout extends React.Component {
       <Wrapper>
         <header>
         <Navbar/>
-        <Menu/>
           {header}
         </header>
         <main>{children}</main>

@@ -1,5 +1,5 @@
 import React from "react"
-import { rhythm } from "../utils/typography"
+// import { rhythm } from "../utils/typography"
 import styled from "styled-components"
 import { Link } from "gatsby";
 

@@ -1,6 +1,7 @@
 module.exports = {
+  pathPrefix: `/blog`,
   siteMetadata: {
-    title: `Breakpoint, sem subtítulo`,
+    title: `Breakpoint`,
     author: `Dheyson Alves`,
     description: `Um blog sobre desenvolvimento e computação.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,

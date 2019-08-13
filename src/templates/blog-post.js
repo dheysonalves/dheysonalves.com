@@ -4,10 +4,10 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+// import { rhythm, scale } from "../utils/typography"
 import { Heading, Paragraph, Hr, List } from './styles'
-// import Disqus from 'disqus-react';
-// import {disqusConfig} from '../utils/misc'
+import { DiscussionEmbed } from "disqus-react"
+
 
 
 class BlogPostTemplate extends React.Component {
@@ -15,13 +15,10 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-    // const siteBase = 'localhost:8000'
-
-    // const disqusShortname = 'dheyson-blog-tech';
-    //     // const disqusConfig = {
-    //     //      identifier: this.props.markdownRemark.id,
-    //     //      title: post.frontmatter.title,
-    //     // };
+    const disqusConfig = {
+      shortname: process.env.GATSBY_DISQUS_NAME,
+      config: { identifier: post.slug },
+    }
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -31,9 +28,6 @@ class BlogPostTemplate extends React.Component {
         <Heading>
           {post.frontmatter.title}
         </Heading>
-        {/* <Disqus.CommentCount shortname={disqusShortname}>
-                    Comments
-        </Disqus.CommentCount> */}
         <Paragraph>
           {post.frontmatter.date}
         </Paragraph>
@@ -57,13 +51,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
           </List>
-        {/* <Disqus.CommentEmbed 
-                    commentId={this.props.post}
-                    showMedia={true}
-                    height={160}
-                />
-                
-                <Disqus.DiscussionEmbed shortname={disqusShortname} /> */}
+          <DiscussionEmbed {...disqusConfig} />
       </Layout>
     )
   }

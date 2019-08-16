@@ -10,6 +10,12 @@ module.exports = {
     },
   },
   plugins: [
+    {
+    resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://dheysonalves-tech.surge.sh`,
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -52,7 +58,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-145848940-1`,
+        head: true,
+        respectDNT: true
       },
     },
     `gatsby-plugin-feed`,

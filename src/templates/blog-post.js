@@ -15,9 +15,11 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    
+    // const short = 'dheysonalves-cs'
     const disqusConfig = {
       shortname: process.env.GATSBY_DISQUS_NAME,
-      config: { identifier: post.slug },
+      config: { identifier: post.slug }
     }
     return (
       <Layout location={this.props.location} title={siteTitle}>

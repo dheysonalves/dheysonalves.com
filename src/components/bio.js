@@ -63,7 +63,13 @@ const Bio = () => {
         <a href={`https://twitter.com/${social.twitter}`} Target={`_blank`} rel={`noopener noreferrer`}>
           Saber mais, segue no Twitter.
         </a>
+        <br/>
+        <br/>
+        <div><a href="http://www.thedevelopersconference.com.br" target="_blank" rel="noopener noreferrer" title=" The Developer's Conference 2019, um evento organizado pela Globalcode" style={{textDecoration: `none`}}><img src="https://s3-sa-east-1.amazonaws.com/thedevconf/2019/img/divulgacao/recife/banner-TDC2019-recife-234x60.png" style={{border:`none`}} alt="Evento TDC2019" /></a></div>
       </p>
+        
+      
+                                                        
       </Wrapper>
   )
 }

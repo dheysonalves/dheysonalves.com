@@ -18,9 +18,9 @@ const Head1 = styled.h1`
     margin-top: 0;
 `
 const Head3 = styled.h3`
-     font-family: Montserrat, sans-serif;
-     margin-top: 0;
-     max-width: ${rhythm(50)};
+  font-family: Montserrat, sans-serif;
+  margin-top: 0;
+  max-width: ${rhythm(50)};
 `
 
 class Layout extends React.Component {
@@ -31,7 +31,7 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-       <Head1>
+        <Head1>
           <Link
             style={{
               boxShadow: `none`,
@@ -63,11 +63,11 @@ class Layout extends React.Component {
     return (
       <Wrapper>
         <header>
-        <Navbar/>
+          <Navbar />
           {header}
         </header>
         <main>{children}</main>
-        <Footer/>
+        <Footer />
       </Wrapper>
     )
   }

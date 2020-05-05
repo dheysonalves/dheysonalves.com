@@ -66,7 +66,9 @@ class Layout extends React.Component {
           <Navbar />
           {header}
         </header>
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
         <Footer />
       </Wrapper>
     )

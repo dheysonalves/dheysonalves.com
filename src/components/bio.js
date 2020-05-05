@@ -56,20 +56,19 @@ const Bio = () => {
         }}
       />
       <p>
-        Escrito por <strong>{author}</strong> estudante de Ciência da Computação na UNIFAVIP,
-        entusiasta do Open Source e Desenvolvedor Front-end.
+        Escrito por <strong>{author}</strong> estudante de Ciência da Computação na UNIFAVIP, Desenvolvedor Front-end.
         {` `}
-        <br/>
+        <br />
         <a href={`https://twitter.com/${social.twitter}`} Target={`_blank`} rel={`noopener noreferrer`}>
           Saber mais, segue no Twitter.
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
       </p>
 
 
 
-      </Wrapper>
+    </Wrapper>
   )
 }
 

@@ -1,16 +1,16 @@
 import React from "react"
 // import { rhythm } from "../utils/typography"
-import styled from "styled-components"
+import styled from "styled-components";
 import { Link } from "gatsby";
 
 const Wrapper = styled.div`
-    body, ul, li {
+  body, ul, li {
 	padding: 0;
 	margin: 0;
   }
 
   padding: 10px;
-  
+
   .menu {
     display: flex;
     list-style: none;
@@ -40,15 +40,15 @@ const Wrapper = styled.div`
 
 
 const Menu = () => {
-    return (
-    <Wrapper>
-        <ul className="menu">
-            <li><Link to="/">Web</Link></li>
-            <li><Link to="/">Computação</Link></li>
-            <li><Link to="/">Open Source</Link></li>
-        </ul>
-    </Wrapper>
-    )
+	return (
+		<Wrapper>
+			<ul className="menu">
+				<li><Link to="/">Web</Link></li>
+				<li><Link to="/">Computação</Link></li>
+				<li><Link to="/">Open Source</Link></li>
+			</ul>
+		</Wrapper>
+	)
 }
 
 export default Menu

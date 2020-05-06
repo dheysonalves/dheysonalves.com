@@ -7,6 +7,7 @@ import Footer from "./footer"
 import { rhythm, scale } from "../utils/typography"
 
 const Wrapper = styled.div`
+		height: 100vh;
     margin: 0 auto;
     max-width: ${rhythm(25)};
     padding: ${rhythm(1.5)} ${rhythm(3 / 4)};

@@ -8,9 +8,9 @@ export default props => (
                 <SEO title="Sobre"></SEO>
                 <div>
                   <h2>Sobre mim</h2>
-                  <p>Estudante de Ciência da Computação na UNIFAVIP, amante do Open Source e do mundo GNU/Linux. Tudo que envolve o mundo do Desenvolvimento Web e gosta de pesquisar sobre Otimização.</p>
+                  <p>Estudante de Ciência da Computação na UNIFAVIP. Front-end developer.</p>
                 </div>
             </Layout>
-      
+
       )
 

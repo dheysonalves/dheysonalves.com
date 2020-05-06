@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Heading = styled.h1`
         margin-top: rhythm(1);
@@ -15,7 +15,7 @@ export const Hr = styled.hr`
         margin-bottom: rhythm(1);
 `
 
-export const List = styled.ul `
+export const List = styled.ul`
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;

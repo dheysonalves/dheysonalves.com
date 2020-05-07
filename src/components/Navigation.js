@@ -24,7 +24,7 @@ const Header = styled.header`
   align-items: center;
   padding: 20px;
   overflow: hidden;
-  
+
   .menu {
     display: flex;
     list-style: none;
@@ -42,17 +42,18 @@ const Header = styled.header`
 `
 
 const Navigation = () => {
-  return (
-    <Header>
-      <Link to="/">Dheyson Alves</Link>
-      <nav>
-        <ul className="menu">
-          <li><a href="https://github.com/Dheyson" title="Portfolio" Target={`_blank`} rel={`noopener noreferrer`}>Portfolio</a></li>
-          <li><Link to="/sobre/">Sobre</Link></li>
-        </ul>
-      </nav>
-    </Header>
-  )
+	return (
+		<Header>
+			<Link to="/">Dheyson Alves</Link>
+			<nav>
+				<ul className="menu">
+					<li><a href="https://dheyson10.gitbook.io/breakpoint/" title="Portfolio" Target={`_blank`} rel={`noopener noreferrer`}>Doc</a></li>
+					<li><a href="https://github.com/Dheyson" title="Portfolio" Target={`_blank`} rel={`noopener noreferrer`}>Portfolio</a></li>
+					<li><Link to="/sobre/">Sobre</Link></li>
+				</ul>
+			</nav>
+		</Header>
+	)
 }
 
 export default Navigation

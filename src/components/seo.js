@@ -1,4 +1,4 @@
-/**
+ 	 /**
  * SEO component that queries for data with
  *  Gatsby's useStaticQuery React hook
  *
@@ -38,7 +38,11 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `description`,
           content: metaDescription,
-        },
+				},
+				{
+					name: `viewport`,
+					content: `width=device-width, initial-scale=1.0`
+				},
         {
           property: `og:title`,
           content: title,

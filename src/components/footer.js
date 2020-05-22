@@ -29,10 +29,10 @@ const Footer = () => {
 		<footer>
 			© {new Date().getFullYear()}, Construido com
 			{` `}
-			<a href="https://www.gatsbyjs.org" Target="_blank" rel="noopener noreferrer">Gatsby</a>+<a href="https://pt-br.reactjs.org/" Target="_blank" rel="noopener noreferrer">React</a>
+			<a href="https://www.gatsbyjs.org" trget="_blank" rel="noopener noreferrer">Gatsby</a>+<a href="https://pt-br.reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>
 			<IconsWrapper>
-				<a href="https://www.linkedin.com/in/dheysonalvess/" Target="_blank" rel="noopener noreferrer"><IoLogoLinkedin size="2em" /></a>
-				<a href="https://github.com/Dheyson" Target="_blank" rel="noopener noreferrer" className="anchor__specific"><IoLogoGithub size="2em" /> </a>
+				<a href="https://www.linkedin.com/in/dheysonalvess/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin size="2em" /></a>
+				<a href="https://github.com/Dheyson" target="_blank" rel="noopener noreferrer" className="anchor__specific"><IoLogoGithub size="2em" /> </a>
 			</IconsWrapper>
 		</footer>
 	)

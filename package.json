@@ -46,10 +46,10 @@
   },
   "homepage": "https://github.com/Dheyson/personal-blog/blob/master/README.md",
   "keywords": [
-		"blog",
-		"react",
-		"javascript",
-		"gatsby"
+    "blog",
+    "react",
+    "javascript",
+    "gatsby"
   ],
   "license": "MIT",
   "main": "https://github.com/Dheyson/personal-blog",

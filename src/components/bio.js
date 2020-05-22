@@ -59,7 +59,7 @@ const Bio = () => {
         Escrito por <strong>{author}</strong> estudante de Ciência da Computação na UNIFAVIP, Desenvolvedor Front-end.
         {` `}
         <br />
-        <a href={`https://twitter.com/${social.twitter}`} Target={`_blank`} rel={`noopener noreferrer`}>
+        <a href={`https://twitter.com/${social.twitter}`} target={`_blank`} rel={`noopener noreferrer`}>
           Saber mais, segue no Twitter.
         </a>
         <br />

@@ -8,11 +8,9 @@ import { rhythm, scale } from "../utils/typography";
 import Context from '../store/context.store';
 
 const Wrapper = styled.div`
-		height: 100vh;
     margin: 0 auto;
-    max-width: ${rhythm(25)};
+    max-width: ${rhythm(30)};
     padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
-    background-color: ${props => props.bgcolor};
 `
 const Head1 = styled.h1`
     ${scale(1.5)};
@@ -65,7 +63,7 @@ const Layout = ({ location, title, children }) => {
     )
   }
   return (
-    <Wrapper bgcolor={state.isDark ? theme.dark.background : theme.light.background}>
+    <Wrapper>
       <header>
         <Navbar />
         {header}

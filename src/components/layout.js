@@ -5,7 +5,6 @@ import Navbar from "./Navigation";
 // import Menu from "./menu"
 import Footer from "./footer";
 import { rhythm, scale } from "../utils/typography";
-import Context from '../store/context.store';
 
 const Wrapper = styled.div`
     margin: 0 auto;
@@ -25,8 +24,6 @@ const Head3 = styled.h3`
 `;
 
 const Layout = ({ location, title, children }) => {
-  const { state } = useContext(Context);
-  const theme = useTheme();
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 

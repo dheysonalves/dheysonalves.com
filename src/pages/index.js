@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { Link, graphql } from 'gatsby';
 import { useTheme } from 'styled-components';
-import Bio from './components/bio';
-import Layout from './components/layout';
-import SEO from './components/seo';
-import { rhythm } from './utils/typography';
-import GlobalStyle from './styles/globalStyle';
-import Context from './store/context.store';
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { rhythm } from '../utils/typography';
+import GlobalStyle from '../styles/globalStyle';
+import Context from '../store/context.store';
 
 export const pageQuery = graphql`
     query {

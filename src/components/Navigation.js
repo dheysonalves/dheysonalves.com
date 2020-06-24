@@ -57,7 +57,7 @@ const Navigation = () => {
     }, [dispatch, iconState]);
 
     return (
-        <Header links={state.isDark ? theme.dark.font : theme.light.font}>
+        <Header>
             <Link to="/">Dheyson Alves</Link>
             <nav>
                 <ul className="menu">

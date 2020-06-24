@@ -5,15 +5,14 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-import styled from 'styled-components'
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
+import styled from 'styled-components';
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../utils/typography";
 
 const Wrapper = styled.div`
-
         display: flex;
         margin-bottom: ${rhythm(2.5)};
 `
@@ -65,9 +64,6 @@ const Bio = () => {
         <br />
         <br />
       </p>
-
-
-
     </Wrapper>
   )
 }

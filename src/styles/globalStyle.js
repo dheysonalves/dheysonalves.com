@@ -1,4 +1,4 @@
-import { createGlobalStyle  } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -7,6 +7,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     border: 10px solid ${props => props.borderColor};
   }
-`
+`;
 
 export default GlobalStyle;

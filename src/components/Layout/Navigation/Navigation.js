@@ -1,7 +1,7 @@
 import React, { useState, useContext, useCallback } from 'react';
 // import { rhythm } from "../utils/typography"
-import styled, { useTheme } from 'styled-components';
-import Context from '../store/context.store';
+import styled from 'styled-components';
+import Context from '../../../store/context.store';
 import { Link } from 'gatsby';
 import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
 
@@ -49,7 +49,6 @@ const Header = styled.header`
 const Navigation = () => {
     const [iconState, setIconState] = useState();
     const { state, dispatch } = useContext(Context);
-    const theme = useTheme();
 
     const dispatching = useCallback(() => {
         setIconState(!iconState);

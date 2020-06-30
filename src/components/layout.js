@@ -1,7 +1,7 @@
 import React, { useContext, Fragment } from 'react';
 import { Link } from 'gatsby';
 import styled, { useTheme } from 'styled-components';
-import Navbar from './Navigation';
+import Navbar from './Navigation/Navigation';
 // import Menu from "./menu"
 import Footer from './footer';
 import { rhythm, scale } from '../utils/typography';
@@ -13,6 +13,7 @@ const Wrapper = styled.div`
     max-width: ${rhythm(30)};
     padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
 `;
+
 const Head1 = styled.h1`
     ${scale(1.5)};
     margin-bottom: ${rhythm(1.5)};

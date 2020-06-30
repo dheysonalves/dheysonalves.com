@@ -39,16 +39,6 @@ const BlogIndex = ({ data, location }) => {
     const theme = useTheme();
 
     return (
-        <React.Fragment>
-            <GlobalStyle
-                background={
-                    state.isDark
-                        ? theme.dark.background
-                        : theme.light.background
-                }
-                fontColor={state.isDark ? theme.dark.font : theme.light.font}
-                borderColor={state.isDark ? theme.dark.font : theme.light.font}
-            />
             <Layout location={location} title={siteTitle}>
                 <SEO title="Dheyson Alves - Blog" />
                 <Bio />
@@ -83,7 +73,6 @@ const BlogIndex = ({ data, location }) => {
                     );
                 })}
             </Layout>
-        </React.Fragment>
     );
 };
 

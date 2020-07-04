@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
-  ${reset}
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
   body {
@@ -21,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a:hover {
-        color: gray;
+        color: ${props => props.lhover};
     }
 
 `;

@@ -8,14 +8,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
-import styled from 'styled-components';
 
-import { rhythm } from '../utils/typography';
-
-const Wrapper = styled.div`
-    display: flex;
-    margin-bottom: ${rhythm(2.5)};
-`;
+import { rhythm } from '../../utils/typography';
+import * as S from './styles.js';
 
 const Bio = () => {
     const data = useStaticQuery(graphql`
@@ -40,36 +35,15 @@ const Bio = () => {
 
     const { author, social } = data.site.siteMetadata;
     return (
-        <Wrapper>
-            <Image
-                fixed={data.avatar.childImageSharp.fixed}
-                alt={author}
-                style={{
-                    marginRight: rhythm(1 / 2),
-                    marginBottom: 0,
-                    minWidth: 50,
-                    borderRadius: `100%`,
-                }}
-                imgStyle={{
-                    borderRadius: `50%`,
-                }}
-            />
-            <p>
+        <S.Wrapper>
+            <S.Paragraph>
                 Escrito por <strong>{author}</strong> estudante de Ciência da
                 Computação na UNIFAVIP, Desenvolvedor Front-end.
-                {` `}
-                <br />
-                <a
-                    href={`https://twitter.com/${social.twitter}`}
-                    target={`_blank`}
-                    rel={`noopener noreferrer`}
-                >
-                    Saber mais, segue no Twitter.
-                </a>
-                <br />
-                <br />
+            </S.Paragraph>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda accusamus enim voluptatem, illo dolore, voluptate nihil excepturi, aut facilis consequatur facere perspiciatis obcaecati exercitationem ad eaque consequuntur sapiente ullam! Harum!
             </p>
-        </Wrapper>
+        </S.Wrapper>
     );
 };
 

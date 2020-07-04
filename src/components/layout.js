@@ -74,6 +74,8 @@ const Layout = ({ location, title, children }) => {
                 }
                 fontColor={state.isDark ? theme.dark.font : theme.light.font}
                 borderColor={state.isDark ? theme.dark.font : theme.light.font}
+                links={state.isDark ? theme.dark.links : theme.light.links}
+                lhover={state.isDark ? theme.dark.links_hover : theme.light.links_hover}
             />
             <Wrapper>
                 <header>

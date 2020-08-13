@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: ${rhythm(2.5)};
+    text-align: center;
 `;
 
 export const Paragraph = styled.p`
@@ -12,4 +13,5 @@ export const Paragraph = styled.p`
     font-size: 36px;
     line-height: 54px;
     text-transform: uppercase;
+    text-align: center;
 `;

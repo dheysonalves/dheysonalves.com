@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
-export const Navigation = styled.nav``;
-
-export const Header = styled.header`
+export const Navigation = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    overflow: hidden;
+`;
+
+export const Header = styled.header`
 `;
 
 export const Menu = styled.ul`

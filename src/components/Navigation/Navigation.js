@@ -19,8 +19,10 @@ const Navigation = () => {
 
     return (
         <S.Header>
-            <Link to="/">Dheyson Alves</Link>
             <S.Navigation>
+                <div>
+                    <Link to="/">Dheyson Alves</Link>
+                </div>
                 <S.Menu>
                     <S.MenuItem>
                         <a

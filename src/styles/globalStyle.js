@@ -17,10 +17,15 @@ const GlobalStyle = createGlobalStyle`
   a {
         color: ${props => props.links};
         text-decoration: none;
+        box-shadow: 0 0 0 0 currentColor;
     }
 
     a:hover {
         color: ${props => props.lhover};
+    }
+
+    ul {
+      margin: 0;
     }
 
 `;

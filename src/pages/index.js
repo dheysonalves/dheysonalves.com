@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 import { useTheme } from 'styled-components';
 import Bio from '../components/Biograph/bio';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import SEO from '../components/Seo/Seo';
 import { rhythm } from '../utils/typography';
 import GlobalStyle from '../styles/globalStyle';
 import Context from '../store/context.store';

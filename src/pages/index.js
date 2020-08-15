@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Bio from '../components/Bio/bio';
-import Layout from '../components/Layout/layout';
-import SEO from '../components/seo';
+import { useTheme } from 'styled-components';
+import Bio from '../components/Biograph/bio';
+import Layout from '../components/layout';
+import SEO from '../components/Seo/Seo';
 import { rhythm } from '../utils/typography';
 
 export const pageQuery = graphql`

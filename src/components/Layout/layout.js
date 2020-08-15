@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, Fragment } from 'react';
 import { Link } from 'gatsby';
 import styled, { useTheme } from 'styled-components';
 import Navbar from './Navigation/Navigation';
 // import Menu from "./menu"
-import Footer from './Footer/footer';
-import { rhythm, scale } from '../../utils/typography';
-import GlobalStyle from '../../styles/globalStyle';
-import Context from '../../store/context.store';
+import Footer from './footer';
+import { rhythm, scale } from '../utils/typography';
+import GlobalStyle from '../styles/globalStyle';
+import Context from '../store/context.store';
 
 const Wrapper = styled.div`
     margin: 0 auto;
@@ -18,6 +18,8 @@ const Head1 = styled.h1`
     ${scale(1.5)};
     margin-bottom: ${rhythm(1.5)};
     margin-top: 0;
+    text-shadow: 0px 4px 15px rgba(87, 136, 108, 0.5);
+    text-align: center;
 `;
 
 const Head3 = styled.h3`
@@ -29,6 +31,8 @@ const Head3 = styled.h3`
 const Layout = ({ location, title, children }) => {
     const rootPath = `${__PATH_PREFIX__}/`;
     let header;
+    const { state } = useContext(Context);
+    const theme = useTheme();
 
     const { state } = useContext(Context);
     const theme = useTheme();
@@ -66,7 +70,7 @@ const Layout = ({ location, title, children }) => {
         );
     }
     return (
-        <>
+        <Fragment>
             <GlobalStyle
                 background={
                     state.isDark
@@ -75,6 +79,8 @@ const Layout = ({ location, title, children }) => {
                 }
                 fontColor={state.isDark ? theme.dark.font : theme.light.font}
                 borderColor={state.isDark ? theme.dark.font : theme.light.font}
+                links={state.isDark ? theme.dark.links : theme.light.links}
+                lhover={state.isDark ? theme.dark.links_hover : theme.light.links_hover}
             />
             <Wrapper>
                 <header>
@@ -84,7 +90,7 @@ const Layout = ({ location, title, children }) => {
                 <main>{children}</main>
                 <Footer />
             </Wrapper>
-        </>
+        </Fragment>
     );
 };
 

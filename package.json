@@ -37,12 +37,14 @@
     "react-icons": "^3.10.0",
     "react-typography": "^0.16.19",
     "styled-components": "^5.1.1",
+    "styled-reset": "^4.2.0",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "plop": "^2.7.4",
     "prettier": "^1.18.2"
   },
   "homepage": "https://github.com/Dheyson/personal-blog/blob/master/README.md",
@@ -63,6 +65,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
+    "generate":"yarn plop --plopfile ./generators/plopfile.js",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   }

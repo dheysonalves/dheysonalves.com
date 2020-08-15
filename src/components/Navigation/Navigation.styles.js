@@ -20,7 +20,7 @@ export const Menu = styled.ul`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: #fff;
+        background: ${props => props.color || '#fff'};
         height: 100vh;
         text-align: left;
         padding: 2rem;
@@ -37,7 +37,7 @@ export const Menu = styled.ul`
             padding: 2rem 0;
             font-weight: bold;
             letter-spacing: 0.5rem;
-            color: #363636;
+            color: ${props => props.link || '#363636'};
             text-decoration: none;
             transition: color 0.3s linear;
 

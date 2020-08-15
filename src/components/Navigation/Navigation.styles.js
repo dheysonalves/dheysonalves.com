@@ -6,6 +6,18 @@ export const Navigation = styled.nav`
     align-items: center;
 `;
 
+export const Title = styled.h2`
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #DADADA;
+    /* text-shadow: 0px 4px 15px rgba(87, 136, 108, 0.5); */
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+`;
+
 export const Header = styled.header``;
 
 export const Menu = styled.ul`

@@ -21,9 +21,9 @@ const Navigation = () => {
     return (
         <S.Header>
             <S.Navigation>
-                <div>
-                    <Link to="/">Dheyson Alves</Link>
-                </div>
+                <S.Title>
+                    <Link to="/" links="#DADADA">DHEYSON ALVES</Link>
+                </S.Title>
                 <S.Menu open={isOpen} color={state.isDark ? '#292F36' : '#fff'} link={state.isDark ? '#fff' : '#363636'}>
                     <S.MenuItem>
                         <a

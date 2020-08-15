@@ -36,13 +36,13 @@ const Bio = () => {
     const { author, social } = data.site.siteMetadata;
     return (
         <S.Wrapper>
-            <S.Paragraph>
+            <S.Title>
                 Escrito por <strong>{author}</strong> estudante de Ciência da
                 Computação na UNIFAVIP, Desenvolvedor Front-end.
-            </S.Paragraph>
-            <p>
+            </S.Title>
+            <S.Paragraph>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda accusamus enim voluptatem, illo dolore, voluptate nihil excepturi, aut facilis consequatur facere perspiciatis obcaecati exercitationem ad eaque consequuntur sapiente ullam! Harum!
-            </p>
+            </S.Paragraph>
         </S.Wrapper>
     );
 };

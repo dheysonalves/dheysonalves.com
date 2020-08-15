@@ -1,54 +1,17 @@
 import React, { useState, useContext, useCallback } from 'react';
 // import { rhythm } from "../utils/typography"
-import styled from 'styled-components';
+import { useTheme } from 'styled-components';
 import Context from '../../../store/context.store';
 import { Link } from 'gatsby';
 import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
-
-const Header = styled.header`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 20px;
-    overflow: hidden;
-
-    body,
-    ul,
-    li {
-        padding: 0;
-        margin: 0;
-    }
-
-    a {
-        color: ${props => props.links};
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: gray;
-    }
-
-    .menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-    }
-
-    .menu li {
-        margin-left: 10px;
-    }
-
-    .menu li a {
-        display: block;
-        padding: 10px;
-    }
-`;
+import Burger from '../Burger/Burger';
+import * as S from './Navigation.styles';
 
 const Navigation = () => {
     const [iconState, setIconState] = useState();
+    const [isOpen, setIsOpen] = useState(false);
     const { state, dispatch } = useContext(Context);
+    const theme = useTheme();
 
     const dispatching = useCallback(() => {
         setIconState(!iconState);
@@ -56,11 +19,13 @@ const Navigation = () => {
     }, [dispatch, iconState]);
 
     return (
-        <Header>
-            <Link to="/">Dheyson Alves</Link>
-            <nav>
-                <ul className="menu">
-                    <li>
+        <S.Header>
+            <S.Navigation>
+                <S.Title>
+                    <Link to="/" links="#DADADA">DHEYSON ALVES</Link>
+                </S.Title>
+                <S.Menu open={isOpen} color={state.isDark ? '#292F36' : '#fff'} link={state.isDark ? '#fff' : '#363636'}>
+                    <S.MenuItem>
                         <a
                             href="https://dheyson10.gitbook.io/breakpoint/"
                             title="Portfolio"
@@ -69,8 +34,8 @@ const Navigation = () => {
                         >
                             Doc
                         </a>
-                    </li>
-                    <li>
+                    </S.MenuItem>
+                    <S.MenuItem>
                         <a
                             href="https://github.com/Dheyson"
                             title="Portfolio"
@@ -79,26 +44,25 @@ const Navigation = () => {
                         >
                             Portfolio
                         </a>
-                    </li>
-                    <li>
+                    </S.MenuItem>
+                    <S.MenuItem>
                         <Link to="/sobre/">Sobre</Link>
-                    </li>
-                    <li>
-                        {state.isDark ? (
-                            <FaRegLightbulb
-                                onClick={() => dispatching()}
-                                size={32}
-                            />
-                        ) : (
-                            <FaLightbulb
-                                size={32}
-                                onClick={() => dispatching()}
-                            />
-                        )}
-                    </li>
-                </ul>
-            </nav>
-        </Header>
+                    </S.MenuItem>
+                </S.Menu>
+                <div>
+                    <Burger
+                        color={state.isDark ? '#fff' : '#363636'}
+                        open={isOpen}
+                        setOpen={setIsOpen}
+                    />
+                </div>
+                {state.isDark ? (
+                    <FaRegLightbulb onClick={() => dispatching()} size={32} />
+                ) : (
+                    <FaLightbulb size={32} onClick={() => dispatching()} />
+                )}
+            </S.Navigation>
+        </S.Header>
     );
 };
 

@@ -10,15 +10,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import { rhythm } from '../../utils/typography';
-<<<<<<< HEAD:src/components/Bio/bio.js
-
-const Wrapper = styled.div`
-    display: flex;
-    margin-bottom: ${rhythm(2.5)};
-`;
-=======
 import * as S from './styles.js';
->>>>>>> 9f5cdb61175cd8d9e44d3bae2211f9399c7a2057:src/components/Biograph/bio.js
 
 const Bio = () => {
     const data = useStaticQuery(graphql`

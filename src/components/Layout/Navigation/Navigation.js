@@ -22,9 +22,23 @@ const Navigation = () => {
         <S.Header>
             <S.Navigation>
                 <S.Title>
-                    <Link to="/" links="#DADADA">DHEYSON ALVES</Link>
+                    <Link to="/" links="#DADADA">
+                        DHEYSON ALVES
+                    </Link>
                 </S.Title>
-                <S.Menu open={isOpen} color={state.isDark ? '#292F36' : '#fff'} link={state.isDark ? '#fff' : '#363636'}>
+                <S.Menu
+                    open={isOpen}
+                    color={state.isDark ? '#292F36' : '#fff'}
+                    link={state.isDark ? '#fff' : '#363636'}
+                >
+                    <S.MenuItem>
+                        <a
+                            href="/"
+                            title="Home"
+                        >
+                            Home
+                        </a>
+                    </S.MenuItem>
                     <S.MenuItem>
                         <a
                             href="https://dheyson10.gitbook.io/breakpoint/"

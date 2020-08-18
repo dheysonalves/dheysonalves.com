@@ -1,9 +1,15 @@
 import styled from 'styled-components';
+import { rhythm, scale } from '../../../utils/typography';
+
+export const Header = styled.header`
+`;
+
 
 export const Navigation = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 100%;
 `;
 
 export const Title = styled.h2`
@@ -18,8 +24,6 @@ export const Title = styled.h2`
     padding: 0;
 `;
 
-export const Header = styled.header``;
-
 export const Menu = styled.ul`
     display: flex;
     justify-content: center;
@@ -27,6 +31,7 @@ export const Menu = styled.ul`
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 50%;
 
     @media (max-width: 768px) {
         display: flex;
@@ -54,17 +59,25 @@ export const Menu = styled.ul`
             transition: color 0.3s linear;
 
             &:hover {
-                color: #ff6100;
+                color: #57886C;
+            }
+            &:active {
+                color: #57886C;
+            }
+            &:focus {
+                color: #57886C;
             }
         }
     }
 `;
 
 export const MenuItem = styled.li`
-    margin-left: 10px;
-
-    a {
         display: block;
         padding: 10px;
+        text-transform: uppercase;
+
+        &:active {
+            text-decoration: underline;
+        }
     }
 `;

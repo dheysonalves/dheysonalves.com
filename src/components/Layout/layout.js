@@ -8,25 +8,7 @@ import { rhythm, scale } from '../../utils/typography';
 import GlobalStyle from '../../styles/globalStyle';
 import Context from '../../store/context.store';
 
-const Wrapper = styled.div`
-    margin: 0 auto;
-    max-width: ${rhythm(30)};
-    padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
-`;
-
-const Head1 = styled.h1`
-    ${scale(1.5)};
-    margin-bottom: ${rhythm(1.5)};
-    margin-top: 0;
-    text-shadow: 0px 4px 15px rgba(87, 136, 108, 0.5);
-    text-align: center;
-`;
-
-const Head3 = styled.h3`
-    font-family: Montserrat, sans-serif;
-    margin-top: 0;
-    max-width: ${rhythm(50)};
-`;
+import * as S from './layout.styles'
 
 const Layout = ({ location, title, children }) => {
     const rootPath = `${__PATH_PREFIX__}/`;
@@ -36,7 +18,7 @@ const Layout = ({ location, title, children }) => {
 
     if (location.pathname === rootPath) {
         header = (
-            <Head1>
+            <S.Head1>
                 <Link
                     style={{
                         boxShadow: `none`,
@@ -48,11 +30,11 @@ const Layout = ({ location, title, children }) => {
                 >
                     {title}
                 </Link>
-            </Head1>
+            </S.Head1>
         );
     } else {
         header = (
-            <Head3>
+            <S.Head3>
                 <Link
                     style={{
                         boxShadow: `none`,
@@ -63,7 +45,7 @@ const Layout = ({ location, title, children }) => {
                 >
                     {title}
                 </Link>
-            </Head3>
+            </S.Head3>
         );
     }
     return (
@@ -79,14 +61,13 @@ const Layout = ({ location, title, children }) => {
                 links={state.isDark ? theme.dark.links : theme.light.links}
                 lhover={state.isDark ? theme.dark.links_hover : theme.light.links_hover}
             />
-            <Wrapper>
+            <S.Wrapper>
                 <header>
-                    <Navbar />
-                    {header}
+                <Navbar />
                 </header>
-                <main>{children}</main>
+                <S.Main>{children}</S.Main>
                 <Footer />
-            </Wrapper>
+            </S.Wrapper>
         </Fragment>
     );
 };

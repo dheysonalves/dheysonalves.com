@@ -37,8 +37,7 @@ const Bio = () => {
     return (
         <S.Wrapper>
             <S.Title>
-                Escrito por <strong>{author}</strong> estudante de Ciência da
-                Computação na UNIFAVIP, Desenvolvedor Front-end.
+            Software developer and computer science student.
             </S.Title>
             <S.Paragraph>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda accusamus enim voluptatem, illo dolore, voluptate nihil excepturi, aut facilis consequatur facere perspiciatis obcaecati exercitationem ad eaque consequuntur sapiente ullam! Harum!

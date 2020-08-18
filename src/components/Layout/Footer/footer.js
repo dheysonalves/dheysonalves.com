@@ -2,30 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
-
-const IconsWrapper = styled.div`
-    margin-top: 10px;
-
-    a {
-        color: #ff6100;
-        text-decoration: none;
-
-        :hover {
-            color: #363636;
-        }
-
-        :active {
-            color: #000007;
-        }
-    }
-    .anchor__specific {
-        padding-left: 10px;
-    }
-`;
+import * as S from './footer.styles';
 
 const Footer = () => {
     return (
-        <footer>
+        <S.Footer>
             © {new Date().getFullYear()}, Construido com
             {` `}
             <a
@@ -43,7 +24,7 @@ const Footer = () => {
             >
                 React
             </a>
-            <IconsWrapper>
+            <S.IconsWrapper>
                 <a
                     href="https://www.linkedin.com/in/dheysonalvess/"
                     target="_blank"
@@ -59,8 +40,8 @@ const Footer = () => {
                 >
                     <IoLogoGithub size="2em" />{' '}
                 </a>
-            </IconsWrapper>
-        </footer>
+            </S.IconsWrapper>
+        </S.Footer>
     );
 };
 

@@ -30,15 +30,15 @@ const GlobalStyle = createGlobalStyle`
     .navbar {
       display: flex;
       align-items: center;
+      background-color: ${props => props.scroll};
       justify-content: space-between;
-      padding: 0.5rem 2.5rem;
+      padding: 2rem 2.5rem;
       position: absolute;
       z-index: 1;
       width: 100%;
 }
 
     .navbar-sticky {
-      background: #333;
       position: fixed;
       top: 0;
       left: 0;

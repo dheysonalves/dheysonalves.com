@@ -42,7 +42,7 @@ export const Menu = styled.ul`
     margin: 0;
     width: 50%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1279px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -100,21 +100,4 @@ export const MenuItem = styled.li`
             &:focus {
                 color: #57886C;
             }
-`;
-
-const rotate = keyframes`
-    0 % {
-        transform: rotateY(360deg);
-    }
-    100 % {
-        transform: rotateY(0rem);
-    }
-`;
-const moveDown = keyframes`
-    from {
-        transform: translateY(-5rem);
-    }
-    to {
-        transform: translateY(0rem);
-    }
 `;

@@ -4,7 +4,6 @@ import styled, { useTheme } from 'styled-components';
 import Navbar from './Navigation/Navigation';
 // import Menu from "./menu"
 import Footer from './Footer/footer';
-import { rhythm, scale } from '../../utils/typography';
 import GlobalStyle from '../../styles/globalStyle';
 import Context from '../../store/context.store';
 import useSticky from '../../hooks/useSticky';
@@ -15,7 +14,7 @@ const Layout = ({ location, title, children }) => {
     let header;
     const { state } = useContext(Context);
     const theme = useTheme();
-    // const { isSticky, element } = useSticky();
+    const { isSticky, element } = useSticky();
 
 
     if (location.pathname === rootPath) {
@@ -61,16 +60,23 @@ const Layout = ({ location, title, children }) => {
                 fontColor={state.isDark ? theme.dark.font : theme.light.font}
                 borderColor={state.isDark ? theme.dark.font : theme.light.font}
                 links={state.isDark ? theme.dark.links : theme.light.links}
-                lhover={state.isDark ? theme.dark.links_hover : theme.light.links_hover}
+                lhover={
+                    state.isDark
+                        ? theme.dark.links_hover
+                        : theme.light.links_hover
+                }
+                scroll={
+                    state.isDark
+                        ? theme.dark.scroll
+                        : theme.light.scroll
+                }
             />
             <S.Wrapper>
                 <header>
-                    <Navbar/>
+                    <Navbar sticky={isSticky} />
                 </header>
-                <S.Main>
-                    {children}
-                </S.Main>
-                <Footer/>
+                <S.Main>{children}</S.Main>
+                <Footer element={element} />
             </S.Wrapper>
         </Fragment>
     );

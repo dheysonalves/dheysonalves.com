@@ -4,7 +4,7 @@ import { rhythm } from '../../utils/typography';
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: ${rhythm(2)};
+    margin-top: ${rhythm(3)};
     margin-bottom: ${rhythm(2)};
     text-align: center;
 `;

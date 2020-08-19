@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledBurger = styled.button`
     display: none;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1179px) {
         position: absolute;
         top: 6.5%;
         right: 5rem;

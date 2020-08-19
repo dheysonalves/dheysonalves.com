@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 import * as S from './footer.styles';
 
-const Footer = () => {
+const Footer = ({element}) => {
     return (
-        <S.Footer>
+        <S.Footer ref={element}>
             © {new Date().getFullYear()}, Construido com
             {` `}
             <a

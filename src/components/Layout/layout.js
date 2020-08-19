@@ -7,7 +7,7 @@ import Footer from './Footer/footer';
 import { rhythm, scale } from '../../utils/typography';
 import GlobalStyle from '../../styles/globalStyle';
 import Context from '../../store/context.store';
-
+import useSticky from '../../hooks/useSticky';
 import * as S from './layout.styles'
 
 const Layout = ({ location, title, children }) => {
@@ -15,6 +15,8 @@ const Layout = ({ location, title, children }) => {
     let header;
     const { state } = useContext(Context);
     const theme = useTheme();
+    // const { isSticky, element } = useSticky();
+
 
     if (location.pathname === rootPath) {
         header = (
@@ -63,10 +65,12 @@ const Layout = ({ location, title, children }) => {
             />
             <S.Wrapper>
                 <header>
-                <Navbar />
+                    <Navbar/>
                 </header>
-                <S.Main>{children}</S.Main>
-                <Footer />
+                <S.Main>
+                    {children}
+                </S.Main>
+                <Footer/>
             </S.Wrapper>
         </Fragment>
     );

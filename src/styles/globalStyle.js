@@ -27,6 +27,42 @@ const GlobalStyle = createGlobalStyle`
       margin: 0;
     }
 
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 2.5rem;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+}
+
+    .navbar-sticky {
+      background: #333;
+      position: fixed;
+      top: 0;
+      left: 0;
+      box-shadow: 1px 1px 1px #222;
+      animation: moveDown 0.5s ease-in-out;
+    }
+
+    @keyframes moveDown {
+      from {
+        transform: translateY(-5rem);
+      }
+      to {
+        transform: translateY(0rem);
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotateY(360deg);
+      }
+      100% {
+        transform: rotateY(0rem);
+      }
+    }
 `;
 
 export default GlobalStyle;

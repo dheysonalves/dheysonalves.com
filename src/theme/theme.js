@@ -7,7 +7,7 @@ export const theme = {
     },
     dark: {
         font: '#ffffff',
-        background: '#292F36',
+        background: '#16191E',
         links: '#57886C',
         links_hover: '#AEFFD8',
     },

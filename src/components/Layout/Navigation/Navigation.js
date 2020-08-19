@@ -7,7 +7,7 @@ import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
 import Burger from '../Burger/Burger';
 import * as S from './Navigation.styles';
 
-const Navigation = () => {
+const Navigation = ({ sticky }) => {
     const [iconState, setIconState] = useState();
     const [isOpen, setIsOpen] = useState(false);
     const { state, dispatch } = useContext(Context);
@@ -20,11 +20,9 @@ const Navigation = () => {
 
     return (
         <S.Header>
-            <S.Navigation>
+            <S.Navigation className={sticky ? 'navbar navbar-sticky' : ''}>
                 <S.Title>
-                    <Link to="/" links="#DADADA">
                         DHEYSON ALVES
-                    </Link>
                 </S.Title>
                 <S.Menu
                     open={isOpen}
@@ -37,6 +35,14 @@ const Navigation = () => {
                             title="Home"
                         >
                             Home
+                        </a>
+                    </S.MenuItem>
+                    <S.MenuItem>
+                        <a
+                            href="/"
+                            title="Home"
+                        >
+                            Blog
                         </a>
                     </S.MenuItem>
                     <S.MenuItem>
@@ -60,7 +66,7 @@ const Navigation = () => {
                         </a>
                     </S.MenuItem>
                     <S.MenuItem>
-                        <Link to="/sobre/">Sobre</Link>
+                        <Link to="/sobre/">About</Link>
                     </S.MenuItem>
                 </S.Menu>
                 <div>

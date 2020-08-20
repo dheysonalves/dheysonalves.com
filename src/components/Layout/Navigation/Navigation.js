@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
 import Burger from '../Burger/Burger';
 import * as S from './Navigation.styles';
+import Layout from '../../components/Layout/layout';
 
 const Navigation = ({ sticky }) => {
     const [iconState, setIconState] = useState();
@@ -48,7 +49,7 @@ const Navigation = ({ sticky }) => {
                     <S.MenuItem>
                         <a
                             href="https://dheyson10.gitbook.io/breakpoint/"
-                            title="Portfolio"
+                            title="Doc"
                             target={`_blank`}
                             rel={`noopener noreferrer`}
                         >
@@ -66,7 +67,7 @@ const Navigation = ({ sticky }) => {
                         </a>
                     </S.MenuItem>
                     <S.MenuItem>
-                        <Link to="/sobre/">About</Link>
+                        <Link to="/about/about">About</Link>
                     </S.MenuItem>
                 </S.Menu>
                 <div>

@@ -21,7 +21,7 @@ const Navigation = ({ sticky }) => {
     return (
         <S.Header>
             <S.Navigation className={sticky ? 'navbar navbar-sticky' : ''}>
-                <S.Title>
+                <S.Title color={sticky && state.isDark ? '#363636' : ''}>
                         DHEYSON ALVES
                 </S.Title>
                 <S.Menu
@@ -76,11 +76,13 @@ const Navigation = ({ sticky }) => {
                         setOpen={setIsOpen}
                     />
                 </div>
+
                 {state.isDark ? (
                     <FaRegLightbulb onClick={() => dispatching()} size={32} />
                 ) : (
                     <FaLightbulb size={32} onClick={() => dispatching()} />
                 )}
+
             </S.Navigation>
         </S.Header>
     );

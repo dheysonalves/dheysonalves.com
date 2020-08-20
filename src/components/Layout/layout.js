@@ -1,13 +1,14 @@
 import React, { useContext, Fragment } from 'react';
 import { Link } from 'gatsby';
-import styled, { useTheme } from 'styled-components';
+import { useTheme } from 'styled-components';
 import Navbar from './Navigation/Navigation';
 // import Menu from "./menu"
 import Footer from './Footer/footer';
+import Main from './Main/index';
 import GlobalStyle from '../../styles/globalStyle';
 import Context from '../../store/context.store';
 import useSticky from '../../hooks/useSticky';
-import * as S from './layout.styles'
+import * as S from './layout.styles';
 
 const Layout = ({ location, title, children }) => {
     const rootPath = `${__PATH_PREFIX__}/`;
@@ -68,15 +69,13 @@ const Layout = ({ location, title, children }) => {
                 scroll={
                     state.isDark
                         ? theme.dark.scroll
-                        : theme.light.scroll
+                        : theme.dark.scroll
                 }
             />
             <S.Wrapper>
-                <header>
-                    <Navbar sticky={isSticky} />
-                </header>
-                <S.Main>{children}</S.Main>
-                <Footer element={element} />
+                <Navbar sticky={isSticky} />
+                <Main element={element}>{children}</Main>
+                <Footer />
             </S.Wrapper>
         </Fragment>
     );

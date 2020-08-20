@@ -29,6 +29,7 @@ export const Title = styled.h2`
     text-shadow: 0px 4px 15px rgba(87, 136, 108, 0.5);
     text-transform: uppercase;
     text-decoration: underline;
+    color: ${props => props.color};
     margin: 0;
     padding: 0;
 `;

@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
 import Burger from '../Burger/Burger';
 import * as S from './Navigation.styles';
-import Layout from '../../components/Layout/layout';
+import Layout from '../../Layout/layout';
 
 const Navigation = ({ sticky }) => {
     const [iconState, setIconState] = useState();
@@ -40,8 +40,8 @@ const Navigation = ({ sticky }) => {
                     </S.MenuItem>
                     <S.MenuItem>
                         <a
-                            href="/"
-                            title="Home"
+                            href="/Blog/Blog"
+                            title="Blog"
                         >
                             Blog
                         </a>

@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import { rhythm, scale } from '../../utils/typography';
 
-export const Main = styled.main`
-	max-width: ${rhythm(20)};
-	margin: 0 auto;
-`;
-
 export const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
     margin: 0 auto;
     max-width: ${rhythm(100)};
     padding: ${rhythm(1.5)} ${rhythm(3 / 4)};

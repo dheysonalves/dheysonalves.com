@@ -10,46 +10,13 @@ import Context from '../../store/context.store';
 import useSticky from '../../hooks/useSticky';
 import * as S from './layout.styles';
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ title, children, max, autow }) => {
     const rootPath = `${__PATH_PREFIX__}/`;
     let header;
     const { state } = useContext(Context);
     const theme = useTheme();
     const { isSticky, element } = useSticky();
 
-
-    if (location.pathname === rootPath) {
-        header = (
-            <S.Head1>
-                <Link
-                    style={{
-                        boxShadow: `none`,
-                        textDecoration: `none`,
-                        color: `inherit`,
-                        fontSize: 46,
-                    }}
-                    to={`/`}
-                >
-                    {title}
-                </Link>
-            </S.Head1>
-        );
-    } else {
-        header = (
-            <S.Head3>
-                <Link
-                    style={{
-                        boxShadow: `none`,
-                        textDecoration: `none`,
-                        color: `inherit`,
-                    }}
-                    to={`/`}
-                >
-                    {title}
-                </Link>
-            </S.Head3>
-        );
-    }
     return (
         <Fragment>
             <GlobalStyle
@@ -74,7 +41,7 @@ const Layout = ({ location, title, children }) => {
             />
             <S.Wrapper>
                 <Navbar sticky={isSticky} />
-                <Main element={element}>{children}</Main>
+                <Main element={element} max={max} autow={autow}>{children}</Main>
                 <Footer />
             </S.Wrapper>
         </Fragment>

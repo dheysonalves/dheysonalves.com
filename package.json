@@ -59,7 +59,9 @@
     "blog",
     "react",
     "javascript",
-    "gatsby"
+    "gatsby",
+    "portfolio",
+    "development"
   ],
   "license": "MIT",
   "main": "https://github.com/Dheyson/personal-blog",

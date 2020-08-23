@@ -10,7 +10,7 @@ export const Button = styled.button`
 	width: 200px;
 	cursor: pointer;
 	outline: none;
-
+	z-index: 0;
 	:disabled {
 		opacity: 0.5;
 	}

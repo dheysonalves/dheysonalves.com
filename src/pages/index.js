@@ -8,6 +8,8 @@ import { rhythm, scale } from '../utils/typography';
 import * as S from './index.styles';
 import Svg from '../assets/svg/ellipse.svg';
 
+import CardList from '../components/CardList';
+
 const Index = () => {
     return (
         <Layout max={rhythm(100)} mw={true}>
@@ -24,6 +26,8 @@ const Index = () => {
                     <FiArrowDown size={54} />
                 </S.IconWrapper>
             </S.Wrapper>
+            <CardList />
+            <CardList />
         </Layout>
     );
 };

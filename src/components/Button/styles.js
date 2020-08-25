@@ -10,9 +10,21 @@ export const Button = styled.button`
 	width: 200px;
 	cursor: pointer;
 	outline: none;
-	z-index: 0;
+
 	:disabled {
 		opacity: 0.5;
+	}
+
+	:hover {
+		background-color: #AEFFD8;
+	}
+
+	:active {
+		background-color: #57886C;
+	}
+
+	:focus {
+		background-color: #57886C;
 	}
 `;
 

@@ -4,7 +4,7 @@ import * as S from './styles';
 const Button = ({ text = 'Submit' }) => {
 	return (
 		<S.Wrapper>
-			<S.Button title="ok" disabled>
+			<S.Button title="ok">
 				<S.LabelButton>
 					{text}
 				</S.LabelButton>

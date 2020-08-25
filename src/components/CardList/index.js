@@ -3,7 +3,6 @@ import React, { useEffect, useCallback, useState} from 'react';
 import * as S from './styles';
 
 import Card from '../Card';
-import Pagination from '../../utils/pagination';
 
 const values = [
 	{

@@ -5,6 +5,7 @@ import * as S from './styles';
 import Image from '../Image/index';
 import Title from '../Title/index';
 import Subtitle from '../Subtitle/index';
+import Ships from '../Ships/index';
 
 import { AiFillGithub, AiFillEye } from "react-icons/ai";
 
@@ -17,7 +18,12 @@ const Card = ({ margin, ...data }) => {
 			<Title>
 				{title}
 			</Title>
-			<Subtitle>
+			<S.ShipsWrapper>
+				<Ships label="React" color="#00C2FF" labelColor="#292F36"/>
+				<Ships label="Javascript" color="#EBFF00" labelColor="#292F36" />
+				<Ships label="Nodejs" color="#00FF0A" labelColor="#292F36" />
+			</S.ShipsWrapper>
+			<Subtitle align="none">
 				{subtitle}
 			</Subtitle>
 			<S.IconsWrapper>

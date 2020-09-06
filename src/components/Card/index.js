@@ -9,7 +9,6 @@ import Ships from '../Ships/index';
 
 import { AiFillGithub, AiFillEye } from "react-icons/ai";
 
-
 const Card = ({ margin, ...data }) => {
 	const { title, subtitle, github, linkedin, photo } = data;
 	return (

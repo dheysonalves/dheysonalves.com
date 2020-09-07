@@ -4,6 +4,7 @@ import { rhythm, scale } from '../../../utils/typography';
 export const Footer = styled.footer`
 	max-width: ${rhythm(20)};
 	margin: 0 auto;
+    text-align: center;
 `;
 
 export const IconsWrapper = styled.div`

@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
 	justify-content: space-between;
 	align-items: flex-start;
 	margin: ${props => props.margin + 'px'};
-	width: 230px;
 `;
 
 export const IconsWrapper = styled.div`

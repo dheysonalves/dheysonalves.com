@@ -28,7 +28,7 @@ module.exports = function (plop) {
             {
                 type: 'add',
                 path: '../src/components/{{ pascalCase name }}/stories.js',
-                templateFile: 'templates/stories.js.hbs',
+                templateFile: 'templates/index.stories.js.hbs',
             },
         ],
     });

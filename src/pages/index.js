@@ -17,8 +17,8 @@ const Index = () => {
                 {/* <S.ImageWrapper src={Svg} width="100%" height="auto" /> */}
                 <S.Title>
                     Software developer,
-                working to build great <S.EnphasisText>
-                        products with quality.
+                    working to build great <S.EnphasisText>
+                    products with quality.
                 </S.EnphasisText>
                 </S.Title>
                 <Button text="Reach Me" />
@@ -26,7 +26,6 @@ const Index = () => {
                     <FiArrowDown size={54} />
                 </S.IconWrapper>
             </S.Wrapper>
-            <CardList />
             <CardList />
         </Layout>
     );

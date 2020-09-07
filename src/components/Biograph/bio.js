@@ -39,8 +39,9 @@ const Bio = () => {
             <S.Title>
             Software developer and computer science student.
             </S.Title>
+            <br/>
             <S.Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda accusamus enim voluptatem, illo dolore, voluptate nihil excepturi, aut facilis consequatur facere perspiciatis obcaecati exercitationem ad eaque consequuntur sapiente ullam! Harum!
+                Software developer, Roleplay Tabletop player at Roll20, weekend video game player, comic book reader, loves to create and design fantasy stories for my rpg adventures.
             </S.Paragraph>
         </S.Wrapper>
     );

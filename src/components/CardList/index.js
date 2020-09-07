@@ -4,6 +4,8 @@ import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import * as S from './styles';
 
 import Card from '../Card';
+import Select from '../Select';
+import Input from '../Input';
 
 const values = [
 	{
@@ -57,10 +59,17 @@ const CardList = () => {
 	return (
 		<S.Container>
 			<S.FilterContainer>
-				<span>a</span>
-				<span>a</span>
-				<span>a</span>
-				<span>a</span>
+				<div></div>
+				<div>
+					<Select height="100px" />
+					<Select height="100px" />
+					<Select height="100px" />
+					<Input
+						padding="10px"
+						radius="0px"
+						height="100px"
+					/>
+				</div>
 			</S.FilterContainer>
 			<S.Pagination>
 				<S.PaginationTitle>All repositories (100)</S.PaginationTitle>

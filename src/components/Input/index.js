@@ -6,12 +6,13 @@ import * as S from './styles';
 /**
  * Regular input UI component
  */
-const Input = ({ radius, padding, background, color, ...props }) => {
+const Input = ({ radius, height, background, color, borderColor, ...props }) => {
     return (
         <S.Input
             radius={radius}
-            padding={padding}
-			background={background}
+            height={height}
+            background={background}
+            borderColor={borderColor}
 			color={color}
             placeholder="Type something"
             {...props}
@@ -21,9 +22,9 @@ const Input = ({ radius, padding, background, color, ...props }) => {
 
 Input.propTypes = {
     /**
-     * what is the padding?
+     * what is the height?
      */
-    padding: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired,
     /**
      * what is the radius?
      */
@@ -36,11 +37,16 @@ Input.propTypes = {
      * what is the color?
      */
     color: PropTypes.string,
+    /**
+     * what is the color?
+     */
+    borderColor: PropTypes.string,
 };
 
 Input.defaultProps = {
     radius: '0px',
-    padding: '10px',
+    height: '50px',
+    borderColor: '#000'
 };
 
 export default Input;

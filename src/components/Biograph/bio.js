@@ -7,7 +7,6 @@
 
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
 
 import { rhythm } from '../../utils/typography';
 import * as S from './styles.js';
@@ -33,7 +32,6 @@ const Bio = () => {
         }
     `);
 
-    const { author, social } = data.site.siteMetadata;
     return (
         <S.Wrapper>
             <S.Title>

@@ -8,10 +8,7 @@ import { rhythm, scale } from '../utils/typography';
 import * as S from './index.styles';
 import Svg from '../assets/svg/ellipse.svg';
 
-import CardList from '../components/CardList';
-
-class Index extends React.Component {
-    render() {
+const Index = () => {
         return (
             <Layout max={rhythm(100)} mw={true}>
                 <S.Wrapper>
@@ -33,7 +30,6 @@ class Index extends React.Component {
                 {/* <CardList /> */}
             </Layout>
         );
-    }
-};
+    };
 
 export default Index;

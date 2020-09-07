@@ -40,7 +40,7 @@ const Navigation = ({ sticky }) => {
                     </S.MenuItem>
                     <S.MenuItem>
                         <a
-                            href="/Blog/ArticlesGroup"
+                            href="/Blog/Blog"
                             title="Some articles that I wrote"
                         >
                             Blog

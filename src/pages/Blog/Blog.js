@@ -31,7 +31,7 @@ export const pageQuery = graphql`
     }
 `;
 
-const ArticlesGroup = ({ data, location }) => {
+const Blog = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title;
     const posts = data.allMarkdownRemark.edges;
 
@@ -73,4 +73,4 @@ const ArticlesGroup = ({ data, location }) => {
     );
 };
 
-export default ArticlesGroup;
+export default Blog;

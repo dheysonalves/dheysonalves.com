@@ -40,8 +40,8 @@ const Navigation = ({ sticky }) => {
                     </S.MenuItem>
                     <S.MenuItem>
                         <a
-                            href="/Blog/Blog"
-                            title="Blog"
+                            href="/Blog/ArticlesGroup"
+                            title="Some articles that I wrote"
                         >
                             Blog
                         </a>
@@ -49,26 +49,26 @@ const Navigation = ({ sticky }) => {
                     <S.MenuItem>
                         <a
                             href="https://dheyson10.gitbook.io/breakpoint/"
-                            title="Doc"
+                            title="My personal documentation"
                             target={`_blank`}
                             rel={`noopener noreferrer`}
                         >
-                            Doc
+                            Documentation
                         </a>
                     </S.MenuItem>
                     <S.MenuItem>
                         <a
                             href="https://github.com/Dheyson"
-                            title="Portfolio"
+                            title="My current active projects"
                             target={`_blank`}
                             rel={`noopener noreferrer`}
                         >
                             Portfolio
                         </a>
                     </S.MenuItem>
-                    <S.MenuItem>
+                    {/* <S.MenuItem>
                         <Link to="/about/about">About</Link>
-                    </S.MenuItem>
+                    </S.MenuItem> */}
                 </S.Menu>
                 <div>
                     <Burger

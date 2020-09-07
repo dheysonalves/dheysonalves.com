@@ -7,8 +7,9 @@ export const Navigation = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 0px;
     position: initial;
+    height: 50px;
 
     @media (min-width: 1270px) {
         display: flex;

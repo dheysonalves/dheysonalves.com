@@ -21,12 +21,15 @@ const Index = () => {
                     products with quality.
                 </S.EnphasisText>
                 </S.Title>
-                <Button text="Reach Me" />
-                <S.IconWrapper>
+                <Button text="Reach Me" disabled />
+                <small>
+                    This website is a working in progress. Currently some reported issues are in progress. You can reach me with any social media below.
+                </small>
+                {/* <S.IconWrapper>
                     <FiArrowDown size={54} />
-                </S.IconWrapper>
+                </S.IconWrapper> */}
             </S.Wrapper>
-            <CardList />
+            {/* <CardList /> */}
         </Layout>
     );
 };

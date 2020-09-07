@@ -67,11 +67,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Dheyson Alves - Developer Blog`,
+        name: `Dheyson Alves - a software developer website`,
         short_name: `Dheyson Alves`,
         start_url: `/`,
         background_color: `#D9D9D9`,
-        theme_color: `#663399`,
+        theme_color: `#ff6100`,
         display: `minimal-ui`,
         icon: `content/assets/avatar6.png`,
       },

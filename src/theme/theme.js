@@ -1,4 +1,4 @@
-export default theme = {
+const theme = {
     light: {
         font: '#292F36',
         background: '#ffffff',
@@ -14,3 +14,5 @@ export default theme = {
         scroll: '#ffffff',
     },
 };
+
+export default theme;

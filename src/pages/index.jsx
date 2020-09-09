@@ -5,7 +5,7 @@ import Layout from '../components/Layout/layout';
 import Button from '../components/Button';
 import { rhythm, scale } from '../utils/typography';
 
-import * as S from './index.styles';
+import * as S from './styles';
 import Svg from '../assets/svg/ellipse.svg';
 
 const Index = () => {

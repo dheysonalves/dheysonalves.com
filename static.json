@@ -1,0 +1,7 @@
+{
+	"root": "public/",
+	"encoding": "US-ASCII",
+	"clean_urls": true,
+	"https_only": true
+}
+

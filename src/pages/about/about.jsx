@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout/layout';
 import SEO from '../../components/Seo/Seo';
 
-import * as S from './styles';
+import * as S from '../../styles/about.styles';
 
 const About = ((props) => {
     return (

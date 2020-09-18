@@ -16,10 +16,10 @@ export const Navigation = styled.nav`
         align-items: center;
         justify-content: space-between;
         padding: 0.5rem 3rem 0rem 0rem;
-        position: absolute;
         z-index: 1;
         width: 100%;
     }
+
 `;
 
 export const Title = styled.h2`
@@ -59,6 +59,7 @@ export const Menu = styled.ul`
         transform: ${({ open }) =>
         open ? 'translateX(0)' : 'translateX(-100%)'};
         width: 100%;
+        z-index: 2;
 
         a {
             font-size: 2rem;

@@ -1,10 +1,10 @@
 module.exports = {
   pathPrefix: `/blog`,
   siteMetadata: {
-    title: `Breakpoint`,
+    title: `A personal developer website`,
     author: `Dheyson Alves`,
-    description: `Um blog sobre desenvolvimento e computação.`,
-    siteUrl: `https://dheysonalves-tech.surge.sh`,
+    description: `A developer website about computing and development`,
+    siteUrl: `https://dheyson-personal-website.herokuapp.com/`,
     social: {
       twitter: `DheysonAlves2`,
     },
@@ -13,7 +13,7 @@ module.exports = {
     {
     resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: `https://dheysonalves-tech.surge.sh`,
+        host: `https://dheyson-personal-website.herokuapp.com/`,
       },
     },
     `gatsby-plugin-styled-components`,

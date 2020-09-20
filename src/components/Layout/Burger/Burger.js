@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Burger = ({color, open, setOpen}) => {
 	return (
-		<StyledBurger color={color} open={open} onClick={() => setOpen(!open)}>
+		<StyledBurger color={color} open={open} onClick={() => setOpen(!open)} name="Burger navigation">
 			<div />
 			<div />
 			<div />

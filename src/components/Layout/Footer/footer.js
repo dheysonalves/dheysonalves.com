@@ -13,6 +13,7 @@ const Footer = ({element}) => {
                 href="https://www.gatsbyjs.org"
                 trget="_blank"
                 rel="noopener noreferrer"
+                alt="Gatsby tech"
             >
                 Gatsby
             </a>
@@ -21,6 +22,7 @@ const Footer = ({element}) => {
                 href="https://pt-br.reactjs.org/"
                 target="_blank"
                 rel="noopener noreferrer"
+                alt="React tech"
             >
                 React
             </a>
@@ -29,6 +31,7 @@ const Footer = ({element}) => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
+                alt="Storybook tech"
             >
                 Storybook
             </a>
@@ -37,6 +40,7 @@ const Footer = ({element}) => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
+                alt="GraphQL tech"
             >
                 GraphQL
             </a>
@@ -48,6 +52,7 @@ const Footer = ({element}) => {
                     href="https://www.linkedin.com/in/dheysonalvess/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    alt="Linkedin social media"
                 >
                     <IoLogoLinkedin size="2em" />
                 </a>
@@ -56,6 +61,7 @@ const Footer = ({element}) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="anchor__specific"
+                    alt="social media"
                 >
                     <IoLogoGithub size="2em" />{' '}
                 </a>
@@ -64,6 +70,7 @@ const Footer = ({element}) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="anchor__specific"
+                    alt="Twitter social media"
                 >
                     <IoLogoTwitter size="2em" />{' '}
                 </a>

@@ -37,7 +37,7 @@ const Blog = ({ data, location }) => {
 
     return (
             <Layout location={location} title={siteTitle}>
-                <SEO title="Dheyson Alves - Blog" />
+                <SEO title="Dheyson Alves - Blog" description="Blog about computing and development"/>
                 <Bio />
                 {posts.map(({ node }) => {
                     const title = node.frontmatter.title || node.fields.slug;

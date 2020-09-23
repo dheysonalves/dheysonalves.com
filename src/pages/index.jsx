@@ -13,7 +13,7 @@ import SEO from '../components/Seo/Seo';
 const Index = () => {
     return (
         <Layout max={rhythm(100)} mw={true}>
-            <SEO title="Dheyson Alves" description="A software developer website"/>
+            <SEO title="Dheyson Alves" description="A software developer website, loves programming, sometimes plays with react and in the free time write RPG stories."/>
             <S.Wrapper>
                 {/* <S.ImageWrapper src={Svg} width="100%" height="auto" /> */}
                 <S.Title>

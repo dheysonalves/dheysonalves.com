@@ -36,12 +36,19 @@ function SEO({ description, lang, meta, title }) {
             titleTemplate={`%s | ${site.siteMetadata.title}`}
             meta={[
                 {
+                    charSet: `utf-8`
+                },
+                {
                     name: `description`,
                     content: metaDescription,
                 },
                 {
                     name: `viewport`,
                     content: `width=device-width, initial-scale=1.0`,
+                },
+                {
+                    name: `keywords`,
+                    content: `developer, desenvolvedor, software, software developer, desenvolvedor de software, front-end enginner, dheyson alves, dheyson desenvolvedor, landing page, website, caruaru website, caruaru desenvolvedor, javascript, typescript, reactjs, react native, react, storybook, styled components, css, ciencia da computação, computação, blog`,
                 },
                 {
                     property: `og:title`,
@@ -61,11 +68,15 @@ function SEO({ description, lang, meta, title }) {
                 },
                 {
                     name: `twitter:creator`,
-                    content: site.siteMetadata.author,
+                    content: `@DheysonAlves2`,
                 },
                 {
                     name: `twitter:title`,
                     content: title,
+                },
+                {
+                    name: `twitter:site`,
+                    content: `@DheysonAlves2`,
                 },
                 {
                     name: `twitter:description`,
@@ -79,7 +90,7 @@ function SEO({ description, lang, meta, title }) {
 SEO.defaultProps = {
     lang: `en`,
     meta: [],
-    description: ``,
+    description: `A software developer website, loves programming, sometimes plays with react and in the free time write RPG stories.`,
 };
 
 SEO.propTypes = {

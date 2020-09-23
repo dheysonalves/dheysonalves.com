@@ -2,6 +2,7 @@
 	"root": "public/",
 	"encoding": "US-ASCII",
 	"clean_urls": true,
-	"https_only": true
+	"https_only": true,
+	"error_page": "404.html"
 }
 

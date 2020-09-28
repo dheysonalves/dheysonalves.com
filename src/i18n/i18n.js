@@ -19,9 +19,14 @@ i18n
 	// init i18next
 	// for all options read: https://www.i18next.com/overview/configuration-options
 	.init({
+		whitelist: ['en', 'es', 'pt', 'pt-br'],
 		fallbackLng: 'en',
 		debug: true,
-
+		resources: {
+			en: { translation: require('./en/translation.json') },
+			pt: { translation: require('./pt/translation.json') },
+			es: { translation: require('./es/translation.json') },
+		},
 		interpolation: {
 			escapeValue: false, // not needed for react as it escapes by default
 		}

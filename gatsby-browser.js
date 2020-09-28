@@ -5,7 +5,7 @@ import theme from './src/theme/theme';
 // custom typefaces
 import "typeface-montserrat";
 import "typeface-merriweather";
-import './i18n';
+import './src/i18n';
 
 export const wrapRootElement = ({ element }) => (
 	<GlobalStateProvider>

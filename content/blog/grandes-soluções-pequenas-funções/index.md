@@ -1,7 +1,7 @@
 ---
-title: Grandes funções, pequenas funções
-path: /blog/notitleyet
-date:
+title: Grandes soluções, pequenas funções
+path: /blog/grandes-soluções-pequenas-funções
+date: "2020-10-20T23:12:03.284Z"
 description: "Passei por um desafio interessante recentemente, eu precisava pegar o texto HTML de um editor, realizar uma requisição de um conjunto de palavras, e buscar cada uma delas dentro desse HTML."
 ---
 
@@ -63,9 +63,42 @@ Foi quando precisava de ajuda do RegEX para substituir cada tag HTML interna por
 const htmlStringReplacer = value => value.replace(/<[^>]+>/g, "");
 ```
 
-Com isso, pude substituir cada tag HTML pelo vazio.
+Com isso, pude substituir cada tag HTML por uma string vazia.
 
 #### 3. Pipeline de callbacks
 
 Erick Elliot é um monstro do javascript, ele possui bastante conteúdo sobre Funcional programming e cursos relacionados. Mas comento dele aqui em específico de um vídeo do youtube dele, onde ele comenta sobre a simplicidade do código, o quanto isso é importante.
-E um trecho me chamou atenção, como ele utiliza os reducers.
+E um trecho me chamou atenção, como ele utiliza dos reducers para criar soluções simples.
+```javascript
+  const pipe = (...functions) => value => {
+  return functions.reduce((currentValue, currentFunction) => {
+    return currentFunction(currentValue);
+  }, value);
+};
+```
+O método reducer (`Array<any>.reduce(callbackfn: (previousValue: any, currentValue: any, currentIndex: number, array: any[]) => any, initialValue: any): any`), nos permite reduzir um output para apenas um valor de retorno.
+Nos seus parâmetros, informamos o valor anterior `previousValue` e o valor atual `currentValue`, que neste momento, são informações mais relevantes para nosso cenário.
+Na função `pipe` acima, reduzimos o conjunto de funções com o `spread operator` e tratamos cada resultado da função separadamente, o output anterior da função passada é utilizado como parâmetro da função atual. Como se fosse uma pequena escada, onde subimos cada degrau, um passo de cada vez para chegar a um fim.
+
+Com essa informação, podemos partir para o último passado do nosso desafio.
+
+#### 4. Resultado
+
+```javascript
+  cont data = pipe(htmlStringReplacer, splitString)(html);
+```
+
+As duas primeiras funções realizam o tratamento do dado `html`, onde a ordem importa, pois cada dado é passado, como passo a passo.
+O resultado do dado obtivo vem a seguir:
+
+```javascript
+  ["O", "clínico", "também", "é", "um", "Otorrinolaringologista"]
+```
+
+Que é exatamente que estávamos buscando. Apenas as palavras e sem nenhum vestígio do HTML.
+
+#### 5. Conclusão
+
+O grande ensinamento que retiro do pequeno desafio, é que podemos criar soluções com pequenas funções, e obter ótimos resultados, sem precisar criar elementos complexos, que podem tornar o trabalho confuso. Por hoje é isso, obrigado se leu até aqui.
+<br/>
+Gostou do conteúdo? Compartilha com seus amigo(a)s.

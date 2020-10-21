@@ -3,6 +3,11 @@ import styled from 'styled-components';
 export const Heading = styled.h1`
   margin-top: rhythm(1);
   margin-bottom: 0;
+
+  @media(max-width: 800px) {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
 `;
 
 export const Paragraph = styled.p`

@@ -41,7 +41,7 @@ const Layout = ({ title, children, max, autow }) => {
             />
             <S.Wrapper>
                 <Navbar sticky={isSticky} />
-                <Main element={element} max={max} autow={'0 auto'}>{children}</Main>
+                <Main element={element} max={max} css={{ alignSelf: 'center' }}>{children}</Main>
                 <Footer />
             </S.Wrapper>
         </Fragment>

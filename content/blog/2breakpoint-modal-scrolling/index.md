@@ -11,7 +11,7 @@ description: "Muitas vezes buscamos soluções para o CSS que requerem a ajuda d
 
 Photo by [Kar Ming Moo](https://unsplash.com/@vrnex?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
 
-Muitas vezes buscamos soluções para o CSS que requerem a ajuda do Javascript para funcionalidades customizadas. Mas esquecemos, que nos últimos anos, CSS evoluiu bastante e existem várias novas soluções para problems comuns do CSS, sem a ajuda de uma línguagem.
+Muitas vezes buscamos soluções para o CSS que requerem a ajuda do Javascript para funcionalidades customizadas. Mas esquecemos, que nos últimos anos, CSS evoluiu bastante e existem várias novas soluções para problemas comuns do CSS, sem a ajuda de uma línguagem.
 
 Hoje passei por um problema que me deixou nessa situação, pensei em algumas possibilidades usando Javascript, mas foi o CSS que me salvou desse problema.
 

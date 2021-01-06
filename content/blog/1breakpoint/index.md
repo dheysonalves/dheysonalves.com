@@ -1,5 +1,5 @@
 ---
-title: "breakpoint #1"
+title: "Breakpoint #1 - Front-end Mentors, Arquitetura CSS"
 path: "/blog/1breakpoint"
 date: "2020-05-11T21:12:03.284Z"
 description: "No primeiro breakpoint, hoje aprendi mais sobre o flexbox. Conheci uma plataforma de desafios. Usei do BEM architecture para escrever meu CSS. "

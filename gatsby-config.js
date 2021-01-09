@@ -1,4 +1,5 @@
 module.exports = {
+
   pathPrefix: `/blog`,
   siteMetadata: {
     title: `Um site de desenvolvedor de software/web`,
@@ -11,6 +12,16 @@ module.exports = {
     charSet: `utf8`
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        id: "s9-sdk",
+        async: true,
+        defer: true,
+        content: "f95292bfecf3490b8c41a2217e7c2426",
+        src: "//cdn.social9.com/js/socialshare.min.js"
+      },
+    },
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
@@ -36,6 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+        pedantic: false,
         plugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -119,7 +131,8 @@ module.exports = {
           `gatsby-remark-smartypants`,
         ],
       },
-    },
+
+      },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

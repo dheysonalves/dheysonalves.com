@@ -6,7 +6,7 @@ import Layout from '../components/Layout/layout';
 import SEO from '../components/Seo/Seo';
 // import { rhythm, scale } from "../utils/typography"
 import { Heading, Paragraph, Hr, List } from './styles';
-
+import Img from "gatsby-image"
 import { DiscussionEmbed } from 'disqus-react';
 
 class BlogPostTemplate extends React.Component {
@@ -14,6 +14,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -22,6 +23,7 @@ class BlogPostTemplate extends React.Component {
         />
         <Heading>{post.frontmatter.title}</Heading>
         <Paragraph>{post.frontmatter.date}</Paragraph>
+        <div className="s9-widget-wrapper"></div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <Hr />
         <List>
@@ -62,6 +64,8 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        description
+        charSet
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -72,6 +76,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        # featuredImage {
+        #   childImageSharp {
+        #     fluid(maxWidth: 800) {
+        #       ...GatsbyImageSharpFluid
+        #     }
+        #   }
+        # }
       }
     }
   }

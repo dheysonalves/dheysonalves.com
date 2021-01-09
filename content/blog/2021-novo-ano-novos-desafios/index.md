@@ -3,6 +3,7 @@ title: 2021 - Novo Ano, Novos Desafios
 path: /blog/2021-novo-ano-novos-desafios
 date: "2021-01-04T22:40:03.284Z"
 description: "Como prática anual, a cada final de ano, busco rever minhas conquistas e desafios que vivenciei durante o ano. É uma forma de visualizar de maneira ampla, se consegui chegar ao máximo onde queria. Mesmo sabendo, que nem todos os planejamentos são constantes, eles mudam com o tempo, e às vezes, o que buscamos no início, torna-se algo totalmente diferente."
+# featuredImage: 'https://images.unsplash.com/photo-1609465138734-cce564f001cc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
 ---
 
 # Introdução

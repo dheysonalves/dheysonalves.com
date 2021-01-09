@@ -71,6 +71,7 @@ export const EnphasisText = styled.span`
   color: #ff6100;
   text-decoration: underline;
   display: block;
+  cursor: default;
 `;
 
 export const IconWrapper = styled.div`
@@ -122,4 +123,5 @@ export const Avatar = styled.img`
 
 export const SmallDescription = styled.small`
   margin-top: 15px;
+  cursor: default;
 `;

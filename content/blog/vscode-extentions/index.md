@@ -3,6 +3,7 @@ title: 5 Extensões essenciais do Visual Studio Code para Trabalho Colaborativo
 path: "/blog/vscode-extentions"
 date: "2020-05-05T22:12:03.284Z"
 description: "Apresento aqui 5 extensões e mais algumas extras que podem auxiliar você ou sua equipe no dia a dia."
+# featuredImage: '../../assets/avatar6.png'
 ---
 
 ![Visual Studio Extentions](./vscode-base.jpg)

@@ -33,6 +33,7 @@ export const Title = styled.h2`
     color: ${props => props.color};
     margin: 0;
     padding: 0;
+    cursor: default;
 `;
 
 export const Menu = styled.ul`
@@ -53,18 +54,17 @@ export const Menu = styled.ul`
         text-align: left;
         padding: 2rem;
         position: absolute; */
-        top: 0;
-        right: 0;
-        /* transition: transform 0.3s ease-in-out;
+          /* transition: transform 0.3s ease-in-out;
         transform: ${({ open }) =>
         open ? 'translateX(0)' : 'translateX(-100%)'}; */
+        top: 0;
+        right: 0;
         width: 100%;
         z-index: 2;
 
         a {
             font-size: 1rem;
             text-transform: uppercase;
-            padding: 2rem 0;
             font-weight: bold;
             letter-spacing: 0.5rem;
             color: ${props => props.link || '#363636'};
@@ -82,7 +82,6 @@ export const MenuItem = styled.li`
 
         a {
             text-transform: uppercase;
-            padding: 2rem 0;
             font-weight: bold;
             letter-spacing: 0.2rem;
             color: ${props => props.link};
@@ -103,4 +102,8 @@ export const MenuItem = styled.li`
             &:focus {
                 color: #57886C;
             }
+`;
+
+export const CursorBulb = styled.div`
+    cursor: pointer;
 `;

@@ -31,12 +31,13 @@ const Navigation = ({ sticky }) => {
                         setOpen={setIsOpen}
                     /> */}
                 </div>
-                {state.isDark ? (
-                    <FaRegLightbulb onClick={() => dispatching()} size={32} title="Que tal acender a luz?" />
-                ) : (
-                    <FaLightbulb onClick={() => dispatching()} size={32} title="Que tal apagar a luz?"  />
-                )}
-
+                <S.CursorBulb>
+                    {state.isDark ? (
+                        <FaRegLightbulb onClick={() => dispatching()} size={32} title="Que tal acender a luz?" />
+                    ) : (
+                            <FaLightbulb onClick={() => dispatching()} size={32} title="Que tal apagar a luz?" />
+                        )}
+                </S.CursorBulb>
             </S.Navigation>
             <S.Menu
                 color={state.isDark ? '#292F36' : '#fff'}

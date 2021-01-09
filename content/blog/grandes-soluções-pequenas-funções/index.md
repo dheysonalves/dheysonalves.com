@@ -3,6 +3,7 @@ title: Grandes soluções, pequenas funções
 path: /blog/grandes-soluções-pequenas-funções
 date: "2020-10-20T23:12:03.284Z"
 description: "Passei por um desafio interessante recentemente, eu precisava pegar o texto HTML de um editor, realizar uma requisição de um conjunto de palavras, e buscar cada uma delas dentro desse HTML."
+# featuredImage: '../../assets/avatar6.png'
 ---
 
 <img src="https://images.unsplash.com/photo-1599669550575-22795a95e36f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Architecture image" style="max-width: 100%; height: auto;" />

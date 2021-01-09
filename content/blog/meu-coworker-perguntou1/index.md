@@ -3,6 +3,7 @@ title: "Meu Coworker perguntou... #1"
 path: "/blog/meu-coworker-perguntou1"
 date: "2021-01-06T21:40:03.284Z"
 description: "Um colega de trabalho me fez essa pergunta, ele estava com um cenário específico, possuía três branches para realizar o *merge* com a branch pai, no entanto, todas estava dessincronizadas"
+# featuredImage: '../../assets/avatar6.png'
 ---
 
 # Como realizar um merge com Git 🙂?

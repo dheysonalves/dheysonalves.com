@@ -23,14 +23,6 @@
     </div>
 </div>
 
-<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; height: 400px; ">
-    <img alt="desktop-dark-1" src="./assets/img/dark-mode-first.png" width="20%" />
-    <img alt="desktop-dark-2" src="./assets/img/dark-mode-second.png" width="20%" />
-    <img alt="desktop-dark-3" src="./assets/img/desktop-3.png" width="20%" />
-    <img alt="desktop-dark-3" src="./assets/img/light.png" width="20%" />
-</div>
-
-
 ## 🧐 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.

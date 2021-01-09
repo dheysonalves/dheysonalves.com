@@ -16,7 +16,7 @@ const Index = ({data}) => {
             <SEO title="Dheyson Alves" description="Um desenvolvedor de software, adora programação, às vezes brinca com react e nas horas vagas escreve histórias de RPG." />
             <S.Wrapper>
                 <S.ContentCenter>
-                    <S.Avatar src={Avatar} width="250" height="auto" />
+                    <S.Avatar src={Avatar} width="250" height="auto" alt="Uma imagem de avatar" />
                     <S.Title>
                         <S.EnphasisText>#Software developer;</S.EnphasisText>
                         <S.EnphasisText>#RPG Tabletop Master;</S.EnphasisText>

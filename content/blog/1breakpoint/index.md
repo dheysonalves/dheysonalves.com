@@ -42,8 +42,6 @@ Sendo muito simplório, e pedindo o perdão aqui, como não é o foco desse mini
 .block--modifier {}
 ```
 
-Onde:
-
 - block: Significa a abstração maior ou container.
 - block__element: Significa o elemento descedente do bloco.
 - block--modifier: Significa o bloco modificado, um estado.

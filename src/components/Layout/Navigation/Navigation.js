@@ -20,11 +20,10 @@ const Navigation = ({ sticky }) => {
 
     return (
         <S.Header>
-            <S.Navigation className={sticky ? 'navbar navbar-sticky' : ''}>
+            <S.Navigation>
                 <S.Title color={sticky && state.isDark ? '#363636' : ''} title="Opa, e ai?">
                         DHEYSON ALVES
                 </S.Title>
-
                 <div>
                     {/* <Burger
                         color={state.isDark ? '#fff' : '#363636'}
@@ -32,11 +31,10 @@ const Navigation = ({ sticky }) => {
                         setOpen={setIsOpen}
                     /> */}
                 </div>
-
                 {state.isDark ? (
                     <FaRegLightbulb onClick={() => dispatching()} size={32} title="Que tal acender a luz?" />
                 ) : (
-                    <FaLightbulb onClick={() => dispatching()} size={32} title="Que tal apagar a luz?" className="" />
+                    <FaLightbulb onClick={() => dispatching()} size={32} title="Que tal apagar a luz?"  />
                 )}
 
             </S.Navigation>

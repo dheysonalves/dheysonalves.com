@@ -26,7 +26,7 @@ const Index = ({data}) => {
                 </S.ContentCenter>
                 <br/>
                 <small>
-                    <b>adora criar e projetar histórias de fantasia para minhas aventuras de rpg..</b>
+                    <b>adora criar e projetar histórias de fantasia para minhas aventuras de rpg..💬</b>
                 </small>
             </S.Wrapper>
             {/* <CardList /> */}

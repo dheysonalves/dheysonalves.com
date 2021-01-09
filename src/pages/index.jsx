@@ -7,6 +7,8 @@ import Svg from '../assets/svg/ellipse.svg';
 import SEO from '../components/Seo/Seo';
 import Footer from '../components/Layout/Footer/footer';
 
+import Avatar from '../assets/img/Avatar.png';
+
 const Index = ({data}) => {
 
     return (
@@ -14,12 +16,18 @@ const Index = ({data}) => {
             <SEO title="Dheyson Alves" description="Um desenvolvedor de software, adora programação, às vezes brinca com react e nas horas vagas escreve histórias de RPG." />
             <S.Wrapper>
                 <S.ContentCenter>
+                    <S.Avatar src={Avatar} width="250" height="auto" />
                     <S.Title>
-                        Desenvolvedor de Software, trabalhando para construir{' '}
-                        <S.EnphasisText>produtos com qualidade.</S.EnphasisText>
+                        <S.EnphasisText>#Software developer;</S.EnphasisText>
+                        <S.EnphasisText>#RPG Tabletop Master;</S.EnphasisText>
+                        <S.EnphasisText>#PC gaming player;</S.EnphasisText>
                     </S.Title>
                     {/* <Button text="Me Contate" disabled /> */}
                 </S.ContentCenter>
+                <br/>
+                <small>
+                    <b>adora criar e projetar histórias de fantasia para minhas aventuras de rpg..</b>
+                </small>
             </S.Wrapper>
             {/* <CardList /> */}
         </Layout>

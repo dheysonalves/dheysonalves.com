@@ -70,6 +70,7 @@ export const Title = styled.h1`
 export const EnphasisText = styled.span`
   color: #ff6100;
   text-decoration: underline;
+  display: block;
 `;
 
 export const IconWrapper = styled.div`
@@ -91,5 +92,30 @@ export const ContentCenter = styled.div`
 
   @media only screen and (max-device-width: 767px) {
     flex-direction: column;
+  }
+`;
+
+export const Avatar = styled.img`
+  margin-right: 20px;
+
+  @media only screen and (max-device-width: 767px) {
+    margin-top: 30px;
+    width: 200px;
+  }
+
+  /* tablets (portrait) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1223px) {
+    display: none;
+  }
+  /* Styles */
+
+  /* Desktops and laptops ----------- */
+  @media only screen and (min-width: 1224px) {
+    width: 250px;
+  }
+
+  /* Large screens ----------- */
+  @media only screen and (min-width: 1824px) {
+    width: 400px;
   }
 `;

@@ -4,9 +4,8 @@ import { rhythm } from '../utils/typography';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
 
   /* Smartphones (portrait and landscape) ----------- */
   @media only screen and (max-device-width: 767px) {
@@ -39,6 +38,7 @@ export const Title = styled.h1`
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
+  margin: 0px;
 
   /* Smartphones (portrait and landscape) ----------- */
   @media only screen and (max-device-width: 767px) {
@@ -82,4 +82,14 @@ export const ImageWrapper = styled.img`
   position: absolute;
   top: 150px;
   width: 350px;
+`;
+
+export const ContentCenter = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-device-width: 767px) {
+    flex-direction: column;
+  }
 `;

@@ -31,14 +31,14 @@ export const pageQuery = graphql`
     }
 `;
 
-const Blog = ({ data, location }) => {
+const Writting = ({ data, location, ...props }) => {
     const siteTitle = data.site.siteMetadata.title;
     const posts = data.allMarkdownRemark.edges;
 
     return (
             <Layout location={location} title={siteTitle}>
-                <SEO title="Dheyson Alves - Blog" description="Blog about computing and development"/>
-                <Bio />
+                <SEO title="Dheyson Alves - Blog" description="Blog sobre desenvolvimento e Computação"/>
+                {/* <Bio /> */}
                 {posts.map(({ node }) => {
                     const title = node.frontmatter.title || node.fields.slug;
                     return (
@@ -73,4 +73,4 @@ const Blog = ({ data, location }) => {
     );
 };
 
-export default Blog;
+export default Writting;

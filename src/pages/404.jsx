@@ -10,13 +10,15 @@ const NotFoundPage = ({ data, location }) => {
     const { state } = useContext(Context);
     const siteTitle = data.site.siteMetadata.title;
 
+    console.log(data);
+
     return (
         <Layout location={location} title={siteTitle}>
-            <SEO title="404: Error Page" description="A error page who could find the request" />
+            <SEO title="404: Error Page" description="Uma página de erro que poderia encontrar a solicitação." />
             <div style={{ textAlign: 'center' }}>
             <img src={state.isDark ? Svg.default.Cat : Svg.default.Searcher} width="auto" height="auto" />
-                <h1>Oh no! Something is wrong...</h1>
-                <p>You have clicked in a route which doesn't exist... what a pity.</p>
+                <h1>Ah não! Algo está errado...</h1>
+                <p>Você clicou em uma rota que não existe ... que pena.</p>
             </div>
         </Layout>
     );

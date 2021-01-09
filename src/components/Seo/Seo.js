@@ -88,9 +88,9 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-    lang: `en`,
+    lang: `pt-br`,
     meta: [],
-    description: `A software developer website, loves programming, sometimes plays with react and in the free time write RPG stories.`,
+    description: `Um desenvolvedor de software, adora programação, às vezes brinca com react e nas horas vagas escreve histórias de RPG.`,
 };
 
 SEO.propTypes = {

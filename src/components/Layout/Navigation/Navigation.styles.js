@@ -37,32 +37,32 @@ export const Title = styled.h2`
 
 export const Menu = styled.ul`
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
     padding: 0;
-    margin: 0;
-    width: 50%;
+    margin-top: 20px;
 
     @media (max-width: 1279px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: ${props => props.color || '#fff'};
-        height: 100vh;
+        /* background: ${props => props.color || '#fff'}; */
+        /* height: 100vh;
         text-align: left;
         padding: 2rem;
-        position: absolute;
+        position: absolute; */
         top: 0;
         right: 0;
-        transition: transform 0.3s ease-in-out;
+        /* transition: transform 0.3s ease-in-out;
         transform: ${({ open }) =>
-        open ? 'translateX(0)' : 'translateX(-100%)'};
+        open ? 'translateX(0)' : 'translateX(-100%)'}; */
         width: 100%;
         z-index: 2;
 
         a {
-            font-size: 2rem;
+            font-size: 1rem;
             text-transform: uppercase;
             padding: 2rem 0;
             font-weight: bold;
@@ -84,11 +84,11 @@ export const MenuItem = styled.li`
             text-transform: uppercase;
             padding: 2rem 0;
             font-weight: bold;
-            letter-spacing: 0.5rem;
+            letter-spacing: 0.2rem;
             color: ${props => props.link};
             text-decoration: none;
             transition: color 0.3s linear;
-
+            font-size: 1.1rem;
         }
 
         &:hover {

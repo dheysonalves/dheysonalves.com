@@ -22,6 +22,7 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <Heading>{post.frontmatter.title}</Heading>
+        <br/>
         <Paragraph>{post.frontmatter.date}</Paragraph>
         <div className="s9-widget-wrapper"></div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

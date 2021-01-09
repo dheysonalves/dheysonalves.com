@@ -8,7 +8,7 @@ description: "Apresento aqui 5 extensões e mais algumas extras que podem auxili
 
 ![Visual Studio Extentions](./vscode-base.jpg)
 
-> ## Edição de texto. Redefinida
+## Edição de texto. Redefinida
 
 Esse é o slogan da página inicial do Visual Studio Code. Na minha jordana, por IDE’s e editores de texto, nenhum deles mudou minha concepção ao que um ambiente completo e integrado pode ser. Seja pela imensidão de extensões disponibilizados pela comunidade e pela microsoft, seja pelo seu design compacto e robusto. O Visual Studio Code, mesmo no mercado a tão pouco tempo, 2015, conseguiu atrair uma grande quantidade de desenvolvedores que buscam por uma solução convidativa e simples.
 

@@ -6,9 +6,11 @@ description: "Anotações, leituras e temas mais específicos relacionados a com
 # featuredImage: '../../assets/avatar6.png'
 ---
 
+<br/>
+
 ![Uma imagem de um desenvolvedor](https://www.heidelberg.edu/sites/default/files/styles/865width/public/images/program-images/computer-science-2.jpg?itok=9N2z12gj)
 
-## Jornada de aprendizagem
+# Jornada de aprendizagem
 
 Durante minha jornada como desenvolvedor, sempre busquei adaptar minha forma de estudos. Realizar anotações a mão, seguir códigos de tutoriais e pequenos projetos pessoais. Eu comecei a perceber que, minhas anotações estavam ficando inúteis, os códigos que estava seguindo, com o tempo esquecia o que eles faziam, e os pequenos projetos pessoais não estavam me fazendo crescer como gostaria. Foi neste momento, perguntando a algumas comunidades no 'Discord', que cheguei a uma forma de alinhar todos esses pontos e em consequência elevar meus estudos para um novo nível.
 

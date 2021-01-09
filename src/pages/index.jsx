@@ -25,9 +25,9 @@ const Index = ({data}) => {
                     {/* <Button text="Me Contate" disabled /> */}
                 </S.ContentCenter>
                 <br/>
-                <small>
+                <S.SmallDescription>
                     <b>adora criar e projetar histórias de fantasia para minhas aventuras de rpg..💬</b>
-                </small>
+                </S.SmallDescription>
             </S.Wrapper>
             {/* <CardList /> */}
         </Layout>

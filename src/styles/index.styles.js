@@ -119,3 +119,7 @@ export const Avatar = styled.img`
     width: 400px;
   }
 `;
+
+export const SmallDescription = styled.small`
+  margin-top: 15px;
+`;

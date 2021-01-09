@@ -13,9 +13,9 @@
   My personal website build to present some of my projects related to programming and technology. Worked with theme styled dark and light. As well with a blog with my studies articles, personal programming experiences and computer science related.
 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
+![React](https://img.shields.io/badge/-React-222222?style=flat&logo=React&logoColor=61DAFB)
 ![GraphQL](https://img.shields.io/badge/-GraphQL-222222?style=flat&logo=GraphQL&logoColor=E10098)
 ![Storybook](https://img.shields.io/badge/-Storybook-222222?style=flat&logo=Storybook&logoColor=E10098)
-![React](https://img.shields.io/badge/-React-222222?style=flat&logo=React&logoColor=61DAFB)
 
 ## 🧐 What's inside?
 

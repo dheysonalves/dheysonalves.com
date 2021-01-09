@@ -12,16 +12,10 @@
 
   My personal website build to present some of my projects related to programming and technology. Worked with theme styled dark and light. As well with a blog with my studies articles, personal programming experiences and computer science related.
 
-<div style="display: flex; justify-content: space-evenly; align-items: center;">
-  <div>
-    <img alt="Gatsby" src="https://img.shields.io/badge/-React-222222?style=flat&logo=React&logoColor=61DAFB" width="auto" />
-      <img alt="Gatsby" src="https://img.shields.io/badge/-Gatsby-222222?style=flat&logo=Gatsby&logoColor=663399" width="auto" />
-  </div>
-    <div>
-    <img alt="Gatsby" src="https://img.shields.io/badge/-GraphQL-222222?style=flat&logo=GraphQL&logoColor=663399" width="auto" />
-        <img alt="Gatsby" src="https://img.shields.io/badge/-Figma-000000?style=flat&logo=figma" width="auto" />
-    </div>
-</div>
+![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
+![GraphQL](https://img.shields.io/badge/-GraphQL-222222?style=flat&logo=GraphQL&logoColor=E10098)
+![Storybook](https://img.shields.io/badge/-Storybook-222222?style=flat&logo=Storybook&logoColor=E10098)
+![React](https://img.shields.io/badge/-React-222222?style=flat&logo=React&logoColor=61DAFB)
 
 ## 🧐 What's inside?
 

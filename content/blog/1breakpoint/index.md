@@ -6,7 +6,7 @@ description: "No primeiro breakpoint, hoje aprendi mais sobre o flexbox. Conheci
 # featuredImage: '../../assets/avatar6.png'
 ---
 
-- [Repositório do projeto](https://github.com/Dheyson/four-card-flexible)
+<br />
 
 ## FRONT-END MENTORS
 
@@ -16,15 +16,17 @@ Esta semana em uma publicação de algum dev da comunidade. Vi alguem realizando
 
 Pensei em escrever CSS de uma forma diferente. Eu costumo seguir o padrão de estilos em apenas um arquivo, para mini-projetos vanilla. Neste, dividi os arquivos, em três em específico.
 
-- `global.css`: Para resetar estilos padrões do HTML e determinar background.
-- `variables.css`: Para determinar cores e fontes.
-- `app.css`: Os estilos da tela inteira.
+- **global.css**: Para resetar estilos padrões do HTML e determinar background.
+- **variables.css**: Para determinar cores e fontes.
+- **app.css**: Os estilos da tela inteira.
 
-Funcionou da maneira que esperava, mas o ponto para se observar, e como elas deveriam estar dispostas no `head` do html.
+Funcionou da maneira que esperava, mas o ponto para se observar, e como elas deveriam estar dispostas no **head** do html.
 
-`<link rel="stylesheet" href="./styles/variables.css" type="text/css">`
-`<link rel="stylesheet" href="./styles/app.css" type="text/css">`
-`<link rel="stylesheet" href="./styles/global.css" type="text/css">`
+```css
+<link rel="stylesheet" href="./styles/variables.css" type="text/css">
+<link rel="stylesheet" href="./styles/app.css" type="text/css">
+<link rel="stylesheet" href="./styles/global.css" type="text/css">
+```
 
 A ordem de prescedência é inteiramente importante para o acesso das variáveis sobre os outros estilos. Embora seja óbvio, é um detalhe facilmente esquecível.
 
@@ -34,9 +36,11 @@ BEM é uma metodologia de escrita em CSS. Hoje em dia, muito discutido sobre sua
 
 Sendo muito simplório, e pedindo o perdão aqui, como não é o foco desse mini-documento. O BEM, significa (block, element, modifier) ou Bloco, elemento, modificador. Seguindo exatamente, este formato:
 
-`.block {}`
-`.block__element {}`
-`.block--modifier {}`
+```css
+.block {}
+.block__element {}
+.block--modifier {}
+```
 
 Onde:
 
@@ -46,4 +50,4 @@ Onde:
 
 [Neste CSS, mostra como utilizei](https://github.com/Dheyson/four-card-flexible/blob/master/styles/app.css)
 
-Essas foram as maiores aprendizagens de hoje.
+[Repositório do projeto](https://github.com/Dheyson/four-card-flexible)

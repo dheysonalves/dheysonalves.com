@@ -9,6 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import Image from '../../assets/img/Avatar.png';
 
 function SEO({ description, lang, meta, title }) {
     const { site } = useStaticQuery(
@@ -51,6 +52,10 @@ function SEO({ description, lang, meta, title }) {
                     content: `developer, desenvolvedor, software, software developer, desenvolvedor de software, front-end enginner, dheyson alves, dheyson desenvolvedor, landing page, website, caruaru website, caruaru desenvolvedor, javascript, typescript, reactjs, react native, react, storybook, styled components, css, ciencia da computação, computação, blog`,
                 },
                 {
+                    property: `og:site_name`,
+                    content: title,
+                },
+                {
                     property: `og:title`,
                     content: title,
                 },
@@ -61,6 +66,10 @@ function SEO({ description, lang, meta, title }) {
                 {
                     property: `og:type`,
                     content: `website`,
+                },
+                {
+                    property: `og:image`,
+                    content: Image,
                 },
                 {
                     name: `twitter:card`,
@@ -77,6 +86,10 @@ function SEO({ description, lang, meta, title }) {
                 {
                     name: `twitter:site`,
                     content: `@DheysonAlves2`,
+                },
+                {
+                    name: `twitter:image:alt`,
+                    content: `Twitter alt image`,
                 },
                 {
                     name: `twitter:description`,

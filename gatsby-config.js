@@ -5,7 +5,7 @@ module.exports = {
     title: `Um site de desenvolvedor de software/web`,
     author: `Dheyson Alves`,
     description: `Um site sobre computação e desenvolvimento`,
-    siteUrl: `https://dheyson-personal-website.herokuapp.com/`,
+    siteUrl: `https://www.dheysonalves.com.br/`,
     social: {
       twitter: `DheysonAlves2`,
     },
@@ -25,7 +25,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: `https://dheyson-personal-website.herokuapp.com/`,
+        host: `https://www.dheysonalves.com.br/`,
+        sitemap: `https://www.dheysonalves.com.br/sitemap.xml`,
+        policy: [{ userAgent: '*', allow: '/' }]
       },
     },
     `gatsby-plugin-styled-components`,

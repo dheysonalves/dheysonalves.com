@@ -21,37 +21,40 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <Heading>{post.frontmatter.title}</Heading>
-        <br/>
-        <Paragraph>{post.frontmatter.date}</Paragraph>
-        <div className="s9-widget-wrapper"></div>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <Hr />
-        <List>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </List>
-        <DiscussionEmbed
-          shortname="dheysonalves-cs"
-          config={{
-            url: this.props.location.href,
-            identifier: post.id,
-            title: siteTitle,
-            language: 'pt_Br',
-          }}
-        />
+        <section>
+          <Heading>{post.frontmatter.title}</Heading>
+          <br />
+          <Paragraph>{post.frontmatter.date}</Paragraph>
+          <div className="s9-widget-wrapper"></div>
+          <br />
+          <article dangerouslySetInnerHTML={{ __html: post.html }} />
+          <Hr />
+          <List>
+            <li>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </List>
+          <DiscussionEmbed
+            shortname="dheysonalves-cs"
+            config={{
+              url: this.props.location.href,
+              identifier: post.id,
+              title: siteTitle,
+              language: 'pt_Br',
+            }}
+          />
+        </section>
       </Layout>
     );
   }

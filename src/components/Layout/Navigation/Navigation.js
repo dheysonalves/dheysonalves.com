@@ -24,20 +24,6 @@ const Navigation = ({ sticky }) => {
                 <S.Title color={sticky && state.isDark ? '#363636' : ''} title="Opa, e ai?">
                         DHEYSON ALVES
                 </S.Title>
-                <div>
-                    {/* <Burger
-                        color={state.isDark ? '#fff' : '#363636'}
-                        open={isOpen}
-                        setOpen={setIsOpen}
-                    /> */}
-                </div>
-                <S.CursorBulb>
-                    {state.isDark ? (
-                        <FaRegLightbulb onClick={() => dispatching()} size={32} title="Que tal acender a luz?" />
-                    ) : (
-                            <FaLightbulb onClick={() => dispatching()} size={32} title="Que tal apagar a luz?" />
-                        )}
-                </S.CursorBulb>
             </S.Navigation>
             <S.Menu
                 color={state.isDark ? '#292F36' : '#fff'}
@@ -76,9 +62,16 @@ const Navigation = ({ sticky }) => {
                         target={`_blank`}
                         rel={`noopener noreferrer`}
                     >
-                        Portfolio
+                        Portfólio
                         </a>
                 </S.MenuItem>
+                <S.CursorBulb>
+                    {state.isDark ? (
+                        <FaRegLightbulb onClick={() => dispatching()} size={32} title="Que tal acender a luz?" />
+                    ) : (
+                            <FaLightbulb onClick={() => dispatching()} size={32} title="Que tal apagar a luz?" />
+                        )}
+                </S.CursorBulb>
                 {/* <S.MenuItem>
                         <Link to="/about/about">About</Link>
                     </S.MenuItem> */}

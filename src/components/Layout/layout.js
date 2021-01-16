@@ -45,7 +45,6 @@ const Layout = ({ title, children, max, autow }) => {
                     {children}
                 </Main>
                 <Footer />
-
             </S.Wrapper>
         </Fragment>
     );

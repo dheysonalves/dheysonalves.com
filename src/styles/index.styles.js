@@ -66,9 +66,16 @@ export const Title = styled.h1`
   }
 `;
 
-export const EnphasisText = styled.span`
+export const EmphasisParagraph = styled.p`
+  display: block;
+  cursor: default;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+`;
+
+export const EnphasisSpan = styled.span`
   color: #ff6100;
-  text-decoration: underline;
   display: block;
   cursor: default;
 `;

@@ -1,8 +1,7 @@
-import styled, { keyframes } from 'styled-components';
-import { rhythm, scale } from '../../../utils/typography';
+import styled from 'styled-components';
 
 export const Header = styled.header`
-	margin: ${props => props.mw && '0 auto'};
+    margin: ${(props) => props.mw && '0 auto'};
 `;
 
 export const Navigation = styled.nav`
@@ -32,7 +31,7 @@ export const Title = styled.h2`
     text-shadow: 0px 4px 15px rgba(87, 136, 108, 0.5);
     text-transform: uppercase;
     text-decoration: underline;
-    color: ${props => props.color};
+    color: ${(props) => props.color};
     margin: 0;
     padding: 0;
     cursor: default;
@@ -52,14 +51,14 @@ export const Menu = styled.ul`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* background: ${props => props.color || '#fff'}; */
+        /* background: ${(props) => props.color || '#fff'}; */
         /* height: 100vh;
         text-align: left;
         padding: 2rem;
         position: absolute; */
-          /* transition: transform 0.3s ease-in-out;
+        /* transition: transform 0.3s ease-in-out;
         transform: ${({ open }) =>
-        open ? 'translateX(0)' : 'translateX(-100%)'}; */
+            open ? 'translateX(0)' : 'translateX(-100%)'}; */
         top: 0;
         right: 0;
         width: 100%;
@@ -70,40 +69,39 @@ export const Menu = styled.ul`
             text-transform: uppercase;
             font-weight: bold;
             letter-spacing: 0.5rem;
-            color: ${props => props.link || '#363636'};
+            color: ${(props) => props.link || '#363636'};
             text-decoration: none;
             transition: color 0.3s linear;
-
         }
     }
 `;
 
 export const MenuItem = styled.li`
-        display: block;
-        margin: 0;
+    display: block;
+    margin: 0;
 
-        a {
-            font-weight: bold;
-            letter-spacing: 0.2rem;
-            color: ${props => props.link};
-            text-decoration: none;
-            transition: color 0.3s linear;
-            font-size: 1.1rem;
-        }
+    a {
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+        color: ${(props) => props.link};
+        text-decoration: none;
+        transition: color 0.3s linear;
+        font-size: 1.1rem;
+    }
 
-        &:active {
-            text-decoration: underline;
-            }
-        &:hover {
-            color: #57886C;
-            text-decoration: underline;
-            }
-        &:focus {
-            color: #fff;
-        }
-        &:visited {
-            color: #fff;
-        }
+    &:active {
+        text-decoration: underline;
+    }
+    &:hover {
+        color: #57886c;
+        text-decoration: underline;
+    }
+    &:focus {
+        color: #fff;
+    }
+    &:visited {
+        color: #fff;
+    }
 `;
 
 export const CursorBulb = styled.div`

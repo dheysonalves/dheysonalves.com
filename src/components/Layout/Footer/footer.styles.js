@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { rhythm, scale } from '../../../utils/typography';
+import { rhythm } from '../../../utils/typography';
 
 export const Footer = styled.footer`
-	max-width: ${rhythm(20)};
-	margin: 0 auto;
+    max-width: ${rhythm(20)};
+    margin: 0 auto;
     text-align: center;
 `;
 

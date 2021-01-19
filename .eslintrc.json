@@ -15,12 +15,11 @@
 		"plugin:react/recommended",
 		"plugin:prettier/recommended"
 	],
-	"parser": "@typescript-eslint/parser",
+	"parser": "babel-eslint",
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
 		},
-		"ecmaVersion": 12,
 		"sourceType": "module"
 	},
 	"plugins": [

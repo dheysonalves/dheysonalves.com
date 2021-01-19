@@ -35,7 +35,6 @@
     ]
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.7",
     "disqus-react": "^1.0.10",
     "gatsby": "^2.25.0",
     "gatsby-image": "^2.4.17",
@@ -74,6 +73,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "babel-plugin-styled-components": "^1.10.7",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",

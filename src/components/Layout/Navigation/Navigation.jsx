@@ -1,17 +1,12 @@
 import React, { useState, useContext, useCallback } from 'react';
 // import { rhythm } from "../utils/typography"
-import { useTheme } from 'styled-components';
 import Context from '../../../store/context.store';
 import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import Burger from '../Burger/Burger';
 import * as S from './Navigation.styles';
 
 const Navigation = ({ sticky }) => {
     const [iconState, setIconState] = useState();
-    const [isOpen, setIsOpen] = useState(false);
     const { state, dispatch } = useContext(Context);
-    const theme = useTheme();
 
     const dispatching = useCallback(() => {
         setIconState(!iconState);
@@ -21,8 +16,11 @@ const Navigation = ({ sticky }) => {
     return (
         <S.Header>
             <S.Navigation>
-                <S.Title color={sticky && state.isDark ? '#363636' : ''} title="Opa, e ai?">
-                        DHEYSON ALVES
+                <S.Title
+                    color={sticky && state.isDark ? '#363636' : ''}
+                    title="Opa, e ai?"
+                >
+                    DHEYSON ALVES
                 </S.Title>
             </S.Navigation>
             <S.Menu
@@ -30,20 +28,14 @@ const Navigation = ({ sticky }) => {
                 link={state.isDark ? '#fff' : '#363636'}
             >
                 <S.MenuItem>
-                    <a
-                        href="/"
-                        title="Página principal"
-                    >
+                    <a href="/" title="Página principal">
                         Home
-                        </a>
+                    </a>
                 </S.MenuItem>
                 <S.MenuItem>
-                    <a
-                        href="/Blog/writing"
-                        title="Alguns artigos que escrevi"
-                    >
+                    <a href="/Blog/writing" title="Alguns artigos que escrevi">
                         Escrita
-                        </a>
+                    </a>
                 </S.MenuItem>
                 <S.MenuItem>
                     <a
@@ -53,7 +45,7 @@ const Navigation = ({ sticky }) => {
                         rel={`noopener noreferrer`}
                     >
                         Documentação
-                        </a>
+                    </a>
                 </S.MenuItem>
                 <S.MenuItem>
                     <a
@@ -63,14 +55,22 @@ const Navigation = ({ sticky }) => {
                         rel={`noopener noreferrer`}
                     >
                         Portfólio
-                        </a>
+                    </a>
                 </S.MenuItem>
                 <S.CursorBulb>
                     {state.isDark ? (
-                        <FaRegLightbulb onClick={() => dispatching()} size={32} title="Que tal acender a luz?" />
+                        <FaRegLightbulb
+                            onClick={() => dispatching()}
+                            size={32}
+                            title="Que tal acender a luz?"
+                        />
                     ) : (
-                            <FaLightbulb onClick={() => dispatching()} size={32} title="Que tal apagar a luz?" />
-                        )}
+                        <FaLightbulb
+                            onClick={() => dispatching()}
+                            size={32}
+                            title="Que tal apagar a luz?"
+                        />
+                    )}
                 </S.CursorBulb>
                 {/* <S.MenuItem>
                         <Link to="/about/about">About</Link>

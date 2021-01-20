@@ -6,10 +6,10 @@ import Searcher from './searcher.svg';
 import WrongPlus from './wrong-plug.svg';
 
 export default {
-	Cat,
-	Dragon,
-	MonkeyPhone,
-	Octopus,
-	Searcher,
-	WrongPlus
-}
+    Cat,
+    Dragon,
+    MonkeyPhone,
+    Octopus,
+    Searcher,
+    WrongPlus,
+};

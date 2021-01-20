@@ -1,10 +1,9 @@
 import React from 'react';
-import Select from '.'
+import Select from '.';
 
 export default {
-title: 'Select',
-component: Select
-}
+    title: 'Select',
+    component: Select,
+};
 
-export const Default = () =>
-<Select />
+export const Default = () => <Select />;

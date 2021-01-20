@@ -5,8 +5,6 @@ date: "2021-01-06T21:40:03.284Z"
 description:
 ---
 
-# Como definir uma tag script corretamente e carregar os scripts no Laravel Framework?
-
 <div style="color: orange; border: 2px solid #363636; display: inline-block; padding: 5px; margin-bottom: 10px; border-radius: 10px; background-color: lightyellow;">
 	<label>Meu coworker perguntou</label>
 </div>

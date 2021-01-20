@@ -6,8 +6,6 @@ description: "Um colega de trabalho me fez essa pergunta, ele estava com um cenÃ
 # featuredImage: '../../assets/avatar6.png'
 ---
 
-# Como realizar um merge com Git ğŸ™‚?
-
 <div style="color: orange; border: 2px solid #363636; display: inline-block; padding: 5px; margin-bottom: 10px; border-radius: 10px; background-color: lightyellow;">
 	<label>Meu coworker perguntou</label>
 </div>

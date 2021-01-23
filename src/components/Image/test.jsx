@@ -1,13 +1,14 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import Select from '.';
+import Image from '.';
 
-describe('<Select />', () => {
+describe('<Image />', () => {
     it('should render the heading', () => {
-        const { container } = render(<Select />);
+        const { container } = render(<Image />);
 
         expect(
-            screen.getByRole('heading', { name: /Select/i })
+            screen.getByRole('heading', { name: /Image/i })
         ).toBeInTheDocument();
 
         expect(container.firstChild).toMatchSnapshot();

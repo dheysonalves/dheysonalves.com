@@ -1,13 +1,14 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import Main from '.';
+import Card from '.';
 
-describe('<Main />', () => {
+describe('<Card />', () => {
     it('should render the heading', () => {
-        const { container } = render(<Main />);
+        const { container } = render(<Card />);
 
         expect(
-            screen.getByRole('heading', { name: /Main/i })
+            screen.getByRole('heading', { name: /Card/i })
         ).toBeInTheDocument();
 
         expect(container.firstChild).toMatchSnapshot();

@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+    width: 100%;
+    max-width: ${(props) => props.width || '300px'};
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin: ${(props) => props.margin + 'px'};
+    margin: ${(props) => props.margin + 'rem'};
+`;
+
+export const DescriptionWrapper = styled.div`
+    padding-top: 0.6rem;
 `;
 
 export const IconsWrapper = styled.div`

@@ -49,7 +49,7 @@ const Navigation = ({ sticky }) => {
                 </S.MenuItem>
                 <S.MenuItem>
                     <a
-                        href="https://github.com/Dheyson"
+                        href="https://github.com/dheysonalves"
                         title="Meus atuais projetos"
                         target={`_blank`}
                         rel={`noopener noreferrer`}

@@ -17,7 +17,7 @@ const Footer = ({ element }) => {
           <IoLogoLinkedin size="2em" />
         </a>
         <a
-          href="https://github.com/Dheyson"
+          href="https://github.com/dheysonalves"
           target="_blank"
           rel="noopener noreferrer"
           className="anchor__specific"

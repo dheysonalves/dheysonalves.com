@@ -5,7 +5,6 @@ export default {
     title: 'Components/Inputs',
     component: Input,
     argTypes: {
-        background: { control: 'color' },
         color: { control: 'color' },
     },
 };

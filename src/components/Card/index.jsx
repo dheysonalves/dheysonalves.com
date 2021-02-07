@@ -9,30 +9,36 @@ import Ships from '../Ships/index';
 
 import { AiFillGithub, AiFillEye } from 'react-icons/ai';
 
-const Card = ({ margin, ...data }) => {
+const Card = ({ margin, width, ...data }) => {
     const { title, subtitle, github, linkedin, photo } = data;
     return (
-        <S.Wrapper margin={margin}>
+        <S.Wrapper margin={margin} width={width}>
             <Image source={photo} alt="random image" />
-            <Title>{title}</Title>
-            <S.ShipsWrapper>
-                <Ships label="React" color="#00C2FF" labelColor="#292F36" />
-                <Ships
-                    label="Javascript"
-                    color="#EBFF00"
-                    labelColor="#292F36"
-                />
-                <Ships label="Nodejs" color="#00FF0A" labelColor="#292F36" />
-            </S.ShipsWrapper>
-            <Subtitle align="none">{subtitle}</Subtitle>
-            <S.IconsWrapper>
-                <S.IconLink href={github}>
-                    <AiFillGithub size={24} />
-                </S.IconLink>
-                <S.IconLink href={linkedin}>
-                    <AiFillEye size={24} />
-                </S.IconLink>
-            </S.IconsWrapper>
+            <S.DescriptionWrapper>
+                <Title>{title}</Title>
+                <S.ShipsWrapper>
+                    <Ships label="React" color="#00C2FF" labelColor="#292F36" />
+                    <Ships
+                        label="Javascript"
+                        color="#EBFF00"
+                        labelColor="#292F36"
+                    />
+                    <Ships
+                        label="Nodejs"
+                        color="#00FF0A"
+                        labelColor="#292F36"
+                    />
+                </S.ShipsWrapper>
+                <Subtitle align="none">{subtitle}</Subtitle>
+                <S.IconsWrapper>
+                    <S.IconLink href={github}>
+                        <AiFillGithub size={24} />
+                    </S.IconLink>
+                    <S.IconLink href={linkedin}>
+                        <AiFillEye size={24} />
+                    </S.IconLink>
+                </S.IconsWrapper>
+            </S.DescriptionWrapper>
         </S.Wrapper>
     );
 };

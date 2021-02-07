@@ -12,4 +12,6 @@ export default {
     },
 };
 
-export const Default = (args) => <Card {...args} />;
+export const SmallCard = (args) => <Card {...args} />;
+
+export const LargerCard = (args) => <Card width="400px" {...args} />;

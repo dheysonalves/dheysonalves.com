@@ -1,13 +1,13 @@
 ---
 title: 'Como definir uma tag script corretamente e carregar os scripts no Laravel Framework?'
-path: '/Blog/writing/meu-coworker-perguntou2'
+path: '/blog/meu-coworker-perguntou2'
 date: "2021-01-06T21:40:03.284Z"
 description:
 ---
 
-<div style="color: orange; border: 2px solid #363636; display: inline-block; padding: 5px; margin-bottom: 10px; border-radius: 10px; background-color: lightyellow;">
+<!-- <div style="color: orange; border: 2px solid #363636; display: inline-block; padding: 5px; margin-bottom: 10px; border-radius: 10px; background-color: lightyellow;">
 	<label>Meu coworker perguntou</label>
-</div>
+</div> -->
 
 ![Capa principal](https://images.unsplash.com/photo-1571076250312-ec217013ba75?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
 

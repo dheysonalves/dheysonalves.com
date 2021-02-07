@@ -96,9 +96,11 @@ export const ContentCenter = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 4rem;
 
     @media only screen and (max-device-width: 767px) {
         flex-direction: column;
+        margin-top: 1rem;
     }
 `;
 
@@ -106,8 +108,10 @@ export const Avatar = styled.img`
     margin-right: 20px;
 
     @media only screen and (max-device-width: 767px) {
-        margin-top: 30px;
-        width: 200px;
+        margin-top: 50px;
+        width: 50px;
+        align-self: flex-start;
+        display: none;
     }
 
     /* tablets (portrait) ----------- */
@@ -130,4 +134,43 @@ export const Avatar = styled.img`
 export const SmallDescription = styled.small`
     margin-top: 15px;
     cursor: default;
+`;
+
+export const Footer = styled.footer`
+    max-width: ${rhythm(20)};
+    margin: 0 auto;
+    text-align: center;
+`;
+
+export const IconsWrapper = styled.div`
+    margin-top: 10px;
+
+    a {
+        color: #ff6100;
+        text-decoration: none;
+
+        :hover {
+            color: #363636;
+        }
+
+        :active {
+            color: #000007;
+        }
+    }
+    .anchor__specific {
+        padding-left: 10px;
+    }
+`;
+
+export const BlogPostsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+`;
+
+export const Divider = styled.div`
+    border: 1px solid #363636;
+    opacity: 0.2;
+    width: 100%;
 `;

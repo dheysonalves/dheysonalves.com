@@ -2,8 +2,8 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout/layout';
+import Footer from '../components/Layout/Footer/footer';
 import SEO from '../components/Seo/Seo';
-// import { rhythm, scale } from "../utils/typography"
 import { Heading, Paragraph, Hr, List } from './styles';
 import { DiscussionEmbed } from 'disqus-react';
 
@@ -30,14 +30,20 @@ class BlogPostTemplate extends React.Component {
                     <List>
                         <li>
                             {previous && (
-                                <Link to={previous.fields.slug} rel="prev">
+                                <Link
+                                    to={'/writing' + previous.fields.slug}
+                                    rel="prev"
+                                >
                                     ← {previous.frontmatter.title}
                                 </Link>
                             )}
                         </li>
                         <li>
                             {next && (
-                                <Link to={next.fields.slug} rel="next">
+                                <Link
+                                    to={'/writing' + next.fields.slug}
+                                    rel="next"
+                                >
                                     {next.frontmatter.title} →
                                 </Link>
                             )}
@@ -53,6 +59,7 @@ class BlogPostTemplate extends React.Component {
                         }}
                     />
                 </section>
+                <Footer />
             </Layout>
         );
     }

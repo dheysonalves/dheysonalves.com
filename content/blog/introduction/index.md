@@ -1,6 +1,6 @@
 ---
 title: Minha Documentação pessoal
-path: "/blog/introduction"
+path: /blog/introduction
 date: "2020-05-07T19:12:03.284Z"
 description: "Anotações, leituras e temas mais específicos relacionados a computação, programação, performance e processos relacionados aos meus estudos pessoais."
 # featuredImage: '../../assets/avatar6.png'

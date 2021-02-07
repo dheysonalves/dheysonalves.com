@@ -6,9 +6,9 @@ description: "Um colega de trabalho me fez essa pergunta, ele estava com um cen√
 # featuredImage: '../../assets/avatar6.png'
 ---
 
-<div style="color: orange; border: 2px solid #363636; display: inline-block; padding: 5px; margin-bottom: 10px; border-radius: 10px; background-color: lightyellow;">
+<!-- <div style="color: orange; border: 2px solid #363636; display: inline-block; padding: 5px; margin-bottom: 10px; border-radius: 10px; background-color: lightyellow;">
 	<label>Meu coworker perguntou</label>
-</div>
+</div> -->
 
 ![Capa principal](https://images.unsplash.com/photo-1583279904750-85325bf531b4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
 

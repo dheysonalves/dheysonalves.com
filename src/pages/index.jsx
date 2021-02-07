@@ -1,12 +1,42 @@
 import React from 'react';
 import Layout from '../components/Layout/layout';
+import { Link, graphql } from 'gatsby';
 import { rhythm } from '../utils/typography';
 import * as S from '../styles/index.styles';
 import SEO from '../components/Seo/Seo';
+import { IoLogoLinkedin, IoLogoGithub, IoLogoTwitter } from 'react-icons/io';
+import { FaDev, FaDiscord } from 'react-icons/fa';
 
 import Avatar from '../assets/img/Avatar.png';
 
-const Index = () => {
+export const pageQuery = graphql`
+    query {
+        site {
+            siteMetadata {
+                title
+            }
+        }
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+            edges {
+                node {
+                    excerpt
+                    fields {
+                        slug
+                    }
+                    frontmatter {
+                        date(formatString: "MMMM DD, YYYY")
+                        title
+                        description
+                    }
+                }
+            }
+        }
+    }
+`;
+
+const Index = ({ data }) => {
+    const posts = data.allMarkdownRemark.edges;
+
     return (
         <Layout max={rhythm(100)} mw={true}>
             <SEO
@@ -22,6 +52,57 @@ const Index = () => {
                         alt="Uma imagem de avatar"
                     />
                     <div>
+                        <S.IconsWrapper>
+                            <a
+                                href="https://www.linkedin.com/in/dheysonalvess/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                alt="Logo do Linkedin rede social"
+                                title="Minha rede profissional"
+                            >
+                                <IoLogoLinkedin size="2em" />
+                            </a>
+                            <a
+                                href="https://twitter.com/DheysonAlves2"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="anchor__specific"
+                                alt="Logo do passado com cor branca do twitter"
+                                title="Quer trocar uma ideia?, manda dm"
+                            >
+                                <IoLogoTwitter size="2em" />{' '}
+                            </a>
+                            <a
+                                href="https://github.com/dheysonalves"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="anchor__specific"
+                                alt="social media"
+                                title="Boa parte dos meus projetos"
+                            >
+                                <IoLogoGithub size="2em" />{' '}
+                            </a>
+                            <a
+                                href="https://dev.to/dheyson_alvess"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="anchor__specific"
+                                alt="Logo quadrada com fundo preto com texto DEV no meio de cor branca"
+                                title="Meus outros artigos em inglês"
+                            >
+                                <FaDev size="2em" />{' '}
+                            </a>
+                            <a
+                                href="https://discord.gg/Fzk2PBB"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="anchor__specific"
+                                alt="Logo quadrada com fundo preto com texto DEV no meio de cor branca"
+                                title="Comunidade do discord da Coffer"
+                            >
+                                <FaDiscord size="1.9em" />{' '}
+                            </a>
+                        </S.IconsWrapper>
                         <S.EmphasisParagraph>
                             Study. Build. Improve. Repeat.
                         </S.EmphasisParagraph>
@@ -30,16 +111,49 @@ const Index = () => {
                                 Trabalhando para construir ótimos produtos com
                                 qualidade.
                             </S.EnphasisSpan>
-                            {/* <S.EnphasisText>#RPG Tabletop Master;</S.EnphasisText>
-                        <S.EnphasisText>#PC gaming player;</S.EnphasisText> */}
                         </S.Title>
                     </div>
-
-                    {/* <Button text="Me Contate" disabled /> */}
                 </S.ContentCenter>
-                <br />
+                <hr />
+                <S.Divider />
+                <S.BlogPostsWrapper>
+                    <S.EmphasisParagraph>
+                        Últimas publicações 📝
+                    </S.EmphasisParagraph>
+                    {posts.slice(0, 3).map(({ node }) => {
+                        const title =
+                            node.frontmatter.title || node.fields.slug;
+                        return (
+                            <div key={node.fields.slug}>
+                                <h3
+                                    style={{
+                                        marginBottom: rhythm(1 / 4),
+                                    }}
+                                >
+                                    <Link
+                                        style={{
+                                            boxShadow: `none`,
+                                            textTransform: 'uppercase',
+                                        }}
+                                        to={'/writing' + node.fields.slug}
+                                    >
+                                        {title}
+                                    </Link>
+                                </h3>
+                                <small>{node.frontmatter.date}</small>
+                                <p
+                                    dangerouslySetInnerHTML={{
+                                        __html:
+                                            node.frontmatter.description ||
+                                            node.excerpt,
+                                    }}
+                                />
+                            </div>
+                        );
+                    })}
+                </S.BlogPostsWrapper>
+                <br />© {new Date().getFullYear()}
             </S.Wrapper>
-            {/* <CardList /> */}
         </Layout>
     );
 };

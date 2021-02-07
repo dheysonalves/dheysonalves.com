@@ -8,6 +8,10 @@ export const ShipWrapper = styled.div`
     margin-bottom: 5px;
 `;
 
+export const ShipListWrapper = styled.div`
+    display: flex;
+`;
+
 export const ShipText = styled.p`
     text-align: center;
     font-size: 12px;

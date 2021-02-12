@@ -2,6 +2,19 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+  *,
+  *::before,
+  *::after {
+      box-sizing: border-box;
+  }
+
+  :root {
+  --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: #363636;
+}
+
   body {
     color: ${(props) => props.fontColor};
     background-color: ${(props) => props.background};
@@ -19,6 +32,25 @@ const GlobalStyle = createGlobalStyle`
 
     ul {
       margin: 0;
+    }
+
+    select {
+      // A reset of styles, including removing the default dropdown arrow
+      appearance: none;
+      // Additional resets for further consistency
+      outline: none;
+      background-color: transparent;
+      border: none;
+      padding: 0 1em 0 0;
+      margin: 0;
+      width: 100%;
+      font-family: inherit;
+      font-size: inherit;
+      cursor: inherit;
+      line-height: inherit;
+}
+    select::-ms-expand {
+      display: none;
     }
 
     .navbar {
@@ -57,6 +89,7 @@ const GlobalStyle = createGlobalStyle`
         transform: rotateY(0rem);
       }
     }
+
 `;
 
 export default GlobalStyle;

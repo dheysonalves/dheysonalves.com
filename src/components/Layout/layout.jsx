@@ -1,8 +1,7 @@
-import React, { useContext, Fragment } from 'react';
+import React, { useContext, Fragment, useEffect } from 'react';
 import { useTheme } from 'styled-components';
 import Navbar from './Navigation/Navigation';
 // import Menu from "./menu"
-import Footer from './Footer/footer';
 import Main from './Main/index';
 import GlobalStyle from '../../styles/globalStyle';
 import Context from '../../store/context.store';
@@ -13,6 +12,10 @@ const Layout = ({ children, max }) => {
     const { state } = useContext(Context);
     const theme = useTheme();
     const { isSticky, element } = useSticky();
+
+    useEffect(() => {
+        console.log(state, theme);
+    }, [state, theme]);
 
     return (
         <Fragment>

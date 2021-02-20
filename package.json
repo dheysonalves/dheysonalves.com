@@ -7,9 +7,6 @@
   "bugs": {
     "url": "https://github.com/Dheyson/personal-blog/issues"
   },
-  "engines": {
-    "node": "12.x"
-  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

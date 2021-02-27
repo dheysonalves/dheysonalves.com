@@ -3,6 +3,7 @@ title: "Breakpoint #2 - Modal Scrolling"
 path: "/blog/2breapoint-modal-scrolling"
 date: "2021-01-05T21:15:03.284Z"
 description: "Muitas vezes buscamos soluções para o CSS que requerem a ajuda do Javascript para funcionalidades customizadas. Mas esquecemos, que nos últimos anos, CSS evoluiu bastante e existem várias novas soluções para problems comuns do CSS, sem a ajuda de uma línguagem."
+tags: ["CSS"]
 # featuredImage: '../../assets/avatar6.png'
 ---
 

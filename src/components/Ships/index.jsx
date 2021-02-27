@@ -5,9 +5,11 @@ import * as S from './styles';
 
 const Ships = ({ label, color, radius, labelColor, ...props }) => {
     return (
-        <S.ShipWrapper color={color} radius={radius} {...props}>
-            <S.ShipText labelColor={labelColor}>{label}</S.ShipText>
-        </S.ShipWrapper>
+        <S.ShipListWrapper>
+            <S.ShipWrapper color={color} radius={radius} {...props}>
+                <S.ShipText labelColor={labelColor}>{label}</S.ShipText>
+            </S.ShipWrapper>
+        </S.ShipListWrapper>
     );
 };
 

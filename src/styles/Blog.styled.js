@@ -25,5 +25,7 @@ export const EmphasisParagraph = styled.p`
 
 export const DateParagraph = styled.span`
     display: block;
+    font-weight: bold;
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
 `;

@@ -3,7 +3,7 @@ title: "Awesome Form Validation - Parte 1"
 path: "/blog/awesome-jquery-form"
 date: "2021-01-12T01:13:03.284Z"
 description: "Toda vez que iniciava a criar um formulário, eu pensava, Estou fazendo algo que já fiz, eu devia reutilizar de algum lugar. Eu tinha essa necessidade toda vez, embora exista bastantes modelos na internet, queria um em que eu sabia diretamente onde encontrar, principalmente para formulários em um ambiente JavaScript Puro ou JQUERY."
-tags: ["animals", "Chicago", "zoos"]
+tags: ["JAVASCRIPT"]
 ---
 
 ![Awesome Form Validation](./form-validation.png)

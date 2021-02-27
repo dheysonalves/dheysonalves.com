@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useCallback, useContext } from 'react';
 import { Link, graphql } from 'gatsby';
+import { useTheme } from 'styled-components';
 import Layout from '../components/Layout/layout';
 import Footer from '../components/Layout/Footer/footer';
 import SEO from '../components/Seo/Seo';
+import Ship from '../components/Ships/index';
+import Context from '../store/context.store';
 import { rhythm } from '../utils/typography';
 
 import * as S from '../styles/Blog.styled';
@@ -36,6 +39,19 @@ export const pageQuery = graphql`
 const Writting = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata.title;
     const posts = data.allMarkdownRemark.edges;
+    const { state } = useContext(Context);
+    const theme = useTheme();
+
+    const checkColor = useCallback(
+        (elem) => {
+            if (state.isDark) {
+                return theme.dark[elem];
+            }
+
+            return theme.light[elem];
+        },
+        [state, theme]
+    );
 
     return (
         <Layout location={location} title={siteTitle} max={rhythm(28)}>
@@ -71,7 +87,12 @@ const Writting = ({ data, location }) => {
                             </Link>
                         </h3>
                         {tags.map((item, index) => (
-                            <span key={index}>{item + ' '}</span>
+                            <Ship
+                                color={checkColor(item)}
+                                key={index}
+                                label={item + ' '}
+                                radius={false}
+                            />
                         ))}
                         <S.DateParagraph>{date}</S.DateParagraph>
                         <p

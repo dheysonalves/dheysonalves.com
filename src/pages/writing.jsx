@@ -25,6 +25,7 @@ export const pageQuery = graphql`
                         date(formatString: "MMMM DD, YYYY")
                         title
                         description
+                        tags
                     }
                 }
             }
@@ -50,6 +51,8 @@ const Writting = ({ data, location }) => {
             <hr />
             {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
+                const { tags, date, description } = node.frontmatter;
+
                 return (
                     <div key={node.fields.slug}>
                         <h3
@@ -67,12 +70,13 @@ const Writting = ({ data, location }) => {
                                 {title}
                             </Link>
                         </h3>
-                        <small>{node.frontmatter.date}</small>
+                        {tags.map((item, index) => (
+                            <span key={index}>{item + ' '}</span>
+                        ))}
+                        <S.DateParagraph>{date}</S.DateParagraph>
                         <p
                             dangerouslySetInnerHTML={{
-                                __html:
-                                    node.frontmatter.description ||
-                                    node.excerpt,
+                                __html: description || node.excerpt,
                             }}
                         />
                     </div>

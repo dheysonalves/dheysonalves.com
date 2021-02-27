@@ -81,6 +81,7 @@ export const pageQuery = graphql`
             id
             excerpt(pruneLength: 160)
             html
+            timeToRead
             frontmatter {
                 title
                 date(formatString: "MMMM DD, YYYY")

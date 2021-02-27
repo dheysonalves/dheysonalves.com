@@ -3,6 +3,7 @@ title: "Como implementar o GitFlow?"
 path: /blog/como-implementar-gitflow
 date: "2021-01-24T14:15:03.284Z"
 description: "O GitFlow é uma ideia abstrata para gerenciamento de branches utilizando Git. Ele auxilia a como deve ser criada as branches, e como mergea-las."
+tags: ["animals", "Chicago", "zoos"]
 ---
 
 ![Git flow](https://i2.wp.com/lanziani.com/slides/gitflow/images/gitflow_1.png)

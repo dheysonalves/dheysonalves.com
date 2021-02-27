@@ -3,6 +3,7 @@ title: 'Como definir uma tag script corretamente e carregar os scripts no Larave
 path: '/blog/meu-coworker-perguntou2'
 date: "2021-01-06T21:40:03.284Z"
 description:
+tags: ["animals", "Chicago", "zoos"]
 ---
 
 <!-- <div style="color: orange; border: 2px solid #363636; display: inline-block; padding: 5px; margin-bottom: 10px; border-radius: 10px; background-color: lightyellow;">

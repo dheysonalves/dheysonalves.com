@@ -3,6 +3,7 @@ title: "Integrando com gateway de pagamento - PagSeguro | Parte 1"
 path: "/blog/integrando-com-pagseguro-pt-1"
 date: "2021-02-07T21:40:03.284Z"
 description: "Eu havia comentado em algum artigo anterior, que este ano, seria de muitos desafios. Daqueles que realmente te tiram da zona de conforto. Meu primeiro grande projeto na empresa, era integrar um sistema com o PagSeguro, um gateway de pagamento bastante utilizado no Brasil."
+tags: ["animals", "Chicago", "zoos"]
 ---
 
 ![Logo do Pagseguro](https://camo.githubusercontent.com/ddd2e32162186b7ba2b9d159d4602edb1529226aea27f5dcc9026177d6e40e45/68747470733a2f2f6269746275636b65742e6f72672f7265706f2f346e614c4b7a2f696d616765732f313035313234323635312d7073352e706e67)

@@ -23,12 +23,11 @@ export const Navigation = styled.nav`
     }
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h1`
     font-family: 'Merriweather', 'Georgia', serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    text-shadow: 0px 4px 15px rgba(87, 136, 108, 0.5);
+    font-size: 2rem;
     text-transform: uppercase;
     text-decoration: underline;
     color: ${(props) => props.color};
@@ -83,24 +82,18 @@ export const MenuItem = styled.li`
     a {
         font-weight: bold;
         letter-spacing: 0.2rem;
-        color: ${(props) => props.link};
         text-decoration: none;
         transition: color 0.3s linear;
         font-size: 1.1rem;
-    }
 
-    &:active {
-        text-decoration: underline;
-    }
-    &:hover {
-        color: #57886c;
-        text-decoration: underline;
-    }
-    &:focus {
-        color: #fff;
-    }
-    &:visited {
-        color: #fff;
+        &:visited {
+            color: #77b597;
+        }
+
+        &:hover {
+            color: #ff6100;
+            text-decoration: underline;
+        }
     }
 `;
 

@@ -6,7 +6,7 @@ export const Main = styled.main`
     margin: ${(props) => props.mw && '0 auto'};
 
     @media (max-width: 800px) {
-        max-width: 20rem;
+        max-width: ${rhythm(100)};
         align-self: center;
     }
     @media (min-width: 800px) {

@@ -13,10 +13,6 @@ const Layout = ({ children, max }) => {
     const theme = useTheme();
     const { isSticky, element } = useSticky();
 
-    useEffect(() => {
-        console.log(state, theme);
-    }, [state, theme]);
-
     return (
         <Fragment>
             <GlobalStyle

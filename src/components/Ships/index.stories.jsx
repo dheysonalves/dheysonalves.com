@@ -19,7 +19,7 @@ export const RoundedShip = (args) => (
     <Ship radius={true} color="#363636" labelColor="#fff" {...args} />
 );
 export const RoundedShipList = (args) => (
-    <S.ShipListWrapper>
+    <>
         <Ship
             radius={true}
             color="lightblue"
@@ -41,7 +41,7 @@ export const RoundedShipList = (args) => (
             label="Node"
             {...args}
         />
-    </S.ShipListWrapper>
+    </>
 );
 
 export const ShipList = (args) => (

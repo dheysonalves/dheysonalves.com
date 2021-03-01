@@ -1,11 +1,15 @@
-import React from 'react';
-import Layout from '../components/Layout/layout';
+import React, { useCallback, useContext } from 'react';
+import { useTheme } from 'styled-components';
 import { Link, graphql } from 'gatsby';
+import { IoLogoLinkedin, IoLogoGithub, IoLogoTwitter } from 'react-icons/io';
+import { FaDev, FaDiscord } from 'react-icons/fa';
+
+import Layout from '../components/Layout/layout';
+import Context from '../store/context.store';
 import { rhythm } from '../utils/typography';
 import * as S from '../styles/index.styles';
 import SEO from '../components/Seo/Seo';
-import { IoLogoLinkedin, IoLogoGithub, IoLogoTwitter } from 'react-icons/io';
-import { FaDev, FaDiscord } from 'react-icons/fa';
+import Ship from '../components/Ships/index';
 
 import Avatar from '../assets/img/Avatar.png';
 
@@ -27,6 +31,7 @@ export const pageQuery = graphql`
                         date(formatString: "MMMM DD, YYYY")
                         title
                         description
+                        tags
                     }
                 }
             }
@@ -36,6 +41,19 @@ export const pageQuery = graphql`
 
 const Index = ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
+    const { state } = useContext(Context);
+    const theme = useTheme();
+
+    const checkColor = useCallback(
+        (elem) => {
+            if (state.isDark) {
+                return theme.dark[elem];
+            }
+
+            return theme.light[elem];
+        },
+        [state, theme]
+    );
 
     return (
         <Layout max={rhythm(100)} mw={true}>
@@ -123,6 +141,7 @@ const Index = ({ data }) => {
                     {posts.slice(0, 3).map(({ node }) => {
                         const title =
                             node.frontmatter.title || node.fields.slug;
+                        const { tags, date, description } = node.frontmatter;
                         return (
                             <div key={node.fields.slug}>
                                 <h3
@@ -140,12 +159,18 @@ const Index = ({ data }) => {
                                         {title}
                                     </Link>
                                 </h3>
-                                <small>{node.frontmatter.date}</small>
+                                {tags.map((item, index) => (
+                                    <Ship
+                                        color={checkColor(item)}
+                                        key={index}
+                                        label={item + ' '}
+                                        radius={false}
+                                    />
+                                ))}
+                                <S.DateParagraph>{date}</S.DateParagraph>
                                 <p
                                     dangerouslySetInnerHTML={{
-                                        __html:
-                                            node.frontmatter.description ||
-                                            node.excerpt,
+                                        __html: description || node.excerpt,
                                     }}
                                 />
                             </div>

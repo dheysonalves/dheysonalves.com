@@ -16,12 +16,7 @@ const Navigation = ({ sticky }) => {
     return (
         <S.Header>
             <S.Navigation>
-                <S.Title
-                    color={sticky && state.isDark ? '#363636' : ''}
-                    title="Opa, e ai?"
-                >
-                    DHEYSON ALVES
-                </S.Title>
+                <S.Title title="Opa, e ai?">DHEYSON ALVES</S.Title>
             </S.Navigation>
             <S.Menu
                 color={state.isDark ? '#292F36' : '#fff'}

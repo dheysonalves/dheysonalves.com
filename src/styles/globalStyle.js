@@ -26,9 +26,18 @@ const GlobalStyle = createGlobalStyle`
 
   a {
         color: ${(props) => props.links};
-        text-decoration: none;
-        box-shadow: 0 0 0 0 currentColor;
+        box-shadow: 0px 0px 0px 0px currentColor;
     }
+
+  a:active {
+    color: #ff6100;
+    text-decoration: underline;
+  }
+
+  a:visited {
+      color: #ff6100;
+  }
+
 
     ul {
       margin: 0;

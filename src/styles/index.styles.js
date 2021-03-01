@@ -8,15 +8,15 @@ export const Wrapper = styled.div`
     align-items: center;
 
     /* Smartphones (portrait and landscape) ----------- */
-    @media only screen and (max-device-width: 767px) {
+    @media only screen and (max-width: 767px) {
         max-width: ${rhythm(100)};
         margin: 0 auto;
     }
     /* Styles */
 
     /* tablets (portrait) ----------- */
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1223px) {
-        max-width: ${rhythm(50)};
+    @media only screen and (min-width: 768px) and (max-width: 1223px) {
+        max-width: ${rhythm(100)};
         margin: 0 auto;
     }
     /* Styles */
@@ -173,4 +173,11 @@ export const Divider = styled.div`
     border: 1px solid #363636;
     opacity: 0.2;
     width: 100%;
+`;
+
+export const DateParagraph = styled.span`
+    display: block;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 `;

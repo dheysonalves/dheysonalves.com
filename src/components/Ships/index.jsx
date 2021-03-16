@@ -14,9 +14,21 @@ const Ships = ({ label, color, radius, labelColor, ...props }) => {
 };
 
 Ships.propTypes = {
+    /**
+     * Sets the label from the inner text (required)
+     */
     label: PropTypes.string.isRequired,
+    /**
+     * Sets the background color for the ship (required)
+     */
     color: PropTypes.string.isRequired,
+    /**
+     * Sets the radios for the ship
+     */
     radius: PropTypes.bool,
+    /**
+     * Sets the label color for the ship
+     */
     labelColor: PropTypes.string,
 };
 

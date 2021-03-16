@@ -7,7 +7,6 @@ export default {
     args: {
         title: '',
         subtitle: '',
-        description: '',
         photo: 'https://source.unsplash.com/random/400x400',
     },
 };

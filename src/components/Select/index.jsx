@@ -24,8 +24,18 @@ const Select = ({
 };
 
 Select.propTypes = {
+    /**
+     * Sets the select height (required)
+     */
     height: PropTypes.string.isRequired,
+    /**
+     * Sets the font size from the inner text
+     */
     fontSize: PropTypes.string,
+    /**
+     * Sets the font size from the inner text (required)
+     */
+    data: PropTypes.array.isRequired,
 };
 
 Select.defaultProps = {

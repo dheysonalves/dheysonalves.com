@@ -19,11 +19,11 @@ export const Button = styled.button`
     }
 
     :active {
-        background-color: #57886c;
+        background-color: #aeffc0;
     }
 
     :focus {
-        background-color: #57886c;
+        background-color: #aeffc0;
     }
 `;
 

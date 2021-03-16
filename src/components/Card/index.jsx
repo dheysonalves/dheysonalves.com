@@ -44,13 +44,26 @@ const Card = ({ margin, width, ...data }) => {
 };
 
 Card.propTypes = {
-    data: PropTypes.shape({
-        photo: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        subtitle: PropTypes.string.isRequired,
-        github: PropTypes.string,
-        linkedin: PropTypes.string,
-    }),
+    /**
+     * Sets the photo URL (required)
+     */
+    photo: PropTypes.string.isRequired,
+    /**
+     * Sets the title field (required)
+     */
+    title: PropTypes.string.isRequired,
+    /**
+     * Sets the subtitle field (required)
+     */
+    subtitle: PropTypes.string.isRequired,
+    /**
+     * Sets the github social media URL
+     */
+    github: PropTypes.string,
+    /**
+     * Sets the linkedin social media URL
+     */
+    linkedin: PropTypes.string,
 };
 
 Card.defaultProps = {

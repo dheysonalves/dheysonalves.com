@@ -29,7 +29,7 @@ const Input = ({
 
 Input.propTypes = {
     /**
-     * what is the height?
+     * what is the height? (required)
      */
     height: PropTypes.string.isRequired,
     /**

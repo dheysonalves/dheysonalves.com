@@ -1,7 +1,13 @@
 import styled from 'styled-components';
-import { rhythm } from '../utils/typography';
 
 export const Container = styled.div`
-    max-width: ${rhythm(100)};
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: auto;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
 `;

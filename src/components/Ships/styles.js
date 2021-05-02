@@ -6,10 +6,18 @@ export const ShipWrapper = styled.div`
     width: 120px;
     margin-right: 5px;
     margin-bottom: 5px;
+
+    @media (max-width: 800px) {
+        width: 339px;
+    }
 `;
 
 export const ShipListWrapper = styled.div`
     display: inline-block;
+
+    @media (max-width: 800px) {
+        display: block;
+    }
 `;
 
 export const ShipText = styled.p`

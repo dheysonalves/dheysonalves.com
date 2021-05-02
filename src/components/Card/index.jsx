@@ -9,8 +9,7 @@ import Ships from '../Ships/index';
 
 import { AiFillGithub, AiFillEye } from 'react-icons/ai';
 
-const Card = ({ margin, width, ...data }) => {
-    const { title, subtitle, github, linkedin, photo } = data;
+const Card = ({ margin, width, title, subtitle, github, linkedin, photo }) => {
     return (
         <S.Wrapper margin={margin} width={width}>
             <Image source={photo} alt="random image" />

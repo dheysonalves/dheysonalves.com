@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     margin: ${(props) => props.margin + 'rem'};
+
+    @media (max-width: 800px) {
+        max-width: 340px;
+    }
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -27,6 +31,7 @@ export const IconLink = styled.a`
 export const ShipsWrapper = styled.div`
     display: flex;
     justify-content: flex-start;
+    width: 100%;
     margin-top: 5px;
     margin-bottom: 10px;
     flex-wrap: wrap;

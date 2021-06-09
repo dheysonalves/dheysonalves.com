@@ -1,10 +1,13 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback, useContext, useState, useEffect } from 'react';
 import { Link, graphql } from 'gatsby';
 import { useTheme } from 'styled-components';
 import Layout from '../components/Layout/layout';
 import Footer from '../components/Layout/Footer/footer';
 import SEO from '../components/Seo/Seo';
 import Ship from '../components/Ships/index';
+import TextInput from '../components/Input/index';
+import ButtonShip from '../components/Button/index';
+
 import Context from '../store/context.store';
 import { rhythm } from '../utils/typography';
 
@@ -40,8 +43,42 @@ const Writting = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title;
 	const posts = data.allMarkdownRemark.edges;
 	const { state } = useContext(Context);
+	const [search, setSearch] = useState('');
 	const theme = useTheme();
-
+	const MOCKED_BUTTONS = [
+		{
+			name: 'HTML',
+			active: false,
+		},
+		{
+			name: 'CSS',
+			active: false,
+		},
+		{
+			name: 'Javascript',
+			active: false,
+		},
+		{
+			name: 'Typescript',
+			active: false,
+		},
+		{
+			name: 'PHP',
+			active: false,
+		},
+		{
+			name: 'Shell',
+			active: false,
+		},
+		{
+			name: 'React',
+			active: false,
+		},
+		{
+			name: 'Laravel',
+			active: false,
+		},
+	];
 	const checkColor = useCallback(
 		(elem) => {
 			if (state.isDark) {
@@ -53,6 +90,25 @@ const Writting = ({ data, location }) => {
 		[state, theme]
 	);
 
+	const onChangeSearchValue = useCallback((event) => {
+		setSearch(event.target.value);
+	}, []);
+
+	const filterTextOnClick = useCallback(
+		(event, text) => {
+			event.preventDefault();
+			setSearch((search) => search + ' ' + text);
+		},
+		[search]
+	);
+
+	useEffect(() => {
+		console.log(posts);
+		// console.log(
+		// 	posts?.filter((item) => item.frontmatter.tags.find('SHELL'))
+		// );
+	}, [posts]);
+
 	return (
 		<Layout location={location} title={siteTitle} max={rhythm(28)}>
 			<SEO
@@ -63,6 +119,33 @@ const Writting = ({ data, location }) => {
 				<S.EmphasisParagraph>
 					Todas as publicações 📝
 				</S.EmphasisParagraph>
+				<form
+					action=""
+					method="post"
+					style={{ width: '100%', marginBottom: 15 }}
+				>
+					<TextInput
+						height={100}
+						style={{ width: '100%', marginBottom: 15 }}
+						value={search}
+						onChange={(value) => onChangeSearchValue(value)}
+						counter={posts.length}
+					/>
+					{MOCKED_BUTTONS.map((item) => (
+						<ButtonShip
+							key={item.name}
+							text={item.name}
+							onClick={(e) => filterTextOnClick(e, item.name)}
+							bakgroundColor={item.active}
+							title=""
+							style={{
+								height: 'auto',
+								width: 'auto',
+								marginRight: '5px',
+							}}
+						/>
+					))}
+				</form>
 			</S.BlogPostsWrapper>
 			<hr />
 			{posts.map(({ node }) => {

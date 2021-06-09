@@ -2,18 +2,17 @@ import React from 'react';
 import * as S from './styles';
 import PropTypes from 'prop-types';
 
-const Button = ({ text = 'Submit', click, ...props }) => {
+const Button = ({ text = 'Submit', click, bakgroundColor, ...props }) => {
 	return (
-		<S.Wrapper>
-			<S.Button
-				title="Wanna share an idea?"
-				onClick={click}
-				role="button"
-				{...props}
-			>
-				<S.LabelButton>{text}</S.LabelButton>
-			</S.Button>
-		</S.Wrapper>
+		<S.Button
+			title="Wanna share an idea?"
+			onClick={click}
+			background={bakgroundColor}
+			role="button"
+			{...props}
+		>
+			<S.LabelButton>{text}</S.LabelButton>
+		</S.Button>
 	);
 };
 

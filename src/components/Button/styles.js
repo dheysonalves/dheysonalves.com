@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div``;
 
 export const Button = styled.button`
-	background-color: ${(props) => props.background || '#fff'};
+	background-color: ${(props) => (props.background ? ' #aeffd8' : '#fff')};
 	border: 2px solid #292f36;
 	padding: 10px;
 	width: 200px;

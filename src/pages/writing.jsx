@@ -95,20 +95,29 @@ const Writting = ({ data, location }) => {
 		setSearch(event.target.value);
 	}, []);
 
-	const filterTextOnClick = useCallback((event, text) => {
-		event.preventDefault();
-		setSearch((search) => search + ' ' + text);
-	}, []);
+	const filterTextOnClick = useCallback(
+		(event, text) => {
+			event.preventDefault();
+			setSearch(text);
+			handleFilterPosts(text);
+		},
+		[handleFilterPosts]
+	);
 
-	useEffect(() => {
-		postsData.filter((item) =>
-			console.log(
-				item.node.frontmatter.tags.includes(
-					search.toUpperCase().replace(' ', '')
-				)
-			)
-		);
-	}, [posts, postsData, search]);
+	const handleFilterPosts = useCallback(
+		(text) => {
+			setPostsData(
+				postsData
+					.filter((item) =>
+						item.node.frontmatter.tags.includes(
+							text.toUpperCase().replace(' ', '')
+						)
+					)
+					.map((item) => item)
+			);
+		},
+		[postsData]
+	);
 
 	return (
 		<Layout location={location} title={siteTitle} max={rhythm(28)}>
@@ -130,7 +139,7 @@ const Writting = ({ data, location }) => {
 						style={{ width: '100%', marginBottom: 15 }}
 						value={search}
 						onChange={(value) => onChangeSearchValue(value)}
-						counter={posts.length}
+						counter={postsData.length}
 					/>
 					{MOCKED_BUTTONS.map((item) => (
 						<ButtonShip

@@ -44,6 +44,7 @@ const Writting = ({ data, location }) => {
 	const posts = data.allMarkdownRemark.edges;
 	const { state } = useContext(Context);
 	const [search, setSearch] = useState('');
+	const [postsData, setPostsData] = useState(posts);
 	const theme = useTheme();
 	const MOCKED_BUTTONS = [
 		{
@@ -94,20 +95,20 @@ const Writting = ({ data, location }) => {
 		setSearch(event.target.value);
 	}, []);
 
-	const filterTextOnClick = useCallback(
-		(event, text) => {
-			event.preventDefault();
-			setSearch((search) => search + ' ' + text);
-		},
-		[search]
-	);
+	const filterTextOnClick = useCallback((event, text) => {
+		event.preventDefault();
+		setSearch((search) => search + ' ' + text);
+	}, []);
 
 	useEffect(() => {
-		console.log(posts);
-		// console.log(
-		// 	posts?.filter((item) => item.frontmatter.tags.find('SHELL'))
-		// );
-	}, [posts]);
+		postsData.filter((item) =>
+			console.log(
+				item.node.frontmatter.tags.includes(
+					search.toUpperCase().replace(' ', '')
+				)
+			)
+		);
+	}, [posts, postsData, search]);
 
 	return (
 		<Layout location={location} title={siteTitle} max={rhythm(28)}>
@@ -148,7 +149,7 @@ const Writting = ({ data, location }) => {
 				</form>
 			</S.BlogPostsWrapper>
 			<hr />
-			{posts.map(({ node }) => {
+			{postsData.map(({ node }) => {
 				const title = node.frontmatter.title || node.fields.slug;
 				const { tags, date, description } = node.frontmatter;
 

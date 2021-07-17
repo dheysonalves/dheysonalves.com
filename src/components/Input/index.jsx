@@ -14,6 +14,8 @@ const Input = ({
 	borderColor,
 	value,
 	onChange,
+	onKeyDown,
+	onBlur,
 	counter,
 	...props
 }) => {
@@ -28,6 +30,8 @@ const Input = ({
 				placeholder="Type something"
 				onChange={onChange}
 				value={value}
+				onBlur={onBlur}
+				onKeyDown={onKeyDown}
 				{...props}
 			/>
 			<S.PostsCounter>{counter}</S.PostsCounter>

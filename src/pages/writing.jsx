@@ -39,6 +39,41 @@ export const pageQuery = graphql`
 	}
 `;
 
+const MOCKED_BUTTONS = [
+	{
+		name: 'HTML',
+		active: false,
+	},
+	{
+		name: 'CSS',
+		active: false,
+	},
+	{
+		name: 'Javascript',
+		active: false,
+	},
+	{
+		name: 'Typescript',
+		active: false,
+	},
+	{
+		name: 'PHP',
+		active: false,
+	},
+	{
+		name: 'Shell',
+		active: false,
+	},
+	{
+		name: 'React',
+		active: false,
+	},
+	{
+		name: 'Laravel',
+		active: false,
+	},
+];
+
 const Writting = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title;
 	const posts = data.allMarkdownRemark.edges;
@@ -46,40 +81,7 @@ const Writting = ({ data, location }) => {
 	const [search, setSearch] = useState('');
 	const [postsData, setPostsData] = useState(posts);
 	const theme = useTheme();
-	const MOCKED_BUTTONS = [
-		{
-			name: 'HTML',
-			active: false,
-		},
-		{
-			name: 'CSS',
-			active: false,
-		},
-		{
-			name: 'Javascript',
-			active: false,
-		},
-		{
-			name: 'Typescript',
-			active: false,
-		},
-		{
-			name: 'PHP',
-			active: false,
-		},
-		{
-			name: 'Shell',
-			active: false,
-		},
-		{
-			name: 'React',
-			active: false,
-		},
-		{
-			name: 'Laravel',
-			active: false,
-		},
-	];
+
 	const checkColor = useCallback(
 		(elem) => {
 			if (state.isDark) {
@@ -91,9 +93,14 @@ const Writting = ({ data, location }) => {
 		[state, theme]
 	);
 
-	const onChangeSearchValue = useCallback((event) => {
-		setSearch(event.target.value);
-	}, []);
+	const onChangeSearchValue = useCallback(
+		(event) => {
+			const inputValue = event.target.value;
+			setSearch(inputValue);
+			filterTextOnClick(event, inputValue);
+		},
+		[filterTextOnClick]
+	);
 
 	const filterTextOnClick = useCallback(
 		(event, text) => {
@@ -129,16 +136,19 @@ const Writting = ({ data, location }) => {
 				<S.EmphasisParagraph>
 					Todas as publicações 📝
 				</S.EmphasisParagraph>
-				<form
-					action=""
-					method="post"
-					style={{ width: '100%', marginBottom: 15 }}
-				>
+				<div style={{ width: '100%', marginBottom: 15 }}>
 					<TextInput
 						height={100}
 						style={{ width: '100%', marginBottom: 15 }}
 						value={search}
-						onChange={(value) => onChangeSearchValue(value)}
+						onChange={(event) => {
+							onChangeSearchValue(event);
+						}}
+						onKeyDown={(event) => {
+							if (event.key === 'Enter') {
+								filterTextOnClick(event, search);
+							}
+						}}
 						counter={postsData.length}
 					/>
 					{MOCKED_BUTTONS.map((item) => (
@@ -155,7 +165,7 @@ const Writting = ({ data, location }) => {
 							}}
 						/>
 					))}
-				</form>
+				</div>
 			</S.BlogPostsWrapper>
 			<hr />
 			{postsData.map(({ node }) => {

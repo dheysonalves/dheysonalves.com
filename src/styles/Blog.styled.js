@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div``;
-
 export const BlogPostsWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	align-self: flex-start;
 	margin-top: 2rem;
+	height: auto;
+	max-width: auto;
 `;
 
 export const Divider = styled.div`

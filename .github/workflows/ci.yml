@@ -16,10 +16,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Detect Linting
-        run: yarn lint
-      
-      - name: Fix Linting
+      - name: Detect Linting and fix
         run: yarn lint --fix
 
       # - name: Test

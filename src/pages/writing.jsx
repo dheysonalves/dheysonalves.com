@@ -113,17 +113,21 @@ const Writting = ({ data, location }) => {
 
 	const handleFilterPosts = useCallback(
 		(text) => {
-			setPostsData(
-				postsData
-					.filter((item) =>
-						item.node.frontmatter.tags.includes(
-							text.toUpperCase().replace(' ', '')
+			if (text === '') {
+				setPostsData(posts);
+			} else {
+				setPostsData(
+					postsData
+						.filter((item) =>
+							item.node.frontmatter.tags.includes(
+								text.toUpperCase().replace(' ', '')
+							)
 						)
-					)
-					.map((item) => item)
-			);
+						.map((item) => item)
+				);
+			}
 		},
-		[postsData]
+		[posts, postsData]
 	);
 
 	return (

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render the \`Wanna share an idea?\` text 1`] = `
+.c0 {
+  background-color: #fff;
+  border: 2px solid #292f36;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  outline: none;
+}
+
+.c0:disabled {
+  opacity: 0.5;
+}
+
+.c0:hover {
+  background-color: #aeffd8;
+}
+
+.c0:active {
+  background-color: #aeffc0;
+}
+
+.c0:focus {
+  background-color: #aeffc0;
+}
+
+.c1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #292f36;
+}
+
+<div
+  class="styles__Wrapper-ox66x8-0"
+>
+  <button
+    class="c0"
+    role="button"
+    title="Wanna share an idea?"
+  >
+    <span
+      class="c1"
+    >
+      testing
+    </span>
+  </button>
+</div>
+`;

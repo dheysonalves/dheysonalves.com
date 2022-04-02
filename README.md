@@ -1,12 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <div>
-  <p align="center">
-    <a href="dheysonalves-tech.surge.sh">
-      <img alt="Gatsby" src="./assets/img/myavatar.png" width="150" />
-    </a>
-  </p>
   <h1 align="center" style="color: #ff6100; text-decoration: underline;">
-    Dheyson Alves - Personal website
+    Dheyson Alves - Personal Blog
   </h1>
 </div>
 

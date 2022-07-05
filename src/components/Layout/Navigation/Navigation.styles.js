@@ -38,7 +38,7 @@ export const Title = styled.h1`
 
 export const Menu = styled.ul`
 	display: flex;
-	flex: 0.5;
+	flex: 0.6;
 	justify-content: space-between;
 	align-items: center;
 	list-style: none;

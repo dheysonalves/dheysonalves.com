@@ -42,6 +42,11 @@ const Navigation = () => {
 						Portfólio
 					</a>
 				</S.MenuItem>
+				<S.MenuItem>
+					<a href="/about/" title="Alguns artigos que escrevi">
+						Sobre
+					</a>
+				</S.MenuItem>
 				<S.CursorBulb>
 					{state.isDark ? (
 						<FaRegLightbulb
@@ -57,9 +62,7 @@ const Navigation = () => {
 						/>
 					)}
 				</S.CursorBulb>
-				{/* <S.MenuItem>
-                        <Link to="/about/about">About</Link>
-                    </S.MenuItem> */}
+
 			</S.Menu>
 		</S.Header>
 	);

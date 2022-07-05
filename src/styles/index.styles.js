@@ -94,19 +94,19 @@ export const ImageWrapper = styled.img`
 
 export const ContentCenter = styled.div`
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 4rem;
 
 	@media only screen and (max-device-width: 767px) {
-		flex-direction: column;
 		margin-top: 1rem;
 	}
 `;
 
 export const Avatar = styled.img`
 	margin-right: 20px;
-
+	cursor: default;
 	@media only screen and (max-device-width: 767px) {
 		margin-top: 50px;
 		width: 50px;

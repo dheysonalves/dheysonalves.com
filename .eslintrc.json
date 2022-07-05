@@ -37,6 +37,6 @@
 				"endOfLine": "auto"
 			}
 		],
-		"indent": [4, "tab"]
+		"ident": [0, "tab"]
 	}
 }

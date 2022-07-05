@@ -59,7 +59,7 @@ const Index = ({ data }) => {
 		<Layout max={rhythm(100)} mw={true}>
 			<SEO
 				title="Dheyson Alves"
-				description="Um desenvolvedor de software, adora programação, às vezes brinca com react e nas horas vagas escreve histórias de RPG."
+				description="Engenheiro de Software com mais de 3 anos de experiência na indústria. Ajudando empresas de diferentes nichos a atingir seu potencial com aplicativos de software."
 			/>
 			<S.Wrapper>
 				<S.ContentCenter>
@@ -81,7 +81,7 @@ const Index = ({ data }) => {
 								<IoLogoLinkedin size="2em" />
 							</a>
 							<a
-								href="https://twitter.com/DheysonAlves2"
+								href="https://twitter.com/dheysonlalves"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="anchor__specific"
@@ -122,12 +122,11 @@ const Index = ({ data }) => {
 							</a>
 						</S.IconsWrapper>
 						<S.EmphasisParagraph>
-							Study. Build. Improve. Repeat.
+							Front-End Developer
 						</S.EmphasisParagraph>
 						<S.Title>
 							<S.EnphasisSpan>
-								Trabalhando para construir ótimos produtos com
-								qualidade.
+								Ajudando clientes a alcançar seu potencial com tecnologia.
 							</S.EnphasisSpan>
 						</S.Title>
 					</div>

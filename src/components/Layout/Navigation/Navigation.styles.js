@@ -1,25 +1,27 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-	margin: ${(props) => props.mw && '0 auto'};
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	@media (min-width: 1270px) {
+		flex-direction: row;
+	}
 `;
 
 export const Navigation = styled.nav`
 	display: flex;
+	flex: 1;
 	justify-content: center;
-	align-items: center;
-	padding: 0px;
-	position: initial;
-	height: 50px;
 	margin-bottom: 20px;
 
 	@media (min-width: 1270px) {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0.5rem 3rem 0rem 0rem;
+		justify-content: flex-start;
 		z-index: 1;
-		width: 100%;
+		margin: 0;
 	}
 `;
 
@@ -28,8 +30,6 @@ export const Title = styled.h1`
 	font-style: normal;
 	font-weight: 500;
 	font-size: 2rem;
-	text-transform: uppercase;
-	text-decoration: underline;
 	color: ${(props) => props.color};
 	margin: 0;
 	padding: 0;
@@ -38,26 +38,16 @@ export const Title = styled.h1`
 
 export const Menu = styled.ul`
 	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
+	flex: 0.5;
+	justify-content: space-between;
 	align-items: center;
 	list-style: none;
 	padding: 0;
-	margin: 0 auto;
-	max-width: 60rem;
 
 	@media (max-width: 1279px) {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		/* background: ${(props) => props.color || '#fff'}; */
-		/* height: 100vh;
-        text-align: left;
-        padding: 2rem;
-        position: absolute; */
-		/* transition: transform 0.3s ease-in-out;
-        transform: ${({ open }) =>
-			open ? 'translateX(0)' : 'translateX(-100%)'}; */
 		top: 0;
 		right: 0;
 		width: 100%;

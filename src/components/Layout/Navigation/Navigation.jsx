@@ -4,7 +4,7 @@ import Context from '../../../store/context.store';
 import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
 import * as S from './Navigation.styles';
 
-const Navigation = ({ sticky }) => {
+const Navigation = () => {
 	const [iconState, setIconState] = useState();
 	const { state, dispatch } = useContext(Context);
 
@@ -16,7 +16,7 @@ const Navigation = ({ sticky }) => {
 	return (
 		<S.Header>
 			<S.Navigation>
-				<S.Title title="Opa, e ai?">DHEYSON ALVES</S.Title>
+				<S.Title title="Opa, e ai?">Dheyson L. Alves</S.Title>
 			</S.Navigation>
 			<S.Menu
 				color={state.isDark ? '#292F36' : '#fff'}
@@ -30,16 +30,6 @@ const Navigation = ({ sticky }) => {
 				<S.MenuItem>
 					<a href="/writing/" title="Alguns artigos que escrevi">
 						Escrita
-					</a>
-				</S.MenuItem>
-				<S.MenuItem>
-					<a
-						href="https://dheyson10.gitbook.io/breakpoint/"
-						title="Minha documentação oficial"
-						target={`_blank`}
-						rel={`noopener noreferrer`}
-					>
-						Documentação
 					</a>
 				</S.MenuItem>
 				<S.MenuItem>

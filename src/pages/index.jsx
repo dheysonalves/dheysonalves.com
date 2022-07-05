@@ -126,7 +126,8 @@ const Index = ({ data }) => {
 						</S.EmphasisParagraph>
 						<S.Title>
 							<S.EnphasisSpan>
-								Ajudando clientes a alcançar seu potencial com tecnologia.
+								Ajudando clientes a alcançar seu potencial com
+								tecnologia.
 							</S.EnphasisSpan>
 						</S.Title>
 					</div>

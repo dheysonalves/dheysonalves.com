@@ -2,12 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	overflow: auto;
-
-	@media (max-width: 800px) {
-		flex-direction: column;
-	}
+	max-height: 100vh;
 `;

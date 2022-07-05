@@ -37,6 +37,6 @@
 				"endOfLine": "auto"
 			}
 		],
-		"ident": [0, "tab"]
+		"no-console": 1
 	}
 }

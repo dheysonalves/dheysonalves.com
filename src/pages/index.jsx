@@ -122,7 +122,7 @@ const Index = ({ data }) => {
 							</a>
 						</S.IconsWrapper>
 						<S.EmphasisParagraph>
-							Front-End Developer
+							Front-End Developer 👨🏽‍💻
 						</S.EmphasisParagraph>
 						<S.Title>
 							<S.EnphasisSpan>

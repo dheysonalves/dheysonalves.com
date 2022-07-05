@@ -1,7 +1,6 @@
 import React, { useContext, Fragment, useEffect } from 'react';
 import { useTheme } from 'styled-components';
 import Navbar from './Navigation/Navigation';
-// import Menu from "./menu"
 import Main from './Main/index';
 import GlobalStyle from '../../styles/globalStyle';
 import Context from '../../store/context.store';

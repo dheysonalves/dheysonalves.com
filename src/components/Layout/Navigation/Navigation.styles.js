@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 export const Header = styled.header`
 	display: flex;
@@ -49,6 +50,11 @@ export const Title = styled.h1`
 	}
 `;
 
+export const LinkStyled = styled(Link)`
+	margin: 0;
+	padding: 0;
+`;
+
 export const Menu = styled.ul`
 	display: flex;
 	flex: 0.6;
@@ -84,7 +90,8 @@ export const MenuItem = styled.li`
 
 	a {
 		font-weight: bold;
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
 		text-decoration: none;
 		transition: color 0.3s linear;
 		font-size: 1.1rem;
@@ -95,7 +102,6 @@ export const MenuItem = styled.li`
 
 		&:hover {
 			color: #ff6100;
-			text-decoration: underline;
 		}
 	}
 `;

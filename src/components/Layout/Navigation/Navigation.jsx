@@ -16,7 +16,9 @@ const Navigation = () => {
 	return (
 		<S.Header>
 			<S.Navigation>
-				<S.Title title="Opa, e ai?">Dheyson L. Alves</S.Title>
+				<S.LinkStyled to="/">
+					<S.Title title="Opa, e ai?">Dheyson L. Alves</S.Title>
+				</S.LinkStyled>
 			</S.Navigation>
 			<S.Menu
 				color={state.isDark ? '#292F36' : '#fff'}

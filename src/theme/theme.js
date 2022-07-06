@@ -14,6 +14,7 @@ const theme = {
 		GERAL: '#36f100',
 		PRODUTIVIDADE: '#E26600',
 		GIT: '#5B7BD2',
+		HTML: '#E26600',
 	},
 	dark: {
 		font: '#ffffff',
@@ -30,6 +31,7 @@ const theme = {
 		GERAL: '#305a42',
 		PRODUTIVIDADE: 'brown',
 		GIT: '#2A407B',
+		HTML: '#E26600',
 	},
 };
 

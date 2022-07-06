@@ -1,5 +1,5 @@
-import React, { useCallback, useContext, useState, useEffect } from 'react';
-import { Link, graphql } from 'gatsby';
+import React, { useCallback, useContext, useState } from 'react';
+import { graphql } from 'gatsby';
 import { useTheme } from 'styled-components';
 import Layout from '../components/Layout/layout';
 import Footer from '../components/Layout/Footer/footer';
@@ -177,22 +177,7 @@ const Writting = ({ data, location }) => {
 				const { tags, date, description } = node.frontmatter;
 
 				return (
-					<div key={node.fields.slug}>
-						<h3
-							style={{
-								marginBottom: rhythm(1 / 4),
-							}}
-						>
-							<Link
-								style={{
-									boxShadow: `none`,
-									textTransform: 'uppercase',
-								}}
-								to={'/writing' + node.fields.slug}
-							>
-								{title}
-							</Link>
-						</h3>
+					<S.ArticleStyle key={node.fields.slug}>
 						{tags.map((item, index) => (
 							<Ship
 								color={checkColor(item)}
@@ -201,13 +186,20 @@ const Writting = ({ data, location }) => {
 								radius={false}
 							/>
 						))}
+						<S.ArticleTitleStyled>
+							<S.ArticleTitleLink
+								to={'/writing' + node.fields.slug}
+							>
+								{title}
+							</S.ArticleTitleLink>
+						</S.ArticleTitleStyled>
 						<S.DateParagraph>{date}</S.DateParagraph>
 						<p
 							dangerouslySetInnerHTML={{
 								__html: description || node.excerpt,
 							}}
 						/>
-					</div>
+					</S.ArticleStyle>
 				);
 			})}
 			<Footer />

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Article, ArticleTitle, ArticleLink } from './index.styles';
 
 export const BlogPostsWrapper = styled.div`
 	display: flex;
@@ -30,3 +31,9 @@ export const DateParagraph = styled.span`
 	margin-top: 1rem;
 	margin-bottom: 0.5rem;
 `;
+
+export const ArticleStyle = styled(Article)``;
+
+export const ArticleTitleStyled = styled(ArticleTitle)``;
+
+export const ArticleTitleLink = styled(ArticleLink)``;

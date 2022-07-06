@@ -62,7 +62,6 @@ const Navigation = () => {
 						/>
 					)}
 				</S.CursorBulb>
-
 			</S.Menu>
 		</S.Header>
 	);

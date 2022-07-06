@@ -5,9 +5,12 @@ export const Header = styled.header`
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	border-bottom: 0.1px solid ${(props) => props.color};
+	padding-bottom: 1em;
 
 	@media (min-width: 1270px) {
 		flex-direction: row;
+		margin: 0 5em;
 	}
 `;
 
@@ -26,14 +29,24 @@ export const Navigation = styled.nav`
 `;
 
 export const Title = styled.h1`
-	font-family: 'Merriweather', 'Georgia', serif;
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 700;
 	font-size: 2rem;
+	text-transform: uppercase;
 	color: ${(props) => props.color};
 	margin: 0;
 	padding: 0;
 	cursor: default;
+
+	&:hover {
+		-webkit-transition: color 500ms ease-out;
+		-moz-transition: color 500ms ease-out;
+		-o-transition: color 500ms ease-out;
+		transition: color 500ms ease-out;
+		transform: scale(1.03);
+		color: #ff6100;
+		cursor: pointer;
+	}
 `;
 
 export const Menu = styled.ul`

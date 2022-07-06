@@ -14,10 +14,10 @@ const About = (props) => {
 			<S.Container>
 				<img src={Svg.default.Cat} width="300px" height="auto" />
 				<div>
-					<h2>Olá, sou Dheyson L. Alves 🖐🏽</h2>
+					<S.Title>Olá, sou Dheyson L. Alves 🖐🏽</S.Title>
 					<p>
-						Engenheiro de Software com 3 anos de experiência
-						na indústria. Ajudando empresas de diferentes origens a
+						Engenheiro de Software com 3 anos de experiência na
+						indústria. Ajudando empresas de diferentes origens a
 						atingir seu potencial com aplicativos de software.
 					</p>
 					<p>
@@ -30,7 +30,6 @@ const About = (props) => {
 					</p>
 				</div>
 			</S.Container>
-
 			<Footer />
 		</Layout>
 	);

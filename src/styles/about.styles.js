@@ -8,3 +8,8 @@ export const Container = styled.div`
 	overflow: auto;
 	max-height: 100vh;
 `;
+
+export const Title = styled.h1`
+	margin: 0;
+	padding: 0 0 1em 0;
+`;

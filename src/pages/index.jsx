@@ -1,6 +1,6 @@
 import React, { useCallback, useContext } from 'react';
 import { useTheme } from 'styled-components';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { IoLogoLinkedin, IoLogoGithub, IoLogoTwitter } from 'react-icons/io';
 import { FaDev, FaDiscord } from 'react-icons/fa';
 
@@ -143,22 +143,7 @@ const Index = ({ data }) => {
 							node.frontmatter.title || node.fields.slug;
 						const { tags, date, description } = node.frontmatter;
 						return (
-							<div key={node.fields.slug}>
-								<h3
-									style={{
-										marginBottom: rhythm(1 / 4),
-									}}
-								>
-									<Link
-										style={{
-											boxShadow: `none`,
-											textTransform: 'uppercase',
-										}}
-										to={'/writing' + node.fields.slug}
-									>
-										{title}
-									</Link>
-								</h3>
+							<S.Article key={node.fields.slug}>
 								{tags.map((item, index) => (
 									<Ship
 										color={checkColor(item)}
@@ -167,13 +152,20 @@ const Index = ({ data }) => {
 										radius={false}
 									/>
 								))}
+								<S.ArticleTitle>
+									<S.ArticleLink
+										to={'/writing' + node.fields.slug}
+									>
+										{title}
+									</S.ArticleLink>
+								</S.ArticleTitle>
 								<S.DateParagraph>{date}</S.DateParagraph>
 								<p
 									dangerouslySetInnerHTML={{
 										__html: description || node.excerpt,
 									}}
 								/>
-							</div>
+							</S.Article>
 						);
 					})}
 				</S.BlogPostsWrapper>

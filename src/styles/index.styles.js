@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { rhythm } from '../utils/typography';
+import { Link } from 'gatsby';
 
 export const Wrapper = styled.div`
 	display: flex;
@@ -63,6 +64,38 @@ export const Title = styled.h1`
 	@media only screen and (min-width: 1824px) {
 		font-size: 45px;
 		line-height: normal;
+	}
+`;
+
+export const Article = styled.article`
+	padding: 1.5em 1em;
+	margin: 0.5em 0;
+	width: 100%;
+
+	&:hover {
+		background-color: #ddd5;
+		border-radius: 0.5em;
+	}
+`;
+
+export const ArticleTitle = styled.h3`
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+	text-transform: uppercase;
+	font-family: Montserrat, sans-serif;
+	font-weight: 600;
+	line-height: 1.2em;
+	letter-spacing: 0.01em;
+`;
+
+export const ArticleLink = styled(Link)`
+	&:hover {
+		opacity: 0.8;
+	}
+
+	&:active {
+		opacity: 0.8;
 	}
 `;
 

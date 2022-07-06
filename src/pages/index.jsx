@@ -12,6 +12,7 @@ import SEO from '../components/Seo/Seo';
 import Ship from '../components/Ships/index';
 
 import Avatar from '../assets/img/Avatar.png';
+import Footer from '../components/Layout/Footer/footer';
 
 export const pageQuery = graphql`
 	query {
@@ -122,12 +123,13 @@ const Index = ({ data }) => {
 							</a>
 						</S.IconsWrapper>
 						<S.EmphasisParagraph>
-							Front-End Developer 👨🏽‍💻
+							Front-End Engineer 👨🏽‍💻
 						</S.EmphasisParagraph>
 						<S.Title>
 							<S.EnphasisSpan>
-								Ajudando clientes a alcançar seu potencial com
-								tecnologia.
+								Codando. Escrevendo. Aprendendo. Ensinando.
+								#CSS, #Javascript, #Typescript, #React e
+								Front-End no geral.
 							</S.EnphasisSpan>
 						</S.Title>
 					</div>
@@ -169,7 +171,7 @@ const Index = ({ data }) => {
 						);
 					})}
 				</S.BlogPostsWrapper>
-				<br />© {new Date().getFullYear()}
+				<Footer />
 			</S.Wrapper>
 		</Layout>
 	);

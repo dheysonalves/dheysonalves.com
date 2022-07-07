@@ -39,8 +39,11 @@ export const EmphasisParagraph = styled.p`
 	cursor: default;
 	font-size: 1rem;
 	font-weight: 500;
-	padding-bottom: 1.5em;
-	margin: 0;
+	margin-bottom: 1em;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
 `;
 
 export const DateParagraph = styled.span`

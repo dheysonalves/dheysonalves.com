@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from 'styled-components';
 
 import * as S from './styles';
+import context from '../../store/context.store';
 
 const Ships = ({ label, color, radius, labelColor, ...props }) => {
+	const theme = useTheme();
+	const { state } = useContext(context);
+
+	const checkColor = React.useCallback(
+		(elem) => {
+			if (state.isDark) {
+				return theme.dark[elem];
+			}
+
+			return theme.light[elem];
+		},
+		[state.isDark, theme.dark, theme.light]
+	);
+
 	return (
 		<S.ShipListWrapper>
-			<S.ShipWrapper color={color} radius={radius} {...props}>
+			<S.ShipWrapper color={checkColor(color)} radius={radius} {...props}>
 				<S.ShipText labelColor={labelColor}>{label}</S.ShipText>
-				<S.ShipBackground color={color} />
+				<S.ShipBackground color={checkColor(color)} />
 			</S.ShipWrapper>
 		</S.ShipListWrapper>
 	);

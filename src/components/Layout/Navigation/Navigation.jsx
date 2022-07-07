@@ -1,5 +1,4 @@
 import React, { useState, useContext, useCallback } from 'react';
-// import { rhythm } from "../utils/typography"
 import Context from '../../../store/context.store';
 import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
 import * as S from './Navigation.styles';

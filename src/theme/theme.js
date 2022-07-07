@@ -18,7 +18,7 @@ const theme = {
 	},
 	dark: {
 		font: '#ffffff',
-		background: '#16191E',
+		background: '#15202B',
 		links: '#7bbf98',
 		links_hover: '#AEFFD8',
 		scroll: '#ffffff',

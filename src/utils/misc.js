@@ -10,3 +10,29 @@ export const readingTime = (text) => {
 
 	return time;
 };
+
+export const formatDate = (date) => {
+	const months = [
+		'Jan',
+		'Fev',
+		'Mar',
+		'Abr',
+		'Mai',
+		'Jun',
+		'Jul',
+		'Ago',
+		'Set',
+		'Out',
+		'Nov',
+		'Dez',
+	];
+	let currentDate = new Date(date);
+	const formatedDate =
+		currentDate.getDate() +
+		' de ' +
+		months[currentDate.getMonth()] +
+		', ' +
+		currentDate.getFullYear();
+
+	return formatedDate;
+};

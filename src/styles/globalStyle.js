@@ -31,7 +31,6 @@ const GlobalStyle = createGlobalStyle`
 
   a:active {
     color: #ff6100;
-    text-decoration: underline;
   }
 
   a:visited {

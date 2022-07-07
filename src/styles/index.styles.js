@@ -170,7 +170,8 @@ export const BlogPostsWrapper = styled.div`
 `;
 
 export const Divider = styled.div`
-	border: 1px solid #363636;
+	border: 1px solid ${(props) => props.color};
 	opacity: 0.2;
 	width: 100%;
+	margin: 1em 0;
 `;

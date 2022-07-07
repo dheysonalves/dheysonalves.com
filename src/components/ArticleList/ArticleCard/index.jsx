@@ -5,16 +5,16 @@ import * as S from './styles';
 const ArticleCard = ({ slug, tags, title, date, description, excerpt }) => {
 	return (
 		<S.Article key={slug}>
-			<ArticleTagsList tags={tags} />
 			<S.ArticleTitle>
 				<S.ArticleLink to={'/writing' + slug}>{title}</S.ArticleLink>
 			</S.ArticleTitle>
 			<S.DateParagraph>{date}</S.DateParagraph>
-			<p
+			<S.EmphasisParagraph
 				dangerouslySetInnerHTML={{
 					__html: description || excerpt,
 				}}
 			/>
+			<ArticleTagsList tags={tags} />
 		</S.Article>
 	);
 };

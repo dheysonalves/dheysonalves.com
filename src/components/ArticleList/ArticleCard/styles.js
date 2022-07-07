@@ -2,13 +2,15 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 export const Article = styled.article`
-	padding: 1.5em 1em;
-	margin: 0.5em 0;
+	padding: 2em;
+	margin: 0.8em 0;
 	width: 100%;
+	border: 0.1px solid #aaa;
+	border-radius: 0.5em;
 
 	&:hover {
-		background-color: #ddd5;
-		border-radius: 0.5em;
+		background-color: #ddd4;
+		transition: background-color 500ms ease-out;
 	}
 `;
 
@@ -34,22 +36,17 @@ export const ArticleLink = styled(Link)`
 `;
 
 export const EmphasisParagraph = styled.p`
-	display: block;
 	cursor: default;
-	font-size: 24px;
-	font-weight: bold;
-	margin-bottom: 5px;
-`;
-
-export const EnphasisSpan = styled.span`
-	color: #ff6100;
-	display: block;
-	cursor: default;
+	font-size: 1rem;
+	font-weight: 500;
+	padding-bottom: 1.5em;
+	margin: 0;
 `;
 
 export const DateParagraph = styled.span`
 	display: block;
-	font-weight: bold;
-	margin-top: 1rem;
-	margin-bottom: 0.5rem;
+	color: #aaa;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 0.5em 0;
 `;

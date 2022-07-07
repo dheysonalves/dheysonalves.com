@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatDate } from '../../../utils/misc';
 import ArticleTagsList from './ArticleTagsList';
 import * as S from './styles';
 
@@ -9,7 +10,7 @@ const ArticleCard = ({ slug, tags, title, date, description, excerpt }) => {
 				<S.ArticleLink to={'/writing' + slug}>{title}</S.ArticleLink>
 			</S.ArticleTitle>
 			<S.DateParagraph>
-				Postado em {date} • Dheyson L. Alves
+				Postado em {formatDate(date)} • Dheyson L. Alves
 			</S.DateParagraph>
 			<S.EmphasisParagraph
 				dangerouslySetInnerHTML={{

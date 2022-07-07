@@ -15,7 +15,7 @@ import {
 	SocialMediaShare,
 } from './styles';
 import { rhythm } from '../utils/typography';
-import { readingTime } from '../utils/misc';
+import { formatDate, readingTime } from '../utils/misc';
 
 export const pageQuery = graphql`
 	query BlogPostBySlug($slug: String!) {
@@ -65,7 +65,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 					<div className="s9-widget-wrapper"></div>
 				</SocialMediaShare>
 				<PostInformation>
-					Postado em {post.frontmatter.date} •{' '}
+					Postado em {formatDate(post.frontmatter.date)} •{' '}
 					{readingTime(post.html)} minutos de leitura
 				</PostInformation>
 				<Heading>{post.frontmatter.title}</Heading>

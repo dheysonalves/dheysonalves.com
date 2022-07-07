@@ -1,75 +1,81 @@
 import styled from 'styled-components';
-import { rhythm } from '../../utils/typography';
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
 	display: flex;
-	flex-direction: column;
-	margin-top: ${rhythm(3)};
-	margin-bottom: ${rhythm(2)};
-	text-align: center;
-`;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 4rem;
 
-export const Title = styled.h2`
-	font-weight: bold;
-	text-transform: uppercase;
-	padding: 0;
-	margin: 0;
-
-	/* Smartphones (portrait and landscape) ----------- */
 	@media only screen and (max-device-width: 767px) {
-		font-size: 34px;
-		line-height: 54px;
-	}
-	/* Styles */
-
-	/* tablets (portrait) ----------- */
-	@media only screen and (min-device-width: 768px) and (max-device-width: 1223px) {
-		font-size: 40px;
-		line-height: normal;
-	}
-	/* Styles */
-
-	/* Desktops and laptops ----------- */
-	@media only screen and (min-width: 1224px) {
-		font-size: 40px;
-		line-height: normal;
-	}
-
-	/* Large screens ----------- */
-	@media only screen and (min-width: 1824px) {
-		font-size: 40px;
-		line-height: normal;
+		margin-top: 1rem;
 	}
 `;
 
-export const Paragraph = styled.p`
+export const Title = styled.p`
+	cursor: default;
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 0.1em;
+`;
+
+export const Subtitle = styled.h1`
 	font-style: normal;
-	font-weight: normal;
-	margin-top: 20px;
+	font-weight: 600;
+	margin: 0;
+	color: #ff6100;
+	cursor: default;
 
-	/* Smartphones (portrait and landscape) ----------- */
 	@media only screen and (max-device-width: 767px) {
-		font-size: 16px;
-		line-height: 30px;
+		font-size: 2rem;
 	}
-	/* Styles */
+
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1223px) {
+		font-size: 2.5rem;
+		line-height: normal;
+	}
+
+	@media only screen and (min-width: 1224px) {
+		font-size: 3rem;
+		line-height: normal;
+	}
+
+	@media only screen and (min-width: 1824px) {
+		font-size: 3rem;
+		line-height: normal;
+	}
+`;
+
+export const BottomSpan = styled.span`
+	font-size: 1rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	cursor: default;
+`;
+
+export const Avatar = styled.img`
+	margin-right: 20px;
+	cursor: default;
+	@media only screen and (max-device-width: 767px) {
+		margin-top: 50px;
+		width: 50px;
+		align-self: flex-start;
+		display: none;
+	}
 
 	/* tablets (portrait) ----------- */
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1223px) {
-		font-size: 18px;
-		line-height: normal;
+		display: none;
 	}
 	/* Styles */
 
 	/* Desktops and laptops ----------- */
 	@media only screen and (min-width: 1224px) {
-		font-size: 18px;
-		line-height: normal;
+		width: 250px;
 	}
 
 	/* Large screens ----------- */
 	@media only screen and (min-width: 1824px) {
-		font-size: 20px;
-		line-height: normal;
+		width: 330px;
 	}
 `;

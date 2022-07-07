@@ -1,17 +1,15 @@
-import React, { useCallback, useContext, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { graphql } from 'gatsby';
-import { useTheme } from 'styled-components';
 import Layout from '../components/Layout/layout';
 import Footer from '../components/Layout/Footer/footer';
 import SEO from '../components/Seo/Seo';
-import Ship from '../components/Ships/index';
 import TextInput from '../components/Input/index';
 import ButtonShip from '../components/Button/index';
 
-import Context from '../store/context.store';
 import { rhythm } from '../utils/typography';
 
-import * as S from '../styles/Blog.styled';
+import * as S from '../styles/writing.styled';
+import ArticleList from '../components/ArticleList';
 
 export const pageQuery = graphql`
 	query {
@@ -77,21 +75,8 @@ const MOCKED_BUTTONS = [
 const Writting = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title;
 	const posts = data.allMarkdownRemark.edges;
-	const { state } = useContext(Context);
 	const [search, setSearch] = useState('');
 	const [postsData, setPostsData] = useState(posts);
-	const theme = useTheme();
-
-	const checkColor = useCallback(
-		(elem) => {
-			if (state.isDark) {
-				return theme.dark[elem];
-			}
-
-			return theme.light[elem];
-		},
-		[state, theme]
-	);
 
 	const onChangeSearchValue = useCallback(
 		(event) => {
@@ -172,36 +157,7 @@ const Writting = ({ data, location }) => {
 				</div>
 			</S.BlogPostsWrapper>
 			<hr />
-			{postsData.map(({ node }) => {
-				const title = node.frontmatter.title || node.fields.slug;
-				const { tags, date, description } = node.frontmatter;
-
-				return (
-					<S.ArticleStyle key={node.fields.slug}>
-						{tags.map((item, index) => (
-							<Ship
-								color={checkColor(item)}
-								key={index}
-								label={item + ' '}
-								radius={false}
-							/>
-						))}
-						<S.ArticleTitleStyled>
-							<S.ArticleTitleLink
-								to={'/writing' + node.fields.slug}
-							>
-								{title}
-							</S.ArticleTitleLink>
-						</S.ArticleTitleStyled>
-						<S.DateParagraph>{date}</S.DateParagraph>
-						<p
-							dangerouslySetInnerHTML={{
-								__html: description || node.excerpt,
-							}}
-						/>
-					</S.ArticleStyle>
-				);
-			})}
+			<ArticleList posts={postsData} />
 			<Footer />
 		</Layout>
 	);

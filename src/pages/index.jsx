@@ -1,18 +1,16 @@
-import React, { useCallback, useContext } from 'react';
-import { useTheme } from 'styled-components';
+import React from 'react';
 import { graphql } from 'gatsby';
 import { IoLogoLinkedin, IoLogoGithub, IoLogoTwitter } from 'react-icons/io';
 import { FaDev, FaDiscord } from 'react-icons/fa';
 
 import Layout from '../components/Layout/layout';
-import Context from '../store/context.store';
 import { rhythm } from '../utils/typography';
 import * as S from '../styles/index.styles';
 import SEO from '../components/Seo/Seo';
-import Ship from '../components/Ships/index';
 
 import Avatar from '../assets/img/Avatar.png';
 import Footer from '../components/Layout/Footer/footer';
+import ArticleList from '../components/ArticleList';
 
 export const pageQuery = graphql`
 	query {
@@ -42,19 +40,6 @@ export const pageQuery = graphql`
 
 const Index = ({ data }) => {
 	const posts = data.allMarkdownRemark.edges;
-	const { state } = useContext(Context);
-	const theme = useTheme();
-
-	const checkColor = useCallback(
-		(elem) => {
-			if (state.isDark) {
-				return theme.dark[elem];
-			}
-
-			return theme.light[elem];
-		},
-		[state, theme]
-	);
 
 	return (
 		<Layout max={rhythm(100)} mw={true}>
@@ -140,36 +125,7 @@ const Index = ({ data }) => {
 					<S.EmphasisParagraph>
 						Últimas publicações 📝
 					</S.EmphasisParagraph>
-					{posts.slice(0, 3).map(({ node }) => {
-						const title =
-							node.frontmatter.title || node.fields.slug;
-						const { tags, date, description } = node.frontmatter;
-						return (
-							<S.Article key={node.fields.slug}>
-								{tags.map((item, index) => (
-									<Ship
-										color={checkColor(item)}
-										key={index}
-										label={item + ' '}
-										radius={false}
-									/>
-								))}
-								<S.ArticleTitle>
-									<S.ArticleLink
-										to={'/writing' + node.fields.slug}
-									>
-										{title}
-									</S.ArticleLink>
-								</S.ArticleTitle>
-								<S.DateParagraph>{date}</S.DateParagraph>
-								<p
-									dangerouslySetInnerHTML={{
-										__html: description || node.excerpt,
-									}}
-								/>
-							</S.Article>
-						);
-					})}
+					<ArticleList posts={posts.slice(0, 3)} />
 				</S.BlogPostsWrapper>
 				<Footer />
 			</S.Wrapper>

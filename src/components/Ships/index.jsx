@@ -24,7 +24,6 @@ const Ships = ({ label, color, radius, labelColor, ...props }) => {
 		<S.ShipListWrapper>
 			<S.ShipWrapper color={checkColor(color)} radius={radius} {...props}>
 				<S.ShipText labelColor={labelColor}>{label}</S.ShipText>
-				<S.ShipBackground color={checkColor(color)} />
 			</S.ShipWrapper>
 		</S.ShipListWrapper>
 	);

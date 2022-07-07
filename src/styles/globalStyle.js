@@ -44,9 +44,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     select {
-      // A reset of styles, including removing the default dropdown arrow
       appearance: none;
-      // Additional resets for further consistency
       outline: none;
       background-color: transparent;
       border: none;

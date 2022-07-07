@@ -13,6 +13,7 @@ import {
 	List,
 	SectionArticle,
 	SocialMediaShare,
+	ArticleContent,
 } from './styles';
 import { rhythm } from '../utils/typography';
 import { formatDate, readingTime } from '../utils/misc';
@@ -72,7 +73,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 				<PostInformation>Escrito por Dheyson L. Alves</PostInformation>
 				<ArticleTagsList tags={post.frontmatter.tags} />
 				<Divider />
-				<article dangerouslySetInnerHTML={{ __html: post.html }} />
+				<ArticleContent
+					dangerouslySetInnerHTML={{ __html: post.html }}
+				/>
 				<Divider />
 				<List>
 					<li>

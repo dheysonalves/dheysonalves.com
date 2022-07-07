@@ -41,3 +41,17 @@ export const List = styled.ul`
 	list-style: none;
 	padding: 0;
 `;
+
+export const ArticleContent = styled.article`
+	width: 100%;
+
+	@media (max-width: 766px) {
+		max-width: 340px;
+		word-wrap: break-word;
+	}
+
+	@media (max-width: 280px) {
+		max-width: 220px;
+		word-wrap: break-word;
+	}
+`;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Avatar from '../../assets/img/Avatar.png';
-import BiographSocialMedia from './BiographSocialMedia';
+import BiographSocialMedia from '../BiographSocialMedia';
 
 import * as S from './styles.js';
 
@@ -15,7 +15,7 @@ const Biography = () => {
 				alt="Uma imagem de avatar"
 			/>
 			<div>
-				<BiographSocialMedia />
+				<BiographSocialMedia logoSize="2em" />
 				<S.Title>Front-End Engineer 👨🏽‍💻</S.Title>
 				<S.Subtitle>
 					Codando. Escrevendo. Aprendendo. Ensinando.

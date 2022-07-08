@@ -1,10 +1,11 @@
 import React from 'react';
 import { FaDev, FaDiscord } from 'react-icons/fa';
 import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io';
+import PropTypes from 'prop-types';
 
 import * as S from './styles.js';
 
-const BiographSocialMedia = () => {
+const BiographSocialMedia = ({ logoSize = '2em' }) => {
 	return (
 		<S.SocialMediaContainer>
 			<S.SocialLink
@@ -14,7 +15,7 @@ const BiographSocialMedia = () => {
 				alt="Logo do Linkedin rede social"
 				title="Minha rede profissional"
 			>
-				<IoLogoLinkedin size="2em" />
+				<IoLogoLinkedin size={logoSize} />
 			</S.SocialLink>
 			<S.SocialLink
 				href="https://twitter.com/dheysonlalves"
@@ -23,7 +24,7 @@ const BiographSocialMedia = () => {
 				alt="Logo do passado com cor branca do twitter"
 				title="Quer trocar uma ideia?, manda dm"
 			>
-				<IoLogoTwitter size="2em" />{' '}
+				<IoLogoTwitter size={logoSize} />{' '}
 			</S.SocialLink>
 			<S.SocialLink
 				href="https://github.com/dheysonalves"
@@ -32,7 +33,7 @@ const BiographSocialMedia = () => {
 				alt="social media"
 				title="Boa parte dos meus projetos"
 			>
-				<IoLogoGithub size="2em" />{' '}
+				<IoLogoGithub size={logoSize} />{' '}
 			</S.SocialLink>
 			<S.SocialLink
 				href="https://dev.to/dheyson_alvess"
@@ -41,7 +42,7 @@ const BiographSocialMedia = () => {
 				alt="Logo quadrada com fundo preto com texto DEV no meio de cor branca"
 				title="Meus outros artigos em inglês"
 			>
-				<FaDev size="2em" />{' '}
+				<FaDev size={logoSize} />{' '}
 			</S.SocialLink>
 			<S.SocialLink
 				href="https://discord.gg/Fzk2PBB"
@@ -50,10 +51,14 @@ const BiographSocialMedia = () => {
 				alt="Logo quadrada com fundo preto com texto DEV no meio de cor branca"
 				title="Comunidade do discord da Coffer"
 			>
-				<FaDiscord size="1.9em" />{' '}
+				<FaDiscord size={logoSize} />{' '}
 			</S.SocialLink>
 		</S.SocialMediaContainer>
 	);
+};
+
+BiographSocialMedia.propTypes = {
+	logoSize: PropTypes.string,
 };
 
 export default BiographSocialMedia;

@@ -118,8 +118,8 @@ const Writting = ({ data, location }) => {
 	return (
 		<Layout location={location} title={siteTitle} max={rhythm(28)}>
 			<SEO
-				title="Dheyson Alves - Blog"
-				description="Blog sobre desenvolvimento e Computação"
+				title="Dheyson L. Alves - Blog"
+				description="Engenheiro de Software com mais de 3 anos de experiência na indústria. Ajudando empresas de diferentes nichos a atingir seu potencial com aplicativos de software."
 			/>
 			<S.BlogPostsWrapper>
 				<S.EmphasisParagraph>

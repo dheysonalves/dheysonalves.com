@@ -42,7 +42,7 @@ const Index = ({ data }) => {
 	return (
 		<Layout max={rhythm(100)} mw={true}>
 			<SEO
-				title="Dheyson Alves"
+				title="Dheyson L. Alves - Home"
 				description="Engenheiro de Software com mais de 3 anos de experiência na indústria. Ajudando empresas de diferentes nichos a atingir seu potencial com aplicativos de software."
 			/>
 			<S.Wrapper>

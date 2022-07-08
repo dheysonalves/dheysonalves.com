@@ -77,7 +77,7 @@ function SEO({ description, lang, meta, title }) {
 				},
 				{
 					name: `twitter:creator`,
-					content: `@DheysonAlves2`,
+					content: `@dheysonlalves`,
 				},
 				{
 					name: `twitter:title`,
@@ -85,7 +85,7 @@ function SEO({ description, lang, meta, title }) {
 				},
 				{
 					name: `twitter:site`,
-					content: `@DheysonAlves2`,
+					content: `@dheysonlalves`,
 				},
 				{
 					name: `twitter:image:alt`,
@@ -103,7 +103,7 @@ function SEO({ description, lang, meta, title }) {
 SEO.defaultProps = {
 	lang: `pt-br`,
 	meta: [],
-	description: `Um desenvolvedor de software, adora programação, às vezes brinca com react e nas horas vagas escreve histórias de RPG.`,
+	description: `Engenheiro de Software com mais de 3 anos de experiência na indústria. Ajudando empresas de diferentes nichos a atingir seu potencial com aplicativos de software.`,
 };
 
 SEO.propTypes = {

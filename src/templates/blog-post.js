@@ -5,7 +5,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import Layout from '../components/Layout/layout';
 import Footer from '../components/Layout/Footer/footer';
 import SEO from '../components/Seo/Seo';
-import ArticleTagsList from '../components/ArticleList/ArticleCard/ArticleTagsList';
+import ArticleTagsList from '../components/ArticleTagsList';
 import {
 	Heading,
 	PostInformation,

@@ -10,7 +10,10 @@ import * as S from '../styles/about.styles';
 const About = (props) => {
 	return (
 		<Layout location={props.location} max={rhythm(28)}>
-			<SEO title="Sobre"></SEO>
+			<SEO
+				title="Dheyson L. Alves - Sobre"
+				description="Engenheiro de Software com mais de 3 anos de experiência na indústria. Ajudando empresas de diferentes nichos a atingir seu potencial com aplicativos de software."
+			></SEO>
 			<S.Container>
 				<img src={Svg.default.Cat} width="300px" height="auto" />
 				<div>

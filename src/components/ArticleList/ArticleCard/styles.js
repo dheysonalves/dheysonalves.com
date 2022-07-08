@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 export const Article = styled.article`
 	padding: 2em;
 	margin: 0.8em 0;
-	width: 100%;
 	border: 0.1px solid #aaa;
 	border-radius: 0.5em;
 

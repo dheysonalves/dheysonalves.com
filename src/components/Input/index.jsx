@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import * as S from './styles';
 
@@ -19,6 +20,9 @@ const Input = ({
 	counter,
 	...props
 }) => {
+	const { t } = useTranslation();
+	const articlesCounterText = counter === 1 ? t('artigo') : t('artigos');
+
 	return (
 		<S.Wrapper>
 			<S.Input
@@ -27,14 +31,16 @@ const Input = ({
 				background={background}
 				borderColor={borderColor}
 				color={color}
-				placeholder="Type something"
+				placeholder={t('Pesquise')}
 				onChange={onChange}
 				value={value}
 				onBlur={onBlur}
 				onKeyDown={onKeyDown}
 				{...props}
 			/>
-			<S.PostsCounter>{counter}</S.PostsCounter>
+			<S.PostsCounter>
+				{counter} {articlesCounterText}
+			</S.PostsCounter>
 		</S.Wrapper>
 	);
 };

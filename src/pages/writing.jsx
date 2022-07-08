@@ -12,6 +12,7 @@ import { rhythm } from '../utils/typography';
 
 import * as S from '../styles/writing.styled';
 import ArticleList from '../components/ArticleList';
+import * as Svg from '../assets/svg/index';
 
 export const pageQuery = graphql`
 	query($language: String!) {
@@ -113,12 +114,11 @@ const Writting = ({ data, location }) => {
 			if (text === '') {
 				setPostsData(posts);
 			} else {
+				const uppercaseParsed = text.toUpperCase().replace(' ', '');
 				setPostsData(
 					postsData
 						.filter((item) =>
-							item.node.frontmatter.tags.includes(
-								text.toUpperCase().replace(' ', '')
-							)
+							item.node.frontmatter.tags.includes(uppercaseParsed)
 						)
 						.map((item) => item)
 				);
@@ -170,8 +170,25 @@ const Writting = ({ data, location }) => {
 					))}
 				</div>
 			</S.BlogPostsWrapper>
-			<hr />
+			<S.Divider />
 			<ArticleList posts={postsData} />
+			{postsData.length === 0 ? (
+				<S.SearchUnfound>
+					<img
+						src={Svg.default.Searcher}
+						width="auto"
+						height="auto"
+					/>
+					<S.SearchUnfoundTitle>
+						{t('Artigo não encontrado')} 😭
+					</S.SearchUnfoundTitle>
+					<S.SearchUnfoundDescription>
+						{t(
+							'Parece que você chegou a uma pesquisa que não existe.Por favor, use a navegação acima ou pesquise acima paraencontrar o caminho de volta ao nosso site daora.'
+						)}
+					</S.SearchUnfoundDescription>
+				</S.SearchUnfound>
+			) : null}
 			<Footer />
 		</Layout>
 	);

@@ -58,7 +58,7 @@
     "gatsby-transformer-sharp": "^2.5.14",
     "i18next": "^21.8.13",
     "local-storage-fallback": "^4.1.1",
-    "prismjs": "^1.24.0",
+    "prismjs": "^1.28.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",

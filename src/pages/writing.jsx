@@ -184,7 +184,7 @@ const Writting = ({ data, location }) => {
 					</S.SearchUnfoundTitle>
 					<S.SearchUnfoundDescription>
 						{t(
-							'Parece que você chegou a uma pesquisa que não existe.Por favor, use a navegação acima ou pesquise acima paraencontrar o caminho de volta ao nosso site daora.'
+							'Parece que você chegou a uma pesquisa que não existe. Por favor, use a navegação acima ou pesquise acima para encontrar o caminho de volta ao nosso site daora.'
 						)}
 					</S.SearchUnfoundDescription>
 				</S.SearchUnfound>

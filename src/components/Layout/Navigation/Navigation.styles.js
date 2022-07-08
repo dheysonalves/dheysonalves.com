@@ -82,6 +82,14 @@ export const Menu = styled.ul`
 			transition: color 0.3s linear;
 		}
 	}
+
+	@media (min-width: 1280px) {
+		flex: 1;
+	}
+
+	@media (min-width: 1920px) {
+		flex: 0.5;
+	}
 `;
 
 export const MenuItem = styled.li`
@@ -108,6 +116,18 @@ export const MenuItem = styled.li`
 
 export const LanguageMenuItem = styled(MenuItem)`
 	display: inline-block;
+`;
+
+export const LanguageLink = styled.a`
+	color: ${(props) => props.color};
+	border: 0.3px dashed ${(props) => props.color};
+	padding: 0.5em;
+	font-weight: 900;
+
+	@media (max-width: 980px) {
+		padding: 0.1em 0.5em;
+		margin: 0.5em 0;
+	}
 `;
 
 export const CursorBulb = styled.div`

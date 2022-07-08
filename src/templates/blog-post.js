@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, graphql } from 'gatsby';
 import { DiscussionEmbed } from 'disqus-react';
+import { useTranslation, I18nextContext } from 'gatsby-plugin-react-i18next';
 
 import Layout from '../components/Layout/layout';
 import Footer from '../components/Layout/Footer/footer';
@@ -63,6 +64,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 	const post = data.markdownRemark;
 	const siteTitle = data.site.siteMetadata.title;
 	const { previous, next } = pageContext;
+	const { t } = useTranslation();
+	const { language } = useContext(I18nextContext);
 
 	return (
 		<Layout location={location} title={siteTitle} max={rhythm(28)}>
@@ -75,11 +78,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 					<div className="s9-widget-wrapper"></div>
 				</SocialMediaShare>
 				<PostInformation>
-					Postado em {formatDate(post.frontmatter.date)} •{' '}
-					{readingTime(post.html)} minutos de leitura
+					{t('Postado em')}{' '}
+					{language === 'pt'
+						? formatDate(post.frontmatter.date)
+						: post.frontmatter.date}{' '}
+					• {readingTime(post.html)} {t('minutos de leitura')}
 				</PostInformation>
 				<Heading>{post.frontmatter.title}</Heading>
-				<PostInformation>Escrito por Dheyson L. Alves</PostInformation>
+				<PostInformation>
+					{t('Escrito por')} Dheyson L. Alves
+				</PostInformation>
 				<ArticleTagsList tags={post.frontmatter.tags} />
 				<Divider />
 				<ArticleContent

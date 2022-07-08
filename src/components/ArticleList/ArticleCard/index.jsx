@@ -1,11 +1,14 @@
 import React from 'react';
+import { useTranslation, I18nextContext } from 'gatsby-plugin-react-i18next';
+
 import { formatDate } from '../../../utils/misc';
 import ArticleTagsList from '../../ArticleTagsList';
 import * as S from './styles';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { useContext } from 'react';
 
 const ArticleCard = ({ slug, tags, title, date, description, excerpt }) => {
 	const { t } = useTranslation();
+	const { language } = useContext(I18nextContext);
 
 	return (
 		<S.Article key={slug}>
@@ -13,7 +16,8 @@ const ArticleCard = ({ slug, tags, title, date, description, excerpt }) => {
 				<S.ArticleLink to={'/writing' + slug}>{title}</S.ArticleLink>
 			</S.ArticleTitle>
 			<S.DateParagraph>
-				{t('Postado em')} {formatDate(date)} • Dheyson L. Alves
+				{t('Postado em')} {language === 'pt' ? formatDate(date) : date}{' '}
+				• Dheyson L. Alves
 			</S.DateParagraph>
 			<S.EmphasisParagraph
 				dangerouslySetInnerHTML={{

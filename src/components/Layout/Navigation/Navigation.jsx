@@ -1,12 +1,19 @@
 import React, { useState, useContext, useCallback } from 'react';
+import {
+	useI18next,
+	useTranslation,
+	I18nextContext,
+} from 'gatsby-plugin-react-i18next';
+import { Link } from 'gatsby';
+
 import Context from '../../../store/context.store';
 import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
 import * as S from './Navigation.styles';
-import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 
 const Navigation = () => {
 	const [iconState, setIconState] = useState();
 	const { state, dispatch } = useContext(Context);
+	const { language } = useContext(I18nextContext);
 	const { languages, changeLanguage } = useI18next();
 	const { t } = useTranslation();
 
@@ -14,6 +21,7 @@ const Navigation = () => {
 		setIconState(!iconState);
 		dispatch({ type: 'TOOGLE_DARK_MODE' });
 	}, [dispatch, iconState]);
+
 	return (
 		<S.Header>
 			<S.Navigation>
@@ -26,14 +34,22 @@ const Navigation = () => {
 				link={state.isDark ? '#fff' : '#363636'}
 			>
 				<S.MenuItem>
-					<a href="/" title={t('Página principal')}>
+					<Link
+						to={language === 'pt' ? '/' : '/en/'}
+						title={t('Página principal')}
+						activeStyle={{ color: '#ff6100' }}
+					>
 						{t('Home')}
-					</a>
+					</Link>
 				</S.MenuItem>
 				<S.MenuItem>
-					<a href="/writing/" title={t('Alguns artigos que escrevi')}>
+					<Link
+						to={language === 'pt' ? '/writing' : '/en/writing'}
+						title={t('Alguns artigos que escrevi')}
+						activeStyle={{ color: '#ff6100' }}
+					>
 						{t('Escrita')}
-					</a>
+					</Link>
 				</S.MenuItem>
 				<S.MenuItem>
 					<a
@@ -46,9 +62,13 @@ const Navigation = () => {
 					</a>
 				</S.MenuItem>
 				<S.MenuItem>
-					<a href="/about/" title={t('Alguns artigos que escrevi')}>
+					<Link
+						to={language === 'pt' ? '/about/' : '/en/about/'}
+						title={t('Alguns artigos que escrevi')}
+						activeStyle={{ color: '#ff6100' }}
+					>
 						{t('Sobre')}
-					</a>
+					</Link>
 				</S.MenuItem>
 				<S.CursorBulb>
 					{state.isDark ? (
@@ -65,17 +85,18 @@ const Navigation = () => {
 						/>
 					)}
 				</S.CursorBulb>
-				{languages.map((language) => (
-					<S.LanguageMenuItem key={language}>
-						<a
+				{languages.map((lang) => (
+					<S.LanguageMenuItem key={lang}>
+						<S.LanguageLink
+							color={lang === language ? '#ff6100' : ''}
 							href="#"
 							onClick={(e) => {
 								e.preventDefault();
-								changeLanguage(language);
+								changeLanguage(lang);
 							}}
 						>
-							{language}
-						</a>
+							{lang}
+						</S.LanguageLink>
 					</S.LanguageMenuItem>
 				))}
 			</S.Menu>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { formatDate } from '../../../utils/misc';
-import ArticleTagsList from './ArticleTagsList';
+import ArticleTagsList from '../../ArticleTagsList';
 import * as S from './styles';
 
 const ArticleCard = ({ slug, tags, title, date, description, excerpt }) => {

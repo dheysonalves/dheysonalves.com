@@ -1,5 +1,5 @@
 import React from 'react';
-import Ships from '../../../Ships';
+import Ships from '../Ships';
 
 const ArticleTagsList = ({ tags }) => {
 	return tags.map((item, index) => {

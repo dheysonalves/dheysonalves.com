@@ -6,7 +6,7 @@ const Main = ({ children, element, max, autow }) => {
 		<S.Main ref={element} max={max} mw={autow}>
 			{children}
 		</S.Main>
-	)
-}
+	);
+};
 
 export default Main;

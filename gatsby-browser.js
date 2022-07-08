@@ -10,7 +10,7 @@ import 'typeface-merriweather';
 import 'prismjs/themes/prism-solarizedlight.css';
 
 export const wrapRootElement = ({ element }) => (
-    <GlobalStateProvider>
-        <ThemeProvider theme={theme}>{element}</ThemeProvider>
-    </GlobalStateProvider>
+	<GlobalStateProvider>
+		<ThemeProvider theme={theme}>{element}</ThemeProvider>
+	</GlobalStateProvider>
 );

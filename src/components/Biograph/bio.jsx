@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Avatar from '../../assets/img/Avatar.png';
 import BiographSocialMedia from '../BiographSocialMedia';
@@ -6,6 +7,8 @@ import BiographSocialMedia from '../BiographSocialMedia';
 import * as S from './styles.js';
 
 const Biography = () => {
+	const { t } = useTranslation();
+
 	return (
 		<S.Container>
 			<S.Avatar
@@ -18,10 +21,12 @@ const Biography = () => {
 				<BiographSocialMedia logoSize="2em" />
 				<S.Title>Front-End Engineer 👨🏽‍💻</S.Title>
 				<S.Subtitle>
-					Codando. Escrevendo. Aprendendo. Ensinando.
+					{t('Codando. Escrevendo. Aprendendo. Ensinando.')}
 				</S.Subtitle>
 				<S.BottomSpan>
-					CSS, Javascript, Typescript, React e Front-End no geral.
+					{t(
+						'CSS, JAVASCRIPT, TYPESCRIPT, REACT E FRONT-END NO GERAL.'
+					)}
 				</S.BottomSpan>
 			</div>
 		</S.Container>

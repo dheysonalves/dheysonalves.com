@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Layout from '../components/Layout/layout';
 import Footer from '../components/Layout/Footer/footer';
@@ -10,12 +11,15 @@ import Context from '../store/context.store';
 const NotFoundPage = ({ data, location }) => {
 	const { state } = useContext(Context);
 	const siteTitle = data.site.siteMetadata.title;
+	const { t } = useTranslation();
 
 	return (
 		<Layout location={location} title={siteTitle}>
 			<SEO
 				title="404: Error Page"
-				description="Uma página de erro que poderia encontrar a solicitação."
+				description={t(
+					'Uma página de erro que poderia encontrar a solicitação.'
+				)}
 			/>
 			<div style={{ textAlign: 'center', marginTop: 10 }}>
 				<img
@@ -23,8 +27,10 @@ const NotFoundPage = ({ data, location }) => {
 					width="auto"
 					height="auto"
 				/>
-				<h1>Ah não! Algo está errado...</h1>
-				<p>Você clicou em uma rota que não existe ... que pena.</p>
+				<h1>{t('Ah não! Algo está errado...')}</h1>
+				<p>
+					{t('Você clicou em uma rota que não existe ... que pena.')}
+				</p>
 			</div>
 			<Footer />
 		</Layout>
@@ -32,10 +38,19 @@ const NotFoundPage = ({ data, location }) => {
 };
 
 export const pageQuery = graphql`
-	query {
+	query($language: String!) {
 		site {
 			siteMetadata {
 				title
+			}
+		}
+		locales: allLocale(filter: { language: { eq: $language } }) {
+			edges {
+				node {
+					ns
+					data
+					language
+				}
 			}
 		}
 	}

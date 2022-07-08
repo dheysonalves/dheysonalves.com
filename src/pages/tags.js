@@ -54,10 +54,19 @@ TagsPage.propTypes = {
 export default TagsPage;
 
 export const pageQuery = graphql`
-	query {
+	query($language: String!) {
 		site {
 			siteMetadata {
 				title
+			}
+		}
+		locales: allLocale(filter: { language: { eq: $language } }) {
+			edges {
+				node {
+					ns
+					data
+					language
+				}
 			}
 		}
 		allMarkdownRemark(limit: 2000) {

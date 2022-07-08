@@ -1,5 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
+
 import Layout from '../components/Layout/layout';
 import Footer from '../components/Layout/Footer/footer';
 import SEO from '../components/Seo/Seo';
@@ -12,10 +14,19 @@ import * as S from '../styles/writing.styled';
 import ArticleList from '../components/ArticleList';
 
 export const pageQuery = graphql`
-	query {
+	query($language: String!) {
 		site {
 			siteMetadata {
 				title
+			}
+		}
+		locales: allLocale(filter: { language: { eq: $language } }) {
+			edges {
+				node {
+					ns
+					data
+					language
+				}
 			}
 		}
 		allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -77,6 +88,7 @@ const Writting = ({ data, location }) => {
 	const posts = data.allMarkdownRemark.edges;
 	const [search, setSearch] = useState('');
 	const [postsData, setPostsData] = useState(posts);
+	const { t } = useTranslation();
 
 	const onChangeSearchValue = useCallback(
 		(event) => {
@@ -123,7 +135,7 @@ const Writting = ({ data, location }) => {
 			/>
 			<S.BlogPostsWrapper>
 				<S.EmphasisParagraph>
-					Todas as publicações 📝
+					{t('Todas as publicações')} 📝
 				</S.EmphasisParagraph>
 				<div style={{ width: '100%', marginBottom: 15 }}>
 					<TextInput

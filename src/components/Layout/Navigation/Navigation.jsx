@@ -2,21 +2,23 @@ import React, { useState, useContext, useCallback } from 'react';
 import Context from '../../../store/context.store';
 import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
 import * as S from './Navigation.styles';
+import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 
 const Navigation = () => {
 	const [iconState, setIconState] = useState();
 	const { state, dispatch } = useContext(Context);
+	const { languages, changeLanguage } = useI18next();
+	const { t } = useTranslation();
 
 	const dispatching = useCallback(() => {
 		setIconState(!iconState);
 		dispatch({ type: 'TOOGLE_DARK_MODE' });
 	}, [dispatch, iconState]);
-
 	return (
 		<S.Header>
 			<S.Navigation>
 				<S.LinkStyled to="/">
-					<S.Title title="Opa, e ai?">Dheyson L. Alves</S.Title>
+					<S.Title title={t('Opa, e ai?')}>Dheyson L. Alves</S.Title>
 				</S.LinkStyled>
 			</S.Navigation>
 			<S.Menu
@@ -24,28 +26,28 @@ const Navigation = () => {
 				link={state.isDark ? '#fff' : '#363636'}
 			>
 				<S.MenuItem>
-					<a href="/" title="Página principal">
-						Home
+					<a href="/" title={t('Página principal')}>
+						{t('Home')}
 					</a>
 				</S.MenuItem>
 				<S.MenuItem>
-					<a href="/writing/" title="Alguns artigos que escrevi">
-						Escrita
+					<a href="/writing/" title={t('Alguns artigos que escrevi')}>
+						{t('Escrita')}
 					</a>
 				</S.MenuItem>
 				<S.MenuItem>
 					<a
 						href="https://dheysonalvesportfolio.netlify.app/"
-						title="Meus atuais projetos"
+						title={t('Meus atuais projetos')}
 						target={`_blank`}
 						rel={`noopener noreferrer`}
 					>
-						Portfólio
+						{t('Portfólio')}
 					</a>
 				</S.MenuItem>
 				<S.MenuItem>
-					<a href="/about/" title="Alguns artigos que escrevi">
-						Sobre
+					<a href="/about/" title={t('Alguns artigos que escrevi')}>
+						{t('Sobre')}
 					</a>
 				</S.MenuItem>
 				<S.CursorBulb>
@@ -53,16 +55,29 @@ const Navigation = () => {
 						<FaRegLightbulb
 							onClick={() => dispatching()}
 							size={32}
-							title="Que tal acender a luz?"
+							title={t('Que tal acender a luz?')}
 						/>
 					) : (
 						<FaLightbulb
 							onClick={() => dispatching()}
 							size={32}
-							title="Que tal apagar a luz?"
+							title={t('Que tal apagar a luz?')}
 						/>
 					)}
 				</S.CursorBulb>
+				{languages.map((language) => (
+					<S.LanguageMenuItem key={language}>
+						<a
+							href="#"
+							onClick={(e) => {
+								e.preventDefault();
+								changeLanguage(language);
+							}}
+						>
+							{language}
+						</a>
+					</S.LanguageMenuItem>
+				))}
 			</S.Menu>
 		</S.Header>
 	);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Layout from '../components/Layout/layout';
 import { rhythm } from '../utils/typography';
@@ -11,10 +12,19 @@ import ArticleList from '../components/ArticleList';
 import Biography from '../components/Biograph/bio';
 
 export const pageQuery = graphql`
-	query {
+	query($language: String!) {
 		site {
 			siteMetadata {
 				title
+			}
+		}
+		locales: allLocale(filter: { language: { eq: $language } }) {
+			edges {
+				node {
+					ns
+					data
+					language
+				}
 			}
 		}
 		allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -38,19 +48,22 @@ export const pageQuery = graphql`
 
 const Index = ({ data }) => {
 	const posts = data.allMarkdownRemark.edges;
+	const { t } = useTranslation();
 
 	return (
 		<Layout max={rhythm(100)} mw={true}>
 			<SEO
 				title="Dheyson L. Alves - Home"
-				description="Engenheiro de Software com mais de 3 anos de experiência na indústria. Ajudando empresas de diferentes nichos a atingir seu potencial com aplicativos de software."
+				description={t(
+					'Engenheiro de Software com mais de 3 anos de experiência na indústria. Ajudando empresas de diferentes nichos a atingir seu potencial com aplicativos de software.'
+				)}
 			/>
 			<S.Wrapper>
 				<Biography />
 				<S.Divider />
 				<S.BlogPostsWrapper>
 					<S.EmphasisParagraph>
-						Últimas publicações 📝
+						<Trans>{t('Últimas publicações')}</Trans> 📝
 					</S.EmphasisParagraph>
 					<ArticleList posts={posts.slice(0, 3)} />
 				</S.BlogPostsWrapper>

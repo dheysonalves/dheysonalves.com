@@ -60,7 +60,16 @@ Tags.propTypes = {
 export default Tags;
 
 export const pageQuery = graphql`
-	query($tag: String) {
+	query($tag: String, $language: String!) {
+		locales: allLocale(filter: { language: { eq: $language } }) {
+			edges {
+				node {
+					ns
+					data
+					language
+				}
+			}
+		}
 		allMarkdownRemark(
 			limit: 2000
 			sort: { fields: [frontmatter___date], order: DESC }

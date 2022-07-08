@@ -46,6 +46,13 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/src/locales`,
+				name: `locale`,
+			},
+		},
+		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
 				pedantic: false,
@@ -162,6 +169,36 @@ module.exports = {
 			resolve: `gatsby-plugin-typography`,
 			options: {
 				pathToConfigModule: `src/utils/typography`,
+			},
+		},
+		{
+			resolve: `gatsby-plugin-react-i18next`,
+			options: {
+				localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+				languages: [`pt`, `en`],
+				defaultLanguage: `pt`,
+				// if you are using Helmet, you must include siteUrl, and make sure you add http:https
+				siteUrl: `https://dheysonalves.com.br`,
+				// if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
+				trailingSlash: 'always',
+				// you can pass any i18next options
+				i18nextOptions: {
+					interpolation: {
+						escapeValue: false, // not needed for react as it escapes by default
+					},
+					keySeparator: false,
+					nsSeparator: false,
+				},
+				pages: [
+					{
+						matchPath: '/:lang?/blog/:uid',
+						getLanguageFromPath: true,
+					},
+					{
+						matchPath: '/preview',
+						languages: ['pt'],
+					},
+				],
 			},
 		},
 	],

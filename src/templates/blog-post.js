@@ -19,13 +19,22 @@ import { rhythm } from '../utils/typography';
 import { formatDate, readingTime } from '../utils/misc';
 
 export const pageQuery = graphql`
-	query BlogPostBySlug($slug: String!) {
+	query BlogPostBySlug($slug: String!, $language: String!) {
 		site {
 			siteMetadata {
 				title
 				author
 				description
 				charSet
+			}
+		}
+		locales: allLocale(filter: { language: { eq: $language } }) {
+			edges {
+				node {
+					ns
+					data
+					language
+				}
 			}
 		}
 		markdownRemark(fields: { slug: { eq: $slug } }) {

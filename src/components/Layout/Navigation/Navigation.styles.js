@@ -57,7 +57,7 @@ export const LinkStyled = styled(Link)`
 
 export const Menu = styled.ul`
 	display: flex;
-	flex: 0.6;
+	flex: 0.8;
 	justify-content: space-between;
 	align-items: center;
 	list-style: none;
@@ -104,6 +104,10 @@ export const MenuItem = styled.li`
 			color: #ff6100;
 		}
 	}
+`;
+
+export const LanguageMenuItem = styled(MenuItem)`
+	display: inline-block;
 `;
 
 export const CursorBulb = styled.div`

@@ -25,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
 	transition: background-color 200ms ease-out;
   }
 
+  footer {
+	background-color: ${(props) => props.footer};
+  }
+
   a {
         color: ${(props) => props.links};
         box-shadow: 0px 0px 0px 0px currentColor;

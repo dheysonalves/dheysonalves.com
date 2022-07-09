@@ -6,7 +6,12 @@ import BiographSocialMedia from '../../BiographSocialMedia';
 const Footer = ({ element }) => {
 	return (
 		<S.Footer ref={element}>
-			DHEYSON L.ALVES © {new Date().getFullYear()} • POWERED BY GATSBY
+			<S.FooterContent>
+				<S.FooterTitle>
+					DHEYSON L.ALVES © {new Date().getFullYear()} • POWERED BY
+					GATSBY
+				</S.FooterTitle>
+			</S.FooterContent>
 			<BiographSocialMedia logoSize="1.5em" />
 		</S.Footer>
 	);

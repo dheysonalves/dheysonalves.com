@@ -6,6 +6,7 @@ import GlobalStyle from '../../styles/globalStyle';
 import Context from '../../store/context.store';
 import useSticky from '../../hooks/useSticky';
 import * as S from './layout.styles';
+import Footer from '../Layout/Footer/footer';
 
 const Layout = ({ children, max }) => {
 	const { state } = useContext(Context);
@@ -29,13 +30,15 @@ const Layout = ({ children, max }) => {
 						: theme.light.links_hover
 				}
 				scroll={state.isDark ? theme.dark.scroll : theme.dark.scroll}
+				footer={state.isDark ? theme.dark.footer : theme.light.footer}
 			/>
-			<S.Wrapper>
+			<S.Container>
 				<Navbar sticky={isSticky} />
 				<Main element={element} max={max} css={{ alignSelf: 'center' }}>
 					{children}
 				</Main>
-			</S.Wrapper>
+				<Footer />
+			</S.Container>
 		</Fragment>
 	);
 };

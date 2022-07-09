@@ -1,13 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Layout from '../components/Layout/layout';
 import { rhythm } from '../utils/typography';
 import * as S from '../styles/index.styles';
 import SEO from '../components/Seo/Seo';
 
-import Footer from '../components/Layout/Footer/footer';
 import ArticleList from '../components/ArticleList';
 import Biography from '../components/Biograph/bio';
 
@@ -63,11 +62,10 @@ const Index = ({ data }) => {
 				<S.Divider />
 				<S.BlogPostsWrapper>
 					<S.EmphasisParagraph>
-						<Trans>{t('Últimas publicações')}</Trans> 📝
+						{t('Últimas publicações')} 📝
 					</S.EmphasisParagraph>
 					<ArticleList posts={posts.slice(0, 3)} />
 				</S.BlogPostsWrapper>
-				<Footer />
 			</S.Wrapper>
 		</Layout>
 	);

@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Layout from '../components/Layout/layout';
-import Footer from '../components/Layout/Footer/footer';
 import SEO from '../components/Seo/Seo';
 import * as Svg from '../assets/svg/index';
 import Context from '../store/context.store';
@@ -32,7 +31,6 @@ const NotFoundPage = ({ data, location }) => {
 					{t('Você clicou em uma rota que não existe ... que pena.')}
 				</p>
 			</div>
-			<Footer />
 		</Layout>
 	);
 };

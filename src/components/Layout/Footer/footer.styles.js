@@ -1,12 +1,19 @@
 import styled from 'styled-components';
-import { rhythm } from '../../../utils/typography';
 
 export const Footer = styled.footer`
+	background-color: ${(props) => props.footer};
+	color: ${(props) => props.color};
+	position: relative;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
-	max-width: ${rhythm(22)};
-	margin: 0 auto;
+	justify-content: space-between;
+	padding: 2em 5em;
 	text-align: center;
+	width: 100%;
 `;
+
+export const FooterContent = styled.section``;
+
+export const FooterTitle = styled.span``;

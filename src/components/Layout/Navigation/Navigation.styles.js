@@ -7,7 +7,7 @@ export const Header = styled.header`
 	justify-content: space-around;
 	align-items: center;
 	border-bottom: 0.1px solid ${(props) => props.color};
-	padding-bottom: 1em;
+	padding: 2em 0;
 
 	@media (min-width: 1270px) {
 		flex-direction: row;

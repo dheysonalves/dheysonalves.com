@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Layout from '../components/Layout/layout';
-import Footer from '../components/Layout/Footer/footer';
 import SEO from '../components/Seo/Seo';
 import TextInput from '../components/Input/index';
 import ButtonShip from '../components/Button/index';
@@ -189,7 +188,6 @@ const Writting = ({ data, location }) => {
 					</S.SearchUnfoundDescription>
 				</S.SearchUnfound>
 			) : null}
-			<Footer />
 		</Layout>
 	);
 };

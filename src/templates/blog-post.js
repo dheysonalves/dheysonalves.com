@@ -4,7 +4,6 @@ import { DiscussionEmbed } from 'disqus-react';
 import { useTranslation, I18nextContext } from 'gatsby-plugin-react-i18next';
 
 import Layout from '../components/Layout/layout';
-import Footer from '../components/Layout/Footer/footer';
 import SEO from '../components/Seo/Seo';
 import ArticleTagsList from '../components/ArticleTagsList';
 import {
@@ -123,7 +122,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 					}}
 				/>
 			</SectionArticle>
-			<Footer />
 		</Layout>
 	);
 };

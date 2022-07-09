@@ -6,7 +6,7 @@ export const ShipWrapper = styled.div`
 	box-shadow: inset 0 0 0 0.5px ${(props) => props.border};
 	border-radius: ${(props) => (props.radius ? '4px' : '0.3em')};
 	margin-right: 0.5em;
-	padding: 0.5em 2em;
+	padding: 0.3em 1em;
 	cursor: pointer;
 
 	&:hover {

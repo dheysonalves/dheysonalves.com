@@ -127,7 +127,12 @@ const Writting = ({ data, location }) => {
 	);
 
 	return (
-		<Layout location={location} title={siteTitle} max={rhythm(28)}>
+		<Layout
+			location={location}
+			title={siteTitle}
+			max={rhythm(31)}
+			mw={true}
+		>
 			<SEO
 				title="Dheyson L. Alves - Blog"
 				description={t(

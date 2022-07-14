@@ -3,17 +3,19 @@ import { Link } from 'gatsby';
 
 export const Article = styled.article`
 	padding: 2em;
-	margin: 0.8em 0;
+	margin: 1.2em 0;
 	border: 0.1px solid rgb(209, 213, 219);
 	border-radius: 0.5em;
 	width: 100%;
 
 	&:hover {
 		background-color: #fbfbfb11;
-		box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px,
 			rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
 			rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-		transition: background-color 200ms ease-out;
+		transition: 0.2s ease-out;
+		transform: scale(1.04);
+		border: none;
 	}
 `;
 

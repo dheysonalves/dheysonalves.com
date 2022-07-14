@@ -17,7 +17,7 @@ const Navigation = () => {
 	const { languages, changeLanguage } = useI18next();
 	const { t } = useTranslation();
 
-	const dispatching = useCallback(() => {
+	const dispatchToogleThemeMode = useCallback(() => {
 		setIconState(!iconState);
 		dispatch({ type: 'TOOGLE_DARK_MODE' });
 	}, [dispatch, iconState]);
@@ -73,13 +73,13 @@ const Navigation = () => {
 				<S.CursorBulb>
 					{state.isDark ? (
 						<FaRegLightbulb
-							onClick={() => dispatching()}
+							onClick={() => dispatchToogleThemeMode()}
 							size={32}
 							title={t('Que tal acender a luz?')}
 						/>
 					) : (
 						<FaLightbulb
-							onClick={() => dispatching()}
+							onClick={() => dispatchToogleThemeMode()}
 							size={32}
 							title={t('Que tal apagar a luz?')}
 						/>

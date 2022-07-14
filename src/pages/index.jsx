@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { graphql } from 'gatsby';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { useTranslation, I18nextContext } from 'gatsby-plugin-react-i18next';
 
 import Layout from '../components/Layout/layout';
 import { rhythm } from '../utils/typography';
@@ -48,6 +48,7 @@ export const pageQuery = graphql`
 const Index = ({ data }) => {
 	const posts = data.allMarkdownRemark.edges;
 	const { t } = useTranslation();
+	const { language } = useContext(I18nextContext);
 
 	return (
 		<Layout max={rhythm(100)} mw={true}>
@@ -57,7 +58,7 @@ const Index = ({ data }) => {
 					'Engenheiro de Software com mais de 3 anos de experiência na indústria. Ajudando empresas de diferentes nichos a atingir seu potencial com aplicativos de software.'
 				)}
 			/>
-			<S.Wrapper>
+			<S.Container>
 				<Biography />
 				<S.Divider />
 				<S.BlogPostsWrapper>
@@ -65,8 +66,13 @@ const Index = ({ data }) => {
 						{t('Últimas publicações')} 📝
 					</S.EmphasisParagraph>
 					<ArticleList posts={posts.slice(0, 3)} />
+					<S.MoreArticlesLink
+						to={language === 'pt' ? '/writing' : '/en/writing'}
+					>
+						➜ {t('Mais Artigos')}
+					</S.MoreArticlesLink>
 				</S.BlogPostsWrapper>
-			</S.Wrapper>
+			</S.Container>
 		</Layout>
 	);
 };

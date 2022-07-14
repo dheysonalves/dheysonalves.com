@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { rhythm } from '../utils/typography';
+import { Link } from 'gatsby';
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -174,4 +175,34 @@ export const Divider = styled.div`
 	opacity: 0.2;
 	width: 100%;
 	margin: 1em 0;
+`;
+
+export const MoreArticlesLink = styled(Link)`
+	position: relative;
+	color: #ff6100;
+	transition: 0.3s;
+	width: auto;
+	font-weight: 600;
+	font-size: 1.2rem;
+	padding-top: 0.5em;
+	font-family: Montserrat, sans-serif;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: -0.3em;
+		right: 0;
+		width: 0;
+		height: 2px;
+		background-color: #ff6100;
+		transition: width 0.6s;
+	}
+
+	&:hover:before {
+		left: 0;
+		bottom: -0.3em;
+		right: 0;
+		right: auto;
+		width: 100%;
+	}
 `;

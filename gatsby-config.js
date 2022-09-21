@@ -4,7 +4,7 @@ module.exports = {
 		title: `Um site de um desenvolvedor de software`,
 		author: `Dheyson L. Alves`,
 		description: `Um site sobre computação e desenvolvimento`,
-		siteUrl: `https://www.dheysonalves.com.br/`,
+		siteUrl: `https://dheysonalves-blog.netlify.app/`,
 		social: {
 			twitter: `@dheysonlalves`,
 		},
@@ -178,7 +178,7 @@ module.exports = {
 				languages: [`pt`, `en`],
 				defaultLanguage: `pt`,
 				// if you are using Helmet, you must include siteUrl, and make sure you add http:https
-				siteUrl: `https://dheysonalves.com.br`,
+				siteUrl: `https://dheysonalves-blog.netlify.app/`,
 				// if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
 				trailingSlash: 'always',
 				// you can pass any i18next options

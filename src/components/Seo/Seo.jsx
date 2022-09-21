@@ -95,6 +95,10 @@ function SEO({ description, lang, meta, title }) {
 					name: `twitter:description`,
 					content: metaDescription,
 				},
+				{
+					name: 'google-site-verification',
+					content: '_LAex4pkg9QRLrq4BbRhKwdadJexqKDzcBDVxmG44Y4',
+				},
 			].concat(meta)}
 		/>
 	);

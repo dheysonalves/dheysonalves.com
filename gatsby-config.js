@@ -24,8 +24,8 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-robots-txt`,
 			options: {
-				host: `https://www.dheysonalves.com.br/`,
-				sitemap: `https://www.dheysonalves.com.br/sitemap.xml`,
+				host: `https://dheysonalves-blog.netlify.app/`,
+				sitemap: `https://dheysonalves-blog.netlify.app/sitemap.xml`,
 				policy: [{ userAgent: '*', allow: '/' }],
 			},
 		},
